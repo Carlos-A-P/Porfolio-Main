@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTL4P6PC5T"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-NTL4P6PC5T');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
+    <!-- custom js file -->
+    <script src="js/script.js" defer></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/my_icon1.png">
+    <title>CPWD Portfolio</title>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light sticky">
+            <div class="container-fluid px-3">
+                <a class="navbar-brand" href="#header">CPWD</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="icons/icon-hamburger.svg" alt="Navigation Menu">
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="intro d-flex flex-column align-items-center" id="header">
+            <h1>Hi, I'm Carlos</h1>
+            <p>Full Stack Developer</p>
+            <p class="resume"><a href="pdf/CARLOS_A_PEREZ_2024_ONLINE_RESUME.pdf" target="_blank">My Resume</a></p>
+            <div class="social-header d-flex justify-content-end">
+                <a class="circle" target="_blank" href="https://twitter.com/WDCarlosP">
+                    <span class="twitter">
+                        <img src="icons/twitter.svg" alt="twitter">
+                    </span>
+                </a>
+                <a class="circle" target="_blank" href="https://github.com/Carlos-A-P">
+                    <span class="github">
+                        <img src="icons/github.svg" alt="github">
+                    </span>
+                </a>
+                <a class="circle" target="_blank" href="https://www.linkedin.com/in/cpwd/">
+                    <span class="linkedIn">
+                        <img src="icons/linkedin (1).svg" alt="LinkedIn">
+                    </span>
+                </a>
+            </div>
+        </section>
+        <section class="about px-3" id="about">
+            <h2 class="py-3 mb-4 mx-auto">About Me</h2>
+            <p class="lh-lg">Hello! I'm a web developer with a passion for front-end development and design. I aspire
+                toward a career
+                that will allow me to channel my creativity through creating software and engaging experiences. </p>
+        </section>
+        <section class="skills px-3" id="skills">
+            <h2 class="py-3 mb-4">Technologies I've worked with</h2>
+            <div class="list d-flex justify-content-around px-2">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Bootstrap</li>
+                    <li>SASS</li>
+                    <li>Python</li>
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>SQL</li>
+                </ul>
+                <ul>
+                    <li>React</li>
+                    <li>Apache</li>
+                    <li>Node.js</li>
+                    <li>Git</li>
+                    <li>C++</li>
+                    <li>mySQL</li>
+                    <li>Figma</li>
+                    <li>Wordpress</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+            </div>
+        </section>
+        <section class="projects d-flex flex-column align-items-center mx-auto" id="projects">
+            <h2 class="py-3 mb-4">Projects</h2>
+            <div class="grid justify-content-center" id="grid"></div>
+            <!-- <button>View More</button> -->
+                <!-- Modal -->
+                <div class="modal fade" id="projectModal"
+                    tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="projectModalLabel">Modal title</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                </button>
+                            </div>
+                            <div class="modal-body" id="modal-body">
+                                <h5 class="mb-3">Preview</h5>
+                                <div class="card-preview" id="card-preview"></div>
+                                <h5 class="mt-4 mb-3">Technologies used</h5>
+                                <div class="techUsed">
+                                    <ul class="d-flex flex-wrap" id="tech_List">
+                                    </ul>
+                                </div>
+                                <h5 class="mt-4 mb-3">What I learned</h5>
+                                <p id="card-description"></p>
+                            </div>
+                            <div class="modal-footer d-flex flex-row justify-content-start">
+                                <a href="#" target="_blank" class="btn" id="viewCode">Code</a>
+                                <a href="#" target="_blank" class="btn" id="viewLive">Live</a>
+                                <button type="button" class="btn ms-auto" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <section class="contact d-flex align-items-center justify-content-center flex-column" id="contact">
+            <img src="icons/email.svg" alt="contact">
+            <h5>Whether you have an idea for a project or just want to chat, feel free to
+                shoot me an email!</h5>
+            <div class="container">
+                <form action="https://formspree.io/f/mrgrjnzb" method="POST" id="my-form">
+
+                    <div class="form-group">
+                        <label for="firstName"> First Name</label>
+                        <input type="text" id="firstName" name="firstName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="massage">Message</label>
+                        <textarea name="massage" id="massage" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <div id="status"></div>
+        </section>
+    </main>
+    <footer class="py-5">
+        <div class="social-footer d-flex justify-content-center">
+            <a class="circle" target="_blank" href="https://twitter.com/WDCarlosP">
+                <span class="twitter">
+                    <img src="icons/twitter.svg" alt="twitter">
+                </span>
+            </a>
+            <a class="circle" target="_blank" href="https://github.com/Carlos-A-P">
+                <span class="github">
+                    <img src="icons/github.svg" alt="github">
+                </span>
+            </a>
+            <a class="circle" target="_blank" href="https://www.linkedin.com/in/carlos-perez-a92b2a210/">
+                <span class="linkedIn">
+                    <img src="icons/linkedin (1).svg" alt="LinkedIn">
+                </span>
+            </a>
+        </div>
+        <div class="copyright pt-3"> &copy;Carlos Perez</div>
+        <div class="p-icon">
+            Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel
+                perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+        </div>
+    </footer>
+    <!-- bootstrap js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js" integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- custom css file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- custom js file -->
+    <script src="js/script.js"></script>
+    <script>
+        $(document).on("click",'a[href^="#"]',(function(o){o.preventDefault(),$("html, body").animate({scrollTop:$($.attr(this,"href")).offset().top-50},0)})),$(window).scroll((function(){$("nav").toggleClass("scrolled",$(this).scrollTop()>10)}));
+    </script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #181818;
+            color: #fff;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .counter-container,
+        .input-group,
+        .table-container {
+            background-color: #202020;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .count {
+            font-size: 3rem;
+            color: #4CAF50;
+        }
+
+        .btn-custom {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            margin: 5px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .btn-custom:hover {
+            background-color: #66BB6A;
+        }
+
+        .btn-outline-secondary {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        .btn-outline-secondary:hover {
+            background-color: #66BB6A;
+        }
+
+        table {
+            color: #fff;
+        }
+
+        .table input[type="text"] {
+            background-color: transparent;
+            border: none;
+            color: inherit;
+            outline: none;
+        }
+
+        .table input[type="text"]:disabled {
+            pointer-events: none;
+            color: #fff;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .count {
+            font-size: 3rem;
+            color: #4CAF50;
+            animation: none; /* Initially, no animation */
+        }
+
+        .count.bounce {
+            animation: bounce 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+
+        <div class="counter-container">
+            <p class="h3">Jobs Applied To Today:</p>
+            <div id="jobCount" class="count">0</div>
+            <!-- <button class="btn-custom" onclick="reduceApplication()">Reduce</button>  -->
+        </div>
+
+        <form id="jobForm">
+            <div class="input-group mb-3">
+                <input type="text" id="jobName" class="form-control" required placeholder="Job Name" autocomplete="on"
+                    aria-label="Job Name">
+                <input type="text" id="companyName" class="form-control" required placeholder="Company Name"
+                    autocomplete="on" aria-label="Company Name">
+                <input type="text" id="jobBoard" class="form-control" required placeholder="Job Board"
+                    list="jobBoardList" autocomplete="on" aria-label="Job Board">
+                <datalist id="jobBoardList">
+                    <option value="ZipRecruiter">
+                    <option value="LinkedIn">
+                    <option value="Indeed">
+                </datalist>
+                <button class="btn btn-outline-secondary" type="submit">Add to List</button>
+            </div>
+        </form>
+
+
+        <div class="table-container">
+            <table class="table table-dark table-striped" id="jobsTable">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Job Name</th>
+                        <th scope="col">Job Board</th>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Options</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Job list will be added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="button-group">
+            <button class="btn btn-custom" onclick="resetList()">Reset List</button>
+            <button class="btn btn-custom" onclick="exportList()">Export List</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script>
+        let count = localStorage.getItem('jobCount') ? parseInt(localStorage.getItem('jobCount')) : 0;
+        let jobsList = JSON.parse(localStorage.getItem('jobsList')) || [];
+        document.getElementById('jobCount').innerText = count;
+        renderJobsList();
+
+        function addApplication() {
+            count++;
+            const jobCountElement = document.getElementById('jobCount');
+            jobCountElement.innerText = count;
+            localStorage.setItem('jobCount', count);
+
+            // Add bounce animation
+            jobCountElement.classList.add('bounce');
+            setTimeout(() => {
+                jobCountElement.classList.remove('bounce');
+            }, 1000); // Duration of the animation
+        }
+
+        function reduceApplication() {
+            if (count > 0) {
+                count--;
+                document.getElementById('jobCount').innerText = count;
+                localStorage.setItem('jobCount', count);
+            }
+        }
+
+        document.getElementById('jobForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            addJobToList();
+        });
+
+        function addJobToList() {
+            const jobName = document.getElementById('jobName').value;
+            const jobBoard = document.getElementById('jobBoard').value;
+            const companyName = document.getElementById('companyName').value;
+            const now = new Date();
+            if (jobName && jobBoard && companyName) {
+                // jobsList.push({ jobName, jobBoard });
+                jobsList.push({
+                    jobName: jobName,
+                    jobBoard: jobBoard,
+                    companyName: companyName,
+                    dateAdded: now.toLocaleDateString('en-US'), // e.g., 'MM/DD/YYYY'
+                    timeAdded: now.toLocaleTimeString('en-US')  // e.g., 'HH:MM:SS AM/PM'
+                });
+                localStorage.setItem('jobsList', JSON.stringify(jobsList));
+                addApplication(); // Increment the counter when a job is added
+                renderJobsList();
+                document.getElementById('jobName').value = '';
+                document.getElementById('jobBoard').value = '';
+                document.getElementById('companyName').value = '';
+            }
+
+
+        }
+
+        function deleteJob(index) {
+            if (jobsList.length > 0) {
+                jobsList.splice(index, 1);
+                localStorage.setItem('jobsList', JSON.stringify(jobsList));
+                reduceApplication(); // Decrement the counter when a job is deleted
+                renderJobsList();
+            }
+        }
+
+        function renderJobsList() {
+            const tableBody = document.getElementById('jobsTable').getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = '';
+            jobsList.forEach((job, index) => {
+                let row = tableBody.insertRow();
+                let cell1 = row.insertCell(0);
+                let cell2 = row.insertCell(1);
+                let cell3 = row.insertCell(2);
+                let cell4 = row.insertCell(3);
+                let cell5 = row.insertCell(4);
+                let cell6 = row.insertCell(5);
+                cell1.innerHTML = index + 1;
+                cell2.innerHTML = `<input type="text" value="${job.jobName}" class="form-control" disabled>`;
+                cell3.innerHTML = `<input type="text" value="${job.jobBoard}" class="form-control" disabled>`;
+                cell4.innerHTML = `<input type="text" value="${job.companyName}" class="form-control" disabled>`;
+                cell5.innerHTML = '<i class="bi bi-pencil-square btn-edit" style="cursor:pointer;" onclick="editJob(' + index + ')">Edit</i>';
+                cell6.innerHTML = '<i class="bi bi-trash btn-delete" style="cursor:pointer;" onclick="deleteJob(' + index + ')">DEL</i>';
+            });
+        }
+
+        function editJob(index) {
+            let tableRow = document.getElementById('jobsTable').rows[index + 1];
+            let jobNameField = tableRow.cells[1].getElementsByTagName('input')[0];
+            let jobBoardField = tableRow.cells[2].getElementsByTagName('input')[0];
+            let companyNameField = tableRow.cells[3].getElementsByTagName('input')[0];
+
+            if (jobNameField.disabled) { // If the field is disabled, enable it for editing
+                jobNameField.disabled = false;
+                jobBoardField.disabled = false;
+                companyNameField.disabled = false;
+                jobNameField.focus();
+                tableRow.cells[4].innerHTML = '<i class="bi bi-save btn-save" onclick="saveJob(' + index + ')">Save</i>';
+            }
+        }
+
+        function saveJob(index) {
+            let tableRow = document.getElementById('jobsTable').rows[index + 1];
+            let jobNameField = tableRow.cells[1].getElementsByTagName('input')[0];
+            let jobBoardField = tableRow.cells[2].getElementsByTagName('input')[0];
+            let companyNameField = tableRow.cells[3].getElementsByTagName('input')[0];
+
+            // Update the jobsList array with new values
+            jobsList[index].jobName = jobNameField.value;
+            jobsList[index].jobBoard = jobBoardField.value;
+            jobsList[index].companyName = companyNameField.value;
+            localStorage.setItem('jobsList', JSON.stringify(jobsList));
+
+            // Disable the input fields again and update the edit button
+            jobNameField.disabled = true;
+            jobBoardField.disabled = true;
+            companyNameField.disabled = true;
+            tableRow.cells[4].innerHTML = '<i class="bi bi-pencil-square btn-edit" style="cursor:pointer;" onclick="editJob(' + index + ')">Edit</i>';
+
+            // Optionally, call renderJobsList() to refresh the list display
+        }
+
+
+        function resetList() {
+            if (confirm('Are you sure you want to reset the list?')) {
+                jobsList = [];
+                count = 0;
+                localStorage.setItem('jobsList', JSON.stringify(jobsList));
+                localStorage.setItem('jobCount', count);
+                document.getElementById('jobCount').innerText = count;
+                renderJobsList();
+                updateApplicationsRemaining();
+            }
+        }
+
+        function exportList() {
+            let exportData = 'Job Name\tJob Board\tCompany Name\tDate Added\tTime Added\n';
+            jobsList.forEach(job => {
+                exportData += `${job.jobName}\t${job.jobBoard}\t${job.companyName}\t${job.dateAdded}\t${job.timeAdded}\n`;
+            });
+            navigator.clipboard.writeText(exportData).then(() => {
+                alert("List copied to clipboard! You can go ahead and past in a Google Sheet to save today's List :D");
+            }, () => {
+                alert('Failed to copy list to clipboard.');
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>

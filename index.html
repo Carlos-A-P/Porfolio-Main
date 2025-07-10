@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+
+        <!-- Site Title -->
+        <title>Carlos Perez - Web Developer</title>
+
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="apple-touch-icon" href="assets/images/fav.png" />
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/fav.png" />
+
+        <!-- CSS here -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css" />
+        <link rel="stylesheet" href="assets/css/flaticon_webency.css" />
+        <link rel="stylesheet" href="assets/css/odometer.min.css" />
+        <link rel="stylesheet" href="assets/css/sal.css" />
+        <link rel="stylesheet" href="assets/css/magnific-popup.css" />
+        <!-- <link rel="stylesheet" href="assets/css/swiper.min.css" /> -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css" integrity="sha512-pmAAV1X4Nh5jA9m+jcvwJXFQvCBi3T17aZ1KWkqXr7g/O2YMvO8rfaa5ETWDuBvRq6fbDjlw4jHL44jNTScaKg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="assets/css/meanmenu.css" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+    </head>
+    <body>
+        <!-- start: Preloader -->
+        <div class="preloader" id="preloader">
+            <div class="preloader-inner">
+                <div class="lines">
+                    <span class="line line-1"></span>
+                    <span class="line line-2"></span>
+                    <span class="line line-3"></span>
+                    <span class="line line-4"></span>
+                    <span class="line line-5"></span>
+                    <span class="line line-6"></span>
+                    <span class="line line-7"></span>
+                    <span class="line line-8"></span>
+                    <span class="line line-9"></span>
+                </div>
+                <div class="text">Loading</div>
+            </div>
+            <button class="tj-primary-btn">Cancel Preloader</button>
+        </div>
+        <!-- end: Preloader -->
+
+        <!-- start: Mobile Menu -->
+        <div id="tj-overlay-bg2" class="tj-overlay-canvas d-lg-none"></div>
+        <div class="tj-offcanvas-area d-lg-none">
+            <div class="tj-offcanvas-header d-flex align-items-center justify-content-between">
+                <div class="logo-area text-center">
+                    <a href="#top">
+                        <img src="assets/images/logo/Carlos_Perez_Logo2.png" alt="Logo" />
+                        <!-- <p>Carlos Perez</p> -->
+                    </a>
+                </div>
+                <div class="offcanvas-icon">
+                    <a id="canva_close" href="#">
+                        <i class="fa-light fa-xmark"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="tj-search-box">
+                <form action="#">
+                    <input type="text" name="search" id="search" placeholder="Search" />
+                    <a href="#"> <i class="fal fa-search"></i></a>
+                </form>
+            </div> -->
+            <nav class="right_menu_togle mobile-navbar-menu d-lg-none" id="mobile-navbar-menu"></nav>
+            <div class="mobile-contact">
+                <div class="contact-menu">
+                    <ul class="dot-style">
+                        <li>
+                            <span><i class="fa-sharp fa-regular fa-envelope"></i></span>
+                            <a href="mailto:carlosap.webdev@gmail.com">carlosap.webdev@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- <div class="mobile-share">
+                <ul class="dot-style">
+                    <li>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="header-button">
+                <a class="btn tj-black-btn" href="#contact">Contact Me</a>
+            </div>
+        </div>
+        <!-- end: Mobile Menu -->
+
+        <!-- start: Header Area -->
+        <header class="tj-header-area header-sticky">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="header-content-area">
+                            <div class="logo-area">
+                                <div class="logo">
+                                    <a href="#top">
+                                        <img src="assets/images/logo/Carlos_Perez_Logo2.png" alt="Logo" />
+                                        <!-- <p>Carlos Perez</p> -->
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="tj-menu-area d-lg-block d-none" id="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#scroll-bottom">Overview</a>
+                                        </li>
+                                        <li>
+                                            <a href="#services">Services</a>
+                                        </li>
+                                        <li>
+                                            <a href="#faq">FAQ</a>
+                                        </li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="header-button d-none d-lg-block">
+                                <a href="#contact" class="tj-secondary-btn btn-border"><span>Contact Me</span></a>
+                            </div>
+                            <div class="tj-canva-icon d-lg-none">
+                                <a class="canva_expander nav-menu-link menu-button" href="#">
+                                    <span class="dot1"></span>
+                                    <span class="dot2"></span>
+                                    <span class="dot3"></span>
+                                    <span class="dot4"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- end: Header Area -->
+
+        <main class="site-content">
+            <!-- start: Hero Area -->
+            <section class="tj-hero-section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7">
+                            <div
+                                class="hero-left-content"
+                                data-sal="slide-up"
+                                data-sal-duration="1000"
+                                data-sal-delay="100"
+                            >
+                                <div class="tj-sec-heading">
+                                    <!-- <span class="hero-sub-title"> Creative Thinking</span> -->
+                                    <h1 class="hero-title">
+                                        Crafting Visions, Powering Triumphs <span class="title"> Shaping Tomorrow.</span>
+                                    </h1>
+                                    <div class="desc">
+                                        <p>
+                                            Where innovation meets strategy. Explore the extraordinary as we redefine success through creativity.
+                                        </p>
+                                    </div>
+
+                                    <div class="hero-button d-flex">
+                                        <a class="tj-primary-btn" href="#contact"> Explore Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="hero-image-group">
+                                <div class="group-image1 shake-y">
+                                    <img class="image" src="assets/images/hero/hero-1.png" alt="Image" />
+                                </div>
+                                <div class="group-image2 pulse">
+                                    <img
+                                        data-sal="slide-right"
+                                        data-sal-duration="1000"
+                                        data-sal-delay="100"
+                                        src="assets/images/hero/hero-2.png"
+                                        alt="Image"
+                                    />
+                                </div>
+                                <img class="group-image3" src="assets/images/shape/shape-5.svg" alt="Image" />
+                                <img class="group-image4 pulse" src="assets/images/shape/shape-6.svg" alt="Image" />
+                                <img class="group-image5 pulse" src="assets/images/shape/shape-7.svg" alt="Image" />
+                                <img class="group-image6 pulse" src="assets/images/shape/shape-8.svg" alt="Image" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-shape">
+                    <img src="assets/images/shape/shape-1.svg" alt="Shape" />
+                </div>
+                <div class="hero-shape1">
+                    <img src="assets/images/shape/shape-2.svg" alt="Shape" />
+                </div>
+                <div class="hero-shape2 pulse">
+                    <img src="assets/images/shape/shape-3.svg" alt="Shape" />
+                </div>
+                <div class="hero-shape3 shake-y">
+                    <img src="assets/images/shape/shape-4.svg" alt="Shape" />
+                </div>
+                <!-- <div class="hero-scroll">
+                    <img src="assets/images/icon/scroll-bg.svg" alt="Bg" />
+                    <div class="scroll-icon jump">
+                        <a href="#scroll-bottom"><img src="assets/images/icon/scroll.svg" alt="Icon" /></a>
+                    </div>
+                </div> -->
+            </section>
+            <!-- end: Hero Area -->
+
+            <!-- start: About Area -->
+            <section id="scroll-bottom" class="tj-about-section">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-xl-6 col-lg-12">
+                            <div class="about-image-group">
+                                <div class="about-circle-box">
+                                    <img class="circle-one" src="assets/images/shape/ab-shape.svg" alt="Shape" />
+                                    <div class="ab-circle" style="visibility:hidden">
+                                        <svg class="shape-1" viewBox="0 0 100 100" width="100" height="100">
+                                            <defs>
+                                                <path
+                                                    id="circle"
+                                                    d="
+                                                  M 50, 50
+                                                  m -37, 0
+                                                  a 37,37 0 1,1 74,0
+                                                  a 37,37 0 1,1 -74,0"
+                                                />
+                                            </defs>
+                                            <text font-size="15">
+                                                <textPath xlink:href="#circle" class="shape-1">
+                                                    Creative Minds_, Creative Minds_
+                                                </textPath>
+                                            </text>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="about-image1 pulse">
+                                    <img src="assets/images/about/about-1.png" alt="Image" />
+                                </div>
+                                <div class="about-image2 pulse">
+                                    <img src="assets/images/about/about-2.png" alt="Image" />
+                                </div>
+                                <div class="about-image3 pulse">
+                                    <img src="assets/images/about/about-3.png" alt="Image" />
+                                </div>
+                                <div class="about-image4 pulse">
+                                    <img src="assets/images/about/about-4.png" alt="Image" />
+                                </div>
+                                <div class="about-shape1 shake-y">
+                                    <img src="assets/images/shape/shape-9.svg" alt="Shape" />
+                                </div>
+                                <div class="about-shape2 pulse">
+                                    <img src="assets/images/shape/shape-10.svg" alt="Shape" />
+                                </div>
+                                <div class="about-shape3 pulse">
+                                    <img src="assets/images/shape/shape-13.svg" alt="Shape" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12">
+                            <div
+                                class="about-content-one"
+                                data-sal="slide-left"
+                                data-sal-duration="1000"
+                                data-sal-delay="600"
+                            >
+                                <div class="tj-sec-heading">
+                                    <!-- <span class="sub-title">About Me</span> -->
+                                    <h2 class="sec-title">Making Your Business More Unique</h2>
+                                    <div class="desc">
+                                        <p>
+                                            We'll work together to enhancing your online presence. Making your business more unique is essential to attract potential clients and showcase your expertise.
+                                        </p>
+                                        <p>
+                                            A revamped website ensures a seamless and intuitive user experience, captivating visitors and encouraging them to explore your products or services further. 
+                                        </p>
+                                        <p>
+                                            I provide ongoing website maintenance services to address any issues and keep your platforms up-to-date with the latest technologies and security measures.
+                                        </p>
+                                    </div>
+                                    <div class="about-button d-flex">
+                                        <a href="#faq" class="tj-secondary-btn btn-border"
+                                            ><span>Read More</span></a
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-section-shape pulse">
+                    <img src="assets/images/shape/shape-37.svg" alt="Shape" />
+                </div>
+            </section>
+            <!-- end: About Area -->
+
+            <!-- start: Counter Area -->
+            <section class="tj-counter-section">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="counter-content-area">
+                                <div
+                                    class="counter-item"
+                                    data-sal="slide-up"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="100"
+                                >
+                                    <div class="tj-count"><span class="odometer" data-count="200">0</span>+</div>
+                                    <span class="sub-title">Projects Completed</span>
+                                </div>
+                                <div
+                                    class="counter-item"
+                                    data-sal="slide-up"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="200"
+                                >
+                                    <div class="tj-count"><span class="odometer" data-count="100">0</span>%</div>
+                                    <span class="sub-title">Customer Assistance Ready</span>
+                                </div>
+                                <div
+                                    class="counter-item"
+                                    data-sal="slide-up"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="400"
+                                >
+                                    <div class="tj-count"><span class="odometer" data-count="2">0</span>+</div>
+                                    <span class="sub-title">Years Of Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="counter-section-shape">
+                    <div class="counter_shape">
+                        <img src="assets/images/shape/counter-shape.svg" alt="Shape" />
+                    </div>
+                    <div class="counter_shape1">
+                        <img src="assets/images/shape/counter-shape1.svg" alt="Shape" />
+                    </div>
+                </div>
+            </section>
+            <!-- end: Counter Area -->
+
+            <!-- start: Service Area -->
+            <section class="tj-service-section" id="services">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div
+                                class="tj-sec-heading text-center"
+                                data-sal="slide-up"
+                                data-sal-duration="1000"
+                                data-sal-delay="600"
+                            >
+                                <span class="sub-title"> My Services</span>
+                                <h2 class="sec-title">Services Provided</h2>
+                                <div class="desc">
+                                    <p>
+                                        Delivering exceptional web solutions that blend innovation, functionality, and user satisfaction for a transformative online presence.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div
+                            class="col-lg-3 col-md-6 col-sm-6"
+                            data-sal="slide-up"
+                            data-sal-duration="1000"
+                            data-sal-delay="100"
+                        >
+                            <div class="tj-service-item text-center">
+                                <div class="service-inner">
+                                    <div class="service-icon">
+                                        <i class="flaticon-design"></i>
+                                        <img class="image-1" src="assets/images/shape/service-image.svg" alt="Shape" />
+                                        <img class="image-2" src="assets/images/shape/service-image1.svg" alt="Shape" />
+                                    </div>
+                                    <div class="service-content">
+                                        <h4 class="title-link">
+                                            <a href="#contact">Web Development</a>
+                                        </h4>
+                                        <p>
+                                            Transform your ideas into reality with our custom web applications, designed to address your specific business needs and enhance functionality.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-lg-3 col-md-6 col-sm-6"
+                            data-sal="slide-up"
+                            data-sal-duration="1000"
+                            data-sal-delay="200"
+                        >
+                            <div class="tj-service-item text-center">
+                                <div class="service-inner">
+                                    <div class="service-icon">
+                                        <i class="flaticon-graphic-design-1"></i>
+                                        <img class="image-1" src="assets/images/shape/service-image.svg" alt="Shape" />
+                                        <img class="image-2" src="assets/images/shape/service-image1.svg" alt="Shape" />
+                                    </div>
+                                    <div class="service-content">
+                                        <h4 class="title-link">
+                                            <a href="#contact">Web Design</a>
+                                        </h4>
+                                        <p>
+                                            Crafting visually stunning and user-centric websites that captivate audiences and elevate online experiences.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-lg-3 col-md-6 col-sm-6"
+                            data-sal="slide-up"
+                            data-sal-duration="1000"
+                            data-sal-delay="300"
+                        >
+                            <div class="tj-service-item text-center">
+                                <div class="service-inner">
+                                    <div class="service-icon">
+                                        <i class="flaticon-ui-design"></i>
+                                        <img class="image-1" src="assets/images/shape/service-image.svg" alt="Shape" />
+                                        <img class="image-2" src="assets/images/shape/service-image1.svg" alt="Shape" />
+                                    </div>
+                                    <div class="service-image"></div>
+                                    <div class="service-content">
+                                        <h4 class="title-link">
+                                            <a href="#contact">Content Management System (CMS)</a>
+                                        </h4>
+                                        <p>
+                                            Simplify website management and updates with our tailored Content Management System, putting you in control of your online presence.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="col-lg-3 col-md-6 col-sm-6"
+                            data-sal="slide-up"
+                            data-sal-duration="1000"
+                            data-sal-delay="400"
+                        >
+                            <div class="tj-service-item text-center">
+                                <div class="service-inner">
+                                    <div class="service-icon">
+                                        <i class="flaticon-megaphone"></i>
+                                        <img class="image-1" src="assets/images/shape/service-image.svg" alt="Shape" />
+                                        <img class="image-2" src="assets/images/shape/service-image1.svg" alt="Shape" />
+                                    </div>
+                                    <div class="service-content">
+                                        <h4 class="title-link">
+                                            <a href="#contact">Search Engine Optimization (SEO)</a>
+                                        </h4>
+                                        <p>
+                                            Maximize your digital presence and reach your target audience with our strategic SEO services, boosting your website's visibility and ranking.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="service-button text-center">
+                            <a href="#contact" class="tj-secondary-btn btn-border"
+                                ><span>Contact Me</span></a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="service-section-shape">
+                    <div class="service-bg-shape pulse">
+                        <img src="assets/images/shape/shape-14.svg" alt="Shape" />
+                    </div>
+                    <div class="service-bg-shape1">
+                        <img src="assets/images/shape/shape-15.svg" alt="Shape" />
+                    </div>
+                    <div class="service-bg-shape2">
+                        <img src="assets/images/shape/shape-14.svg" alt="Shape" />
+                    </div>
+                    <div class="service-bg-shape3 pulse">
+                        <img src="assets/images/shape/shape-15.svg" alt="Shape" />
+                    </div>
+                    <div class="service-bg-shape4 pulse">
+                        <img src="assets/images/shape/shape-16.svg" alt="Shape" />
+                    </div>
+                </div>
+            </section>
+            <!-- end: Service Area -->
+
+
+            <!-- start: FAQ Area -->
+            <section class="tj-faq-section" id="faq">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div
+                                class="tj-sec-heading"
+                                data-sal="slide-right"
+                                data-sal-duration="1000"
+                                data-sal-delay="100"
+                            >
+                                <!-- <span class="sub-title">F,A,Q</span> -->
+                                <h2 class="sec-title">FAQ</h2>
+                                <div class="desc">
+                                    <p>
+                                        Unlock clarity and insights as our experts address your FAQs, providing comprehensive answers to guide you through a seamless and informed journey.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="faq-image-group">
+                                <div class="faq-image1">
+                                    <div class="group-image pulse">
+                                        <img src="assets/images/about/about-1.png" alt="Image" />
+                                    </div>
+                                    <img class="group-shape pulse" src="assets/images/shape/shape-21.svg" alt="Shape" />
+                                    <img
+                                        class="group-shape1 shake-y"
+                                        src="assets/images/shape/shape-22.svg"
+                                        alt="Shape"
+                                    />
+                                    <img class="group-shape2 pulse" src="assets/images/about/about-4.png" alt="Image" />
+                                </div>
+                                <div class="faq-image3 pulse">
+                                    <img src="assets/images/about/about-3.png" alt="Image" />
+                                </div>
+                                <div class="faq-image2 pulse">
+                                    <div class="group-image">
+                                        <img src="assets/images/about/about-2.png" alt="Image" />
+                                    </div>
+                                    <img class="group-shape pulse" src="assets/images/shape/shape-24.svg" alt="Shape" />
+                                    <img
+                                        class="group-shape1 shake-y"
+                                        src="assets/images/shape/shape-50.svg"
+                                        alt="Shape"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-sal="slide-left" data-sal-duration="1000" data-sal-delay="100">
+                            <div class="tj-faq-area">
+                                <div class="accordion tj-faq-style" id="accordionExample">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button
+                                                class="accordion-button"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne"
+                                                aria-expanded="true"
+                                                aria-controls="collapseOne"
+                                            >
+                                            How Can A Digital Platform Help Grow Your Business
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id="collapseOne"
+                                            class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne"
+                                            data-bs-parent="#accordionExample"
+                                        >
+                                            <div class="accordion-body">
+                                                <strong
+                                                    >A digital platform can help a business grow by expanding its reach, enhancing its customer experience, creating new revenue streams, improving its operational efficiency, and fostering innovation and collaboration.</strong
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo"
+                                                aria-expanded="false"
+                                                aria-controls="collapseTwo"
+                                            >
+                                            What do your websites cost?
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id="collapseTwo"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="headingTwo"
+                                            data-bs-parent="#accordionExample"
+                                        >
+                                            <div class="accordion-body">
+                                                <strong
+                                                    >The cost of a web development project varies depending on many aspects that require a detailed discussion. Don't trust any web developer who can quote you a price without asking many questions. I'll need to know more about your website's purpose, features, design, and other aspects. Then, I'll give you an estimate. If you want to proceed, I'll visit your business location and provide a final quote.</strong
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree"
+                                                aria-expanded="false"
+                                                aria-controls="collapseThree"
+                                            >
+                                            Will I have an input on the graphic design?
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id="collapseThree"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="headingThree"
+                                            data-bs-parent="#accordionExample"
+                                        >
+                                            <div class="accordion-body">
+                                                <strong
+                                                    >Of course! I can create a design that matches your preferences and inspiration. I can also incorporate your logo or brand materials into the design. We'll make sure your new site reflects your brand identity.</strong
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingFour">
+                                            <button
+                                                class="accordion-button collapsed"
+                                                type="button"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFour"
+                                                aria-expanded="false"
+                                                aria-controls="collapseFour"
+                                            >
+                                                How Many Projects Hove Your Completed So far?
+                                            </button>
+                                        </h2>
+                                        <div
+                                            id="collapseFour"
+                                            class="accordion-collapse collapse"
+                                            aria-labelledby="headingFour"
+                                            data-bs-parent="#accordionExample"
+                                        >
+                                            <div class="accordion-body">
+                                                <strong
+                                                    >I have completed over 200 web development projects for various clients and industries, ranging from ecommerce websites, webinar websites, social media websites, to online learning platforms, and more.</strong
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-shape">
+                                    <img src="assets/images/shape/shape-26.svg" alt="Shape" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-section-shape">
+                    <div class="faq-bg-shape pulse">
+                        <img src="assets/images/shape/faq-shape.svg" alt="Shape" />
+                    </div>
+                </div>
+            </section>
+            <!-- end: FAQ Area -->
+
+            <!-- start: Contact Area -->
+            <section class="tj-contact-section" id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="contact-form-area">
+                                <div
+                                    class="contact-left-content"
+                                    data-sal="slide-right"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="300"
+                                >
+                                    <div class="tj-sec-heading">
+                                        <span class="sub-title">Get In touch</span>
+                                        <h2 class="sec-title">Have any Project Plan In your Mind?</h2>
+                                        <div class="desc">
+                                            <p>
+                                                Have a project plan brewing in your mind? Let's turn your ideas into reality together. Keep in touch, and let's collaborate to craft a tailored plan that brings your vision to life.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="comntact-list">
+                                        <div class="contact-icon">
+                                            <img src="assets/images/icon/mail.svg" alt="Icon" />
+                                        </div>
+                                        <div class="contact-header">
+                                            <span class="d-block">Mail us 24/7</span>
+                                            <a href="mailto:carlosap.webdev@gmail.com">carlosap.webdev@gmail.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form
+                                    action="https://formspree.io/f/myyrzppg"
+                                    method="POST"
+                                    class="contact-form-box"
+                                    id="emailForm"
+                                    data-sal="slide-left"
+                                    data-sal-duration="1000"
+                                    data-sal-delay="300"
+                                >
+                                    <div class="form-input">
+                                        <label>Your Name</label>
+                                        <input type="text" class="form__input" name="name" placeholder="" required="" />
+                                    </div>
+                                    <div class="form-input">
+                                        <label>Email Address</label>
+                                        <input type="email" class="form__input" name="email" placeholder="" required="" />
+                                    </div>
+                                    <div class="form-textarea">
+                                        <label>How can help you?</label>
+                                        <textarea id="message" name="message" placeholder=""></textarea>
+                                    </div>
+                                    <div class="tj-contact-button">
+                                        <button class="btn tj-primary-btn" type="submit" id="form_submit_btn">
+                                            Submit Now
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section-shape">
+                    <div class="contact-bg-shape shake-y">
+                        <img src="assets/images/shape/shape-31.svg" alt="Shape" />
+                    </div>
+                    <div class="contact-bg-shape1 pulse">
+                        <img src="assets/images/shape/shape-32.svg" alt="Shape" />
+                    </div>
+                    <div class="contact-bg-shape2 pulse">
+                        <img src="assets/images/shape/shape-33.svg" alt="Shape" />
+                    </div>
+                    <div class="contact-bg-shape3 shake-y">
+                        <img src="assets/images/shape/shape-34.svg" alt="Shape" />
+                    </div>
+                </div>
+            </section>
+            <!-- end: Contact Area -->
+        </main>
+
+        <!-- start: Footer Area -->
+        <footer class="tj-footer-area">
+            <div class="footer-menu-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="footer-widget footer1-col-1">
+                                <div class="footer-content-info">
+                                    <div class="footer-logo">
+                                        <a href="#">
+                                            <img src="assets/images/logo/Carlos_Perez_Logo3.png" alt="Logo" />
+                                        </a>
+                                    </div>
+                                    <p>
+                                        Elevating your digital presence with precision and creativity. Discover the intersection of innovation and excellence in every aspect with our distinctive touch.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                            <div class="footer-widget footer1-col-5">
+                                <h4 class="footer_title">Contact Me</h4>
+                                <div class="widget_contact_menu">
+                                    <div class="footer-menu">
+                                        <ul>
+                                            <li>
+                                                <span><i class="fa-sharp fa-regular fa-envelope"></i></span>
+                                                <a href="mailto:carlosap.webdev@gmail.com">carlosap.webdev@gmail.com</a>
+                                            </li>
+                                            <li>
+                                                <span><i class="fa-solid fa-globe"></i></span
+                                                ><a href="#">www.carlospwd.com</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright-area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="copyright-content-area">
+                                <div class="copyright-left-content">
+                                    <p>
+                                        Copyright © 2024 <a href="#" target="_blank"> Carlos Perez. </a> All Rights
+                                        Reserved.
+                                    </p>
+                                </div>
+                                <div class="copyright-menu">
+                                    <ul>
+                                        <li><a href="#faq">FAQ</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section-shape">
+                <div class="footer-bg-shape">
+                    <img src="assets/images/banner-bg/footer-bg-shape.svg" alt="Shape" />
+                </div>
+                <div class="footer-bg-shape1">
+                    <img src="assets/images/banner-bg/footer-bg-shape1.svg" alt="Shape" />
+                </div>
+                <div class="footer-bg-shape2 shake-y">
+                    <img src="assets/images/shape/shape-35.svg" alt="Shape" />
+                </div>
+                <div class="footer-bg-shape3 pulse">
+                    <img src="assets/images/shape/shape-36.svg" alt="Shape" />
+                </div>
+            </div>
+        </footer>
+        <!-- end: Footer Area -->
+
+        <!-- start: Scroll Area -->
+        <div class="webency-scroll-top">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path
+                    d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+                    style="
+                        transition: stroke-dashoffset 10ms linear 0s;
+                        stroke-dasharray: 307.919px, 307.919px;
+                        stroke-dashoffset: 71.1186px;
+                    "
+                ></path>
+            </svg>
+            <div class="webency-scroll-top-icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                    role="img"
+                    width="1em"
+                    height="1em"
+                    viewBox="0 0 24 24"
+                    data-icon="mdi:arrow-up"
+                    class="iconify iconify--mdi"
+                >
+                    <path
+                        fill="currentColor"
+                        d="M13 20h-2V8l-5.5 5.5l-1.42-1.42L12 4.16l7.92 7.92l-1.42 1.42L13 8v12Z"
+                    ></path>
+                </svg>
+            </div>
+        </div>
+        <!-- end: Scroll Area -->
+
+        <!-- JS here -->
+        <!-- <script src="assets/js/jquery.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/js/meanmenu.js"></script>
+        <!-- <script src="assets/js/swiper.min.js"></script> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="assets/js/jquery.appear.min.js"></script>
+        <script src="assets/js/sal.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/imagesloaded-pkgd.js"></script>
+        <script src="assets/js/magnific-popup.js"></script>
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <!-- <script src="assets/js/mailer.js"></script> -->
+    </body>
+</html>

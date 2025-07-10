@@ -1,0 +1,6 @@
+# This is a comment line
+User-agent: * # This applies to all web crawlers
+Disallow: /resume/ # This blocks access to the resume folder
+Disallow: /assets/images/ # This blocks access to the portfolio images folder
+Allow: / # This allows access to the rest of the website
+Sitemap: https://www.carlospwd.com/sitemap.xml # This provides the location of the sitemap file
