@@ -1,6 +1,6 @@
 # My Portfolio
 
-- Live website -(https://www.carlospwd.com/)
+- Live website -(https://www.carlospwd.dev/portfolio)
 
 ## Table of contents
 
