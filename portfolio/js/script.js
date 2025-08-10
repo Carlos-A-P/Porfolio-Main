@@ -1,87 +1,129 @@
-const projects =
-	'[\n{\n"title": "Hack For LA",\n"image": "url(../portfolio/img/hfla.png)",\n"description": "This project is a multipage website that enables the organization to interact with its volunteers, stakeholders, and donors. It is a great opportunity for new volunteers who want to improve their git protocol skills, such as branching, separation of concerns, and more.",\n"live": "https://hackforla.org/",\n"code": "https://github.com/hackforla/website",\n"made_with": {\n"0":"HTML", \n"1":"Sass/SCSS", \n"2":"Javascript", \n"3":"Jekyll"\n},\n"preview": "<img style=\\"width:100%;\\" src=\\"../portfolio/img/hfla.png\\" />",\n"longer_description": "This is a multipage website that helps the organization communicate with volunteers, stakeholders, and donors. I engaged in continuous learning and research to stay updated on the latest technologies, tools, and methodologies relevant to web development, applying new knowledge to enhance the website\'s functionality."\n},\n\n\n{\n"title": "Space tourism multi-page website",\n"image": "url(../portfolio/img/space.png)",\n"description": "This is a multipage website created using React and Sass. User should be able to: View the optimal layout for each of the website\'s pages depending on their device\'s screen size See hover states for all interactive elements on the page View each page and be able to toggle between the tabs to see new information",\n"live": "https://space-tourism-multipage-cpwd.netlify.app/",\n"code": "https://github.com/Carlos-A-P/space-tourism-website-react",\n"made_with": {\n"0":"React.js", \n"1":"Sass/SCSS", \n"2":"React Hooks"\n},\n"preview": "<div style=\\"padding:64.98% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/651349702?h=6217f9e8dc&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"space-tourism-multipage\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n"longer_description": "This is the first time I made a multi-page layout with React.js. I completed the project using react-router and react hooks. I also used the json file provided to utilize and display the information. I also focused on accessibility and made sure that the layout of my pages are accessible to both keyboard users and screen readers. I also learned a lot about using React and Sass together and found it easy to work with."\n},\n\n\n{\n"title": "E-Commerce Product Page",\n"image": "url(../portfolio/img/e-commerce.jpg)",\n"description": "This is a E-commerce product page where the user is allowed to open a lightbox gallery by clicking on the large product image, switch the large product image by clicking on the small thumbnail images, view cart, and add/remove cart items",\n"live": "https://cpwd-ecommerce-product-page.netlify.app/",\n"code": "https://github.com/Carlos-A-P/ecommerce-product-page-react",\n"made_with": {\n"0":"React.js", \n"1":"Redux", \n"2":"CSS"\n},\n"preview": "<div style=\\"padding:61.12% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/644902213?h=9633cd3cb3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"e-commerce product page\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n\n"longer_description": "This was a very challenging and fun project. I implemented the Redux javascript library in order to manage the state for my cart. I became more comfortable with React hooks and can comfortably navigate and implement functions through out my project."\n},\n{\n"title": "Shortly URL shortening API website",\n"image": "url(../portfolio/img/url-shortening-api.jpg)",\n"description": "In this project, users should be able to: View the optimal layout for the site depending on their device\'s screen size, Shorten any valid URL, See a list of their shortened links, even after refreshing the browser, Copy the shortened link to their clipboard in a single click, Receive an error message when the form is submitted if: The input field is empty",\n"live": "https://carlos-a-p.github.io/URL-shortening-API-master/",\n"code": "https://github.com/Carlos-A-P/URL-shortening-API-master",\n"made_with": {\n"0":"HTML", \n"1":"CSS", \n"2":"JavaScript",\n"3":"BootStrap",\n"4":"API"\n},\n"preview": "<div style=\\"padding:64.29% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/635907938?h=4c214efa68&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"URL-Shortening-API\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n\n"longer_description": "I used the BootStrap framework to get familiar using it and I noticed that it does make the project easier to complete. I also tried to insert a loading gif to simulate a loading element. I used a setTimeout() method to add a timer of 2 seconds after the user submits the input. Overall, this was a fun project and I hope to get proficient at utilizing Bootstrap"\n},\n{\n"title": "My Portfolio",\n"image": "url(../portfolio/img/portfolio-preview.png)",\n"description": "This is my portfolio that I created displaying my projects and work as a front-end developer. I aimed for a simple look and and format that\'s easy to navigate through. User should be able to view project cards along with video preview of projects. Also includes email submission form using Formspree API.",\n"live": "https://carlospwd.netlify.app/",\n"code": "https://github.com/Carlos-A-P/Portfolio",\n"made_with": {\n"0":"HTML", \n"1":"CSS", \n"2":"JavaScript",\n"3":"BootStrap",\n"4":"JQuery",\n"5":"JSON"\n},\n"preview": "<div style=\\"padding:64.29% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/638017476?h=2a4669998e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"portfolio-preview\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n\n"longer_description": "This project was my first time implementing bootstrap and jquery into my project. I thought jquery was complex at first, but after getting the hang of its settings and reading through the documentation, I found that I saved a lot of time using this framework. I usually try to keep accessibility in mind, but bootstrap already gets that taken care of. I tried to keep animations to a minimum. I didn\'t want to rely on every user having above-average internet speed, and I learned that animations could be incredibly taxing on mobile devices. I used jquery to add some exciting animations into my nav settings. There were already many blogs and methods to do this, and I wanted to try it out. I\'m glad I did since it made my portfolio look more professional, and I learned a lot about programming frameworks. As for the video previews, I was thinking of downloading video files, but I quickly learned that it could drastically slow down the website\'s loading speed. I also had a problem where I didn\'t want to create an individual modal for each card, so I used JSON object and for loops to pass in values depending on the card chosen. The JSON object also allowed me to add values and automatically update my project section by appending a new child. I did this using for loops."\n},\n{\n"title": "Coffee Roasters Multi-page Subscription Site",\n"image": "url(../portfolio/img/coffeeroasters-subscription.png)",\n"description": "This is a 3-page coffee subscription website. Users should be able to: View the optimal layout for each page depending on their device\'s screen size, See hover states for all interactive elements throughout the site, Make selections to create a coffee subscription and see an order summary modal of their choices.",\n"live": "https://cpwd-coffeeroasters.netlify.app/",\n"code": "https://github.com/Carlos-A-P/coffeeroasters-subscription-site",\n"made_with": {\n"0":"HTML", \n"1":"CSS", \n"2":"JavaScript"\n},\n"preview": "<div style=\\"padding:82% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/615312720?h=e2fb553814&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"coffee_roasters\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n\n"longer_description": "This was a tough challenge that tested a lot of my javascript skills and organizational skills. It was a lot more than I expected but overall a very educational experience. I learned that there are many ways to do things, but some may be much easier and efficient than others. For example, my accordion was comprised of many buttons, but I first started by using div elements along with click event listeners. I later discovered that it was very tedious to make it accessible and decided to go with buttons instead, which comprised its own challenges with inner tags. Overall, I wanted to make an app that was mainly functional and accessible, so I didn\'t focus too much on transitions. I enjoyed this project, and I certainly learned a lot from it."\n},\n{\n"title": "Calculator App + Color Schemes",\n"image": "url(../portfolio/img/calculator.jpg)",\n"description": "This is a frontend mentor challenge. In this project I focused more on accessibility. User should be able to: See the size of the elements adjust based on their device\'s screen size; perform mathematical operations like addition, subtraction, multiplication, and division; Adjust the color theme based on their preference.",\n"live": "https://cpwd-calculator-app.netlify.app/",\n"code": "https://github.com/Carlos-A-P/calculator-app-multi-color",\n"made_with": {\n"0":"HTML", \n"1":"SASS/SCSS", \n"2":"JavaScript"\n},\n"preview": "<div style=\\"padding:64.98% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/645830053?h=33004fb300&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"Calculator app\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n"longer_description": "This was a fun challenge and I learned a lot about styling with Sass. I also used Javascript classes to set up the calculator. I also separated the theme files into another folder in order to add some organization into my project. I then imported the theme file into my script file in order to reduce src links in my HTML. I also wanted to focus more on accessibility this challenge by using proper HTML5 markup. I also tried to implement a feature where the user can navigate the keypad with the W,A,S,D keys but was unable to finish. Overall this is still a functional and accessible calculator and I want to improve it\'s features later on."\n},\n{\n"title": "Github User Search App",\n"image": "url(../portfolio/img/github-user-search-app.jpg)",\n"description": "This app allows users to search for a username from Github using Github API. The app displays relevant information based on their search. User can also toggle between light and dark themes.",\n"live": "https://cpwd-github-user-search-app.netlify.app/",\n"code": "https://github.com/Carlos-A-P/github-user-search-app",\n"made_with": {\n"0":"HTML", \n"1":"CSS", \n"2":"JavaScript",\n"3":"API"\n},\n"preview": "<div style=\\"padding:82% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/615315737?h=5dbc8956b8&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"github_api\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n"longer_description": "This is my first API project where I made an app able to gather information from github to display user profile information. I also learned how to use Figma design files in order to provide the most accurate measurements possible."\n},\n{\n"title": "To-Do App",\n"image": "url(../portfolio/img/todo-app.jpg)",\n"description": "This is a todo list challenge from frontend mentor. User should be able to: add new todos to the list, marks todos as complete, delete todos from the list, filter by all/active/complete todos, clear all completed todos, toggle light and dark mode, drag and drop to reorder items on the list",\n"live": "https://cpwd-todo-list.netlify.app/",\n"code": "https://github.com/Carlos-A-P/ToDo-List",\n"made_with": {\n"0":"HTML", \n"1":"CSS", \n"2":"JavaScript",\n"3":"Local Storage"\n},\n"preview": "<div style=\\"padding:82% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/615317334?h=11c4fda5ee&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"todo_app\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n"longer_description": "This challenge proved to be difficult. I learned a lot about for loops and foreach methods. I tried to connect this to a backend server such as Azure db but I found it rather difficult and resulted to using local storage which also got the results that I wanted. I thought it was a lot easier to use for loops for this but quickly learned that in order to use them I have to keep changing the original array. As for saving the user\'s list, I saved the inner html of the todo wrapper and store it in a local storage every time it gets updated but some of the event handlers. Something that I\'d like to improve on it learning how to implement a functional drag and drop without having to use an open source code."\n},\n{\n"title": "Tip Calculator",\n"image": "url(../portfolio/img/tip-calculator.jpg)",\n"description": "This is a tip calculator app from frontend mentor. This project was completed with the help of HTML, CSS, and JavaScript",\n"live": "https://carlospwd-tip-calculator.netlify.app/",\n"code": "https://github.com/Carlos-A-P/tip-calculator-app",\n"made_with": {\n"0":"HTML", \n"1":"CSS", \n"2":"JavaScript"\n},\n"preview": "<div style=\\"padding:82% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/615318728?h=7a0bcc9e62&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"tip_calculator\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n"longer_description": "This was an extremely fun challenge where I got to practice more javascript functions and understand how to efficiently implement it in my projects. I also used the data attribute to link my grid buttons to my script.js file. I generally reserve the class attribute for my css and my id attributes for JavaScript, however, in this case I had multiple buttons so I used the data attribute. As far as what I learned in CSS, I learned how to used the focus pseudo-class to let the user see the tip percentage they are using."\n},\n{\n"title": "Room Homepage",\n"image": "url(../portfolio/img/room-homepage.jpg)",\n"description": "A Frontend mentor project completed with HTML, CSS, and JavaScript. This project contains an interactive nav bar with a slideshow",\n"live": "https://cpwd-room-homepage.netlify.app/",\n"code": "https://github.com/Carlos-A-P/room-homepage",\n"made_with": {\n"0":"HTML", \n"1":"CSS", \n"2":"JavaScript"\n},\n"preview": "<div style=\\"padding:64.75% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/615320341?h=8c3b7132ea&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"room_homepage\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n"longer_description": "This challenge really tested my grid-layout skills and I tried to use the least amount of code possible. This is also the first project where I added animations and transitions which was really fun to play around with. Lastly, I was able to add smooth transitions between slides and header images smoothly in multiple screens."\n},\n{\n"title": "Launch Countdown Timer",\n"image": "url(../portfolio/img/launch-countdown-timer.jpg)",\n"description": "This is a countdown timer challenge that I completed using HTML, CSS, and JavaScript. I used most of the javascript and css for the timer from this code: https://codepen.io/shshaw/pen/vKzoLL So I mainly focused on styling the countdown timer as if I were in a situation where I would really have an html and had to prioritize my CSS over the timer…",\n"live": "https://cpwd-count-down-timer.netlify.app/",\n"code": "https://github.com/Carlos-A-P/launch-countdown-timer",\n"made_with": {\n"0":"HTML", \n"1":"CSS", \n"2":"JavaScript"\n},\n"preview": "<div style=\\"padding:66.54% 0 0 0;position:relative;\\"><iframe src=\\"https://player.vimeo.com/video/615322739?h=47000b7843&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\\" frameborder=\\"0\\" allow=\\"autoplay; fullscreen; picture-in-picture\\" allowfullscreen style=\\"position:absolute;top:0;left:0;width:100%;height:100%;\\" title=\\"countdown-timer\\"></iframe></div><script src=\\"https://player.vimeo.com/api/player.js\\"></script>",\n"longer_description": "In this challenge I used the a javascript code from Website CodePen Home Flip Clock & Countdown which is a clock made without a HTML so I mainly focused on prioritizing my CSS and changing styles using Devtools. I also added a few changes to the javascript to remove the second timer."\n}\n]';
-let myProjects = document.getElementById("grid");
-function addCard(e, t, a) {
-	let i = document.createElement("div");
-	i.classList.add("card");
-	let o = document.createElement("div");
-	o.classList.add("project-img"), (o.style.backgroundImage = String(e));
-	let r = document.createElement("div");
-	r.classList.add("card-body", "d-flex", "flex-column");
-	let s = document.createElement("h3");
-	s.classList.add("card-title"), (s.innerHTML = String(t));
-	let n = document.createElement("p");
-	n.classList.add("card-text"), (n.innerHTML = String(a));
-	let l = document.createElement("button");
-	l.classList.add("btn", "mt-auto"),
-		l.setAttribute("type", "button"),
-		l.setAttribute("data-bs-toggle", "modal"),
-		l.setAttribute("data-bs-target", "#projectModal"),
-		l.setAttribute("onClick", `modalInfo('${t}')`),
-		(l.innerHTML = "View more"),
-		i.appendChild(o),
-		i.appendChild(r),
-		r.appendChild(s),
-		r.appendChild(n),
-		r.appendChild(l),
-		myProjects.appendChild(i);
+/** ---- PROJECTS DATA ----
+ * If you still have a JSON string elsewhere, this adapter handles both.
+ * Prefer: define PROJECTS as a real array and delete any old `const projects = '...'`.
+ */
+const PROJECTS = [
+  {
+    title: "Hack For LA",
+    image: "url(../portfolio/img/hfla.png)",
+    description: "This project is a multipage website that enables the organization to interact with its volunteers, stakeholders, and donors. It is a great opportunity for new volunteers who want to improve their git protocol skills, such as branching, separation of concerns, and more.",
+    live: "https://hackforla.org/",
+    code: "https://github.com/hackforla/website",
+    made_with: { "0":"HTML","1":"Sass/SCSS","2":"JavaScript","3":"Jekyll" },
+    preview: "<img style=\"width:100%;\" src=\"../portfolio/img/hfla.png\" />",
+    longer_description: "Developed and maintained a multi-page website enabling the organization to effectively communicate with volunteers, stakeholders, and donors. Implemented features and optimizations to improve accessibility, performance, and content management, ensuring the platform remains scalable and aligned with the organization’s mission."
+  },
+  {
+    title: "Space Tourism Multi-Page Website",
+    image: "url(../portfolio/img/space.png)",
+    description: "This is a multipage website created using React and Sass. User should be able to: View the optimal layout for each of the website\'s pages depending on their device\'s screen size See hover states for all interactive elements on the page View each page and be able to toggle between the tabs to see new information",
+    live: "https://space-tourism-multipage-cpwd.netlify.app/",
+    code: "https://github.com/Carlos-A-P/space-tourism-website-react",
+    made_with: { "0":"React.js","1":"Sass/SCSS","2":"React Hooks" },
+    preview: `<div style="padding:65% 0 0 0;position:relative;">
+		<iframe
+			src="https://player.vimeo.com/video/651349702?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+			frameborder="0"
+			allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+			referrerpolicy="strict-origin-when-cross-origin"
+			loading="lazy"
+			style="position:absolute;top:0;left:0;width:100%;height:100%;"
+			title="space-tourism-multipage">
+		</iframe>
+		</div>`,
+    longer_description: "Developed a responsive multi-page layout in React.js, leveraging React Router for navigation and React Hooks for state management. Integrated data from a JSON source to dynamically render content. Prioritized accessibility by ensuring full keyboard navigation support and screen reader compatibility. Combined React with Sass for modular, maintainable styling and an efficient development workflow."
+  },
+  {
+    title: "La Liga Defensora — Official Website (The United Firm | La Liga Defensora, A.P.C.)",
+    image: "url(../portfolio/img/la_liga_website.png)",
+    description: "Built and maintained LaLigaDefensora.com, a Spanish-language legal brand site with IP-based geofencing for jurisdiction-specific content and compliance with regional advertising rules. Applied SEO best practices and designed high-conversion, mobile-optimized landing pages to enhance visibility and user engagement.",
+    live: "https://laligadefensora.com/",
+    code: "",
+    made_with: {
+      "0":"WordPress","1":"PHP","2":"JavaScript","3":"Python (automation)","6":"Wordfence"
+    },
+    preview: "<img src=\"../portfolio/img/la_liga_website.png\" alt=\"La Liga Defensora website preview\" loading=\"lazy\" style=\"width:100%;\" />",
+    longer_description: "Led the redesign and ongoing development of LaLigaDefensora.com, enhancing performance, user experience, and brand consistency across devices. Implemented IP-based geofencing in coordination with FirmaDefensora.com to comply with Texas Bar advertising regulations, deploying state-specific site variants while preserving SEO rankings through canonical and noindex strategies. Built and integrated a custom Python automation tool that reduced web lead processing time from approximately 8 hours to 15 minutes, eliminating backlogs and improving response efficiency. Strengthened site security through Wordfence monitoring, proactive log analysis, and incident response procedures, and established a failover strategy to maintain uptime during hosting outages."
+  }
+];
+
+/** ---- RENDERING ---- */
+const grid = document.getElementById("grid");
+
+function addCard(image, title, desc) {
+  const card = document.createElement("div");
+  card.classList.add("card");
+
+  const img = document.createElement("div");
+  img.classList.add("project-img");
+  img.style.backgroundImage = String(image);
+
+  const body = document.createElement("div");
+  body.classList.add("card-body", "d-flex", "flex-column");
+
+  const h3 = document.createElement("h3");
+  h3.classList.add("card-title", "h4");
+  h3.textContent = String(title);
+
+  const p = document.createElement("p");
+  p.classList.add("card-text");
+  p.textContent = String(desc);
+
+  const btn = document.createElement("button");
+  btn.classList.add("btn", "mt-auto");
+  btn.type = "button";
+  btn.setAttribute("data-bs-toggle", "modal");
+  btn.setAttribute("data-bs-target", "#projectModal");
+  btn.addEventListener("click", () => modalInfo(title));
+  btn.textContent = "View more";
+
+  card.append(img, body);
+  body.append(h3, p, btn);
+  grid.appendChild(card);
 }
+
 function displayProjects() {
-	for (let e = 0; e < 6; e++)
-		addCard(
-			JSON.parse(projects)[e].image,
-			JSON.parse(projects)[e].title,
-			JSON.parse(projects)[e].description
-		);
+  const count = Math.min(6, PROJECTS.length);
+  for (let i = 0; i < count; i++) {
+    const item = PROJECTS[i];
+    addCard(item.image, item.title, item.description);
+  }
 }
+console.log(Array.isArray(PROJECTS), PROJECTS.length);
 displayProjects();
-let modalTitle = document.getElementById("projectModalLabel"),
-	card_description = document.getElementById("card-description"),
-	codeBtn = document.getElementById("viewCode"),
-	liveBtn = document.getElementById("viewLive"),
-	techList = document.getElementById("tech_List"),
-	cardPreview = document.getElementById("card-preview");
-function modalInfo(e) {
-	let t;
-	for (let a = 0; a < JSON.parse(projects).length; a++)
-		if (e === String(JSON.parse(projects)[a].title)) {
-			(modalTitle.innerText = String(JSON.parse(projects)[a].title)),
-				(cardPreview.innerHTML = JSON.parse(projects)[a].preview),
-				(card_description.innerText = String(
-					JSON.parse(projects)[a].longer_description
-				)),
-				codeBtn.setAttribute("href", `${JSON.parse(projects)[a].code}`),
-				liveBtn.setAttribute("href", `${JSON.parse(projects)[a].live}`),
-				(t = JSON.parse(projects)[a].made_with);
-			let e = [];
-			for (let a = 0; a < Object.keys(t).length; a++)
-				e.push(`<li>${t[a]}</li>`), (techList.innerHTML = e.join(""));
-		}
+
+// Modal
+const modalTitle = document.getElementById("projectModalLabel");
+const card_description = document.getElementById("card-description");
+const codeBtn = document.getElementById("viewCode");
+const liveBtn = document.getElementById("viewLive");
+const techList = document.getElementById("tech_List");
+const cardPreview = document.getElementById("card-preview");
+
+function modalInfo(title) {
+  const item = PROJECTS.find(p => String(p.title) === String(title));
+  if (!item) return;
+
+  modalTitle.textContent = item.title;
+  cardPreview.innerHTML = item.preview || "";
+  card_description.textContent = item.longer_description || "";
+
+  // Buttons
+  if (item.code) {
+    codeBtn.href = item.code;
+    codeBtn.removeAttribute("disabled");
+    codeBtn.classList.remove("disabled");
+  } else {
+    codeBtn.href = "#";
+    codeBtn.setAttribute("disabled", "true");
+    codeBtn.classList.add("disabled");
+  }
+  liveBtn.href = item.live || "#";
+
+  // Tech list
+  const mw = item.made_with || {};
+  techList.innerHTML = Object.keys(mw)
+    .sort((a,b)=>Number(a)-Number(b))
+    .map(k => `<li>${mw[k]}</li>`)
+    .join("");
 }
-function ajax(e, t, a, i, o) {
-	var r = new XMLHttpRequest();
-	r.open(e, t),
-		r.setRequestHeader("Accept", "application/json"),
-		(r.onreadystatechange = function () {
-			r.readyState === XMLHttpRequest.DONE &&
-				(200 === r.status
-					? i(r.response, r.responseType)
-					: o(r.status, r.response, r.responseType));
-		}),
-		r.send(a);
-}
-window.addEventListener("DOMContentLoaded", function () {
-	var e = document.getElementById("my-form"),
-		t = document.getElementById("status");
-	function a() {
-		e.reset(), t.classList.add("success"), (t.innerHTML = "Thanks!");
-	}
-	function i() {
-		t.classList.add("error"), (t.innerHTML = "Oops! There was a problem.");
-	}
-	e.addEventListener("submit", function (t) {
-		t.preventDefault();
-		var o = new FormData(e);
-		ajax(e.method, e.action, o, a, i);
-	});
-});
