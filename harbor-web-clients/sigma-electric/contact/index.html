@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Contact Section -->
+    <section class="bg-white">
+        <!-- Google Map -->
+        <div class="w-full h-96 lg:h-[500px] bg-gray-200">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.7474479892967!2d-77.5084!3d38.7509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQ1JzAzLjIiTiA3N8KwMzAnMzAuMiJX!5e0!3m2!1sen!2sus!4v1234567890" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+        <!-- Contact Information Cards -->
+        <div class="max-w-7xl mx-auto px-4 -mt-20 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <!-- Address Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-map-marker-alt text-orange-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-2">Address:</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Electrician Company<br>
+                                8494 Signal Hill Road Manassas,<br>
+                                VA, 20110
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Hours Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="far fa-clock text-orange-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-2">Work Hours:</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                Mon-Fri 08:00 AM - 05:00 PM<br>
+                                Sat-Sun: Emergency only
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phone Numbers Card -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-phone-alt text-orange-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-gray-800 mb-2">Phone Numbers:</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                <a href="tel:18007654321" class="hover:text-orange-500 transition-colors">1 (800) 765-43-21</a> (Appointments)<br>
+                                <a href="tel:18007654322" class="hover:text-orange-500 transition-colors">1 (800) 765-43-22</a> (Office)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div class="max-w-4xl mx-auto px-4 pb-16 lg:pb-24">
+            <!-- Form Header -->
+            <div class="text-center mb-8">
+                <p class="text-orange-500 font-semibold text-sm uppercase tracking-wide mb-3">
+                    Contact Form
+                </p>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                    Get In Touch with Us
+                </h2>
+                <p class="text-gray-600 text-base lg:text-lg">
+                    Are you stumped by a home wiring project or problem? Fill out the form with the details of your situation and we can come to your aid.
+                </p>
+            </div>
+
+            <!-- Contact Form -->
+            <form class="space-y-6">
+                <!-- Name -->
+                <div>
+                    <input 
+                        type="text" 
+                        placeholder="Your Name *" 
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-gray-50">
+                </div>
+
+                <!-- Email and Phone Row -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input 
+                        type="email" 
+                        placeholder="Your e-mail address *" 
+                        required
+                        class="px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-gray-50">
+                    <input 
+                        type="tel" 
+                        placeholder="Your phone number" 
+                        class="px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-gray-50">
+                </div>
+
+                <!-- Question in Detail -->
+                <div>
+                    <textarea 
+                        placeholder="Question in Detail *" 
+                        rows="6"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none bg-gray-50"></textarea>
+                </div>
+
+                <!-- Disclaimer -->
+                <p class="text-gray-600 text-sm text-center">
+                    All Electrical work must be done by a qualified licensed electrician.
+                </p>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button 
+                        type="submit" 
+                        class="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-3">
+                        <i class="fas fa-bolt"></i>
+                        Contact us
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Form submission
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for contacting us! We will get back to you soon.');
+                contactForm.reset();
+            });
+        }
+    </script>
+</body>
+</html>

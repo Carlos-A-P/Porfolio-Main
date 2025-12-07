@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule for Service CTA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Example page content to show the button in context -->
+    <div class="min-h-screen flex items-center justify-center p-8">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Need Electrical Service?</h1>
+            <p class="text-gray-600 mb-8">Click the button below to schedule an appointment</p>
+            
+            <!-- CTA Button -->
+            <button id="open-modal" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-3">
+                <i class="fas fa-bolt"></i>
+                Schedule for Service
+            </button>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="appointment-modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+            <!-- Close Button -->
+            <button id="close-modal" class="absolute top-4 right-4 w-10 h-10 flex items-center justify-center text-gray-400 hover:text-gray-600 transition-colors z-10">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+
+            <!-- Modal Content -->
+            <div class="p-8 lg:p-12">
+                <!-- Heading -->
+                <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-8">
+                    Make an Appointment
+                </h2>
+
+                <!-- Appointment Form -->
+                <form id="appointment-form" class="space-y-6">
+                    <!-- Name -->
+                    <div>
+                        <input 
+                            type="text" 
+                            placeholder="Your Name *" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                    </div>
+
+                    <!-- Email and Phone Row -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <input 
+                            type="email" 
+                            placeholder="Your e-mail address *" 
+                            required
+                            class="px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                        <input 
+                            type="tel" 
+                            placeholder="Your phone number" 
+                            class="px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                    </div>
+
+                    <!-- Address -->
+                    <div>
+                        <input 
+                            type="text" 
+                            placeholder="Address *" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                    </div>
+
+                    <!-- Service Dropdown -->
+                    <div class="relative">
+                        <select 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent appearance-none bg-white text-gray-700">
+                            <option value="" disabled selected>Service</option>
+                            <option value="electrical">Electrical Installation</option>
+                            <option value="repair">Electrical Repair</option>
+                            <option value="maintenance">Maintenance</option>
+                            <option value="emergency">Emergency Service</option>
+                            <option value="inspection">Inspection</option>
+                            <option value="panel">Panel Upgrade</option>
+                            <option value="lighting">Lighting Installation</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <i class="fas fa-chevron-down absolute right-4 top-1/2 transform -translate-y-1/2 text-orange-500 pointer-events-none"></i>
+                    </div>
+
+                    <!-- Date of Visit -->
+                    <div class="relative">
+                        <input 
+                            type="date" 
+                            placeholder="Date of visit" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent">
+                        <i class="fas fa-calendar-alt absolute right-4 top-1/2 transform -translate-y-1/2 text-orange-500 pointer-events-none"></i>
+                    </div>
+
+                    <!-- Comment -->
+                    <div>
+                        <textarea 
+                            placeholder="Your comment" 
+                            rows="4"
+                            class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent resize-none"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button 
+                        type="submit" 
+                        class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center gap-3">
+                        <i class="fas fa-bolt"></i>
+                        Explore services
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const openModalBtn = document.getElementById('open-modal');
+        const closeModalBtn = document.getElementById('close-modal');
+        const modal = document.getElementById('appointment-modal');
+        const appointmentForm = document.getElementById('appointment-form');
+
+        // Open modal
+        openModalBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
+
+        // Close modal
+        closeModalBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close modal when clicking outside
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // Form submission
+        appointmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Here you would typically send the form data to your server
+            // For now, we'll just show an alert
+            alert('Appointment request submitted! We will contact you soon.');
+            
+            // Close modal and reset form
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+            appointmentForm.reset();
+        });
+    </script>
+</body>
+</html>

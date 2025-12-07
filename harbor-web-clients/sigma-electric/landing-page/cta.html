@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- CTA Section with Split Background -->
+    <section class="relative py-24 lg:py-32 overflow-hidden">
+        <!-- Background Images -->
+        <div class="absolute inset-0 flex">
+            <!-- Left Image -->
+            <div class="w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&h=800&fit=crop" 
+                     alt="Electrical equipment" 
+                     class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            </div>
+            
+            <!-- Right Image -->
+            <div class="w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&h=800&fit=crop" 
+                     alt="Electrician working" 
+                     class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+            </div>
+        </div>
+
+        <!-- Content Box -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4">
+            <div class="max-w-2xl lg:ml-0 mx-auto bg-white rounded-lg shadow-2xl p-8 lg:p-12">
+                <!-- Orange Left Border -->
+                <div class="border-l-4 border-orange-500 pl-6">
+                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6">
+                        Do you <span class="text-orange-500">Need Help</span><br>
+                        With Electrical<br>
+                        Maintenance?
+                    </h2>
+                </div>
+
+                <!-- Description -->
+                <p class="text-gray-600 text-base lg:text-lg mb-8 leading-relaxed">
+                    Our electrical repair and service options are proudly offered to clients. Give us a call today to schedule a free service estimate!
+                </p>
+
+                <!-- Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:18007654321" class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-phone-alt"></i>
+                        Give Us a Call
+                    </a>
+                    <a href="#estimate" class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <i class="fas fa-bolt"></i>
+                        Free Estimate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional: Following section to show context -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Why Choose Our Services?</h3>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                With years of experience and a commitment to excellence, we provide top-quality electrical services for residential and commercial properties.
+            </p>
+        </div>
+    </section>
+</body>
+</html>

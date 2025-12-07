@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics & Testimonials Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Statistics & Testimonials Section -->
+    <section class="relative bg-gray-800 text-white overflow-hidden">
+        <!-- Top Statistics Bar -->
+        <div class="relative z-10 py-12 lg:py-16">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Left Side - Label -->
+                    <div class="text-center lg:text-left">
+                        <p class="text-orange-500 font-semibold text-sm uppercase mb-2">Our Statistics</p>
+                        <h3 class="text-2xl lg:text-3xl font-bold">Some Important<br>Facts</h3>
+                    </div>
+
+                    <!-- Stat 1 -->
+                    <div class="text-center">
+                        <div class="text-4xl lg:text-5xl font-bold mb-2">5000+</div>
+                        <p class="text-gray-300 text-sm lg:text-base">Residential Projects</p>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="text-center">
+                        <div class="text-4xl lg:text-5xl font-bold mb-2">1500+</div>
+                        <p class="text-gray-300 text-sm lg:text-base">Commercial Projects</p>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="text-center">
+                        <div class="text-4xl lg:text-5xl font-bold mb-2">1000+</div>
+                        <p class="text-gray-300 text-sm lg:text-base">Industrial Projects</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section - Testimonial + Emergency Service -->
+        <div class="relative">
+            <div class="max-w-7xl mx-auto px-4 pb-16 lg:pb-24">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <!-- Left - Testimonial Carousel -->
+                    <div class="bg-white text-gray-800 rounded-lg shadow-xl p-8 lg:p-12 relative">
+                        <!-- Orange Quote Icon -->
+                        <div class="flex items-start gap-6 mb-6">
+                            <div class="text-orange-500 text-6xl lg:text-7xl leading-none font-serif">"</div>
+                            <div class="flex-1">
+                                <p class="text-orange-500 font-semibold text-sm uppercase mb-3">What Our Clients Say</p>
+                            </div>
+                        </div>
+
+                        <!-- Carousel Container -->
+                        <div class="relative overflow-hidden mb-8">
+                            <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-out">
+                                <!-- Testimonial 1 -->
+                                <div class="w-full flex-shrink-0">
+                                    <h4 class="text-2xl lg:text-3xl font-bold mb-6">
+                                        Professional, Reliable<br>& Cost Effective
+                                    </h4>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                        We've been using your company and from the very beginning found him and his team to be extremely professional and knowledgeable. We wouldn't have any hesitation in recommending their services.
+                                    </p>
+                                    <p class="font-semibold text-gray-800">- Teresa and Kevin K.</p>
+                                </div>
+
+                                <!-- Testimonial 2 -->
+                                <div class="w-full flex-shrink-0">
+                                    <h4 class="text-2xl lg:text-3xl font-bold mb-6">
+                                        Outstanding Service<br>& Attention to Detail
+                                    </h4>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                        The team was incredibly professional and completed our electrical upgrade ahead of schedule. Their attention to detail and commitment to quality really impressed us. Highly recommended!
+                                    </p>
+                                    <p class="font-semibold text-gray-800">- Michael and Sarah T.</p>
+                                </div>
+
+                                <!-- Testimonial 3 -->
+                                <div class="w-full flex-shrink-0">
+                                    <h4 class="text-2xl lg:text-3xl font-bold mb-6">
+                                        Quick Response<br>& Expert Solutions
+                                    </h4>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                        Called them for an emergency repair and they arrived within the hour. Fixed the problem quickly and explained everything clearly. Fair pricing and excellent work. Will definitely use again.
+                                    </p>
+                                    <p class="font-semibold text-gray-800">- David R.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Avatar (positioned absolutely) -->
+                        <div class="absolute -top-8 left-12 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                            <img src="https://i.pravatar.cc/80?img=5" alt="Client" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Carousel Dots -->
+                        <div class="flex gap-2 justify-center lg:justify-start">
+                            <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-800 transition-all duration-300" data-index="0"></button>
+                            <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-index="1"></button>
+                            <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300 transition-all duration-300" data-index="2"></button>
+                        </div>
+                    </div>
+
+                    <!-- Right - Emergency Service Card with Background -->
+                    <div class="relative h-96 lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-xl">
+                        <!-- Background Image -->
+                        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200&h=800&fit=crop" 
+                             alt="Electrician working" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+
+                        <!-- Emergency Card Overlay -->
+                        <div class="absolute bottom-0 left-0 right-0 bg-orange-500 p-8 lg:p-10">
+                            <h3 class="text-2xl lg:text-3xl font-bold text-white mb-4">
+                                Emergency Service
+                            </h3>
+                            <p class="text-white text-sm lg:text-base mb-4">
+                                If this is an emergency outside of normal business hours, call us
+                            </p>
+                            <a href="tel:18007654321" class="inline-flex items-center gap-3 text-white text-xl lg:text-2xl font-bold hover:text-gray-100 transition-colors">
+                                <i class="fas fa-phone-alt"></i>
+                                1 (800) 765-43-21
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Action Button (bottom right) -->
+        <a href="#contact" class="fixed bottom-8 right-8 w-14 h-14 bg-orange-500 hover:bg-orange-600 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 z-50">
+            <i class="fas fa-bolt text-white text-xl"></i>
+        </a>
+    </section>
+
+    <script>
+        // Testimonial carousel functionality
+        let currentTestimonial = 0;
+        const testimonialCarousel = document.getElementById('testimonial-carousel');
+        const testimonialDots = document.querySelectorAll('.testimonial-dot');
+        const totalTestimonials = 3;
+
+        function updateTestimonialCarousel() {
+            if (testimonialCarousel) {
+                testimonialCarousel.style.transform = `translateX(-${currentTestimonial * 100}%)`;
+                
+                // Update dots
+                testimonialDots.forEach((dot, index) => {
+                    if (index === currentTestimonial) {
+                        dot.classList.add('bg-gray-800');
+                        dot.classList.remove('bg-gray-300');
+                    } else {
+                        dot.classList.remove('bg-gray-800');
+                        dot.classList.add('bg-gray-300');
+                    }
+                });
+            }
+        }
+
+        // Dot navigation
+        testimonialDots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                currentTestimonial = parseInt(dot.dataset.index);
+                updateTestimonialCarousel();
+            });
+        });
+
+        // Auto-play testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            updateTestimonialCarousel();
+        }, 5000);
+
+        // Touch/swipe support for testimonials
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        if (testimonialCarousel) {
+            testimonialCarousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            testimonialCarousel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleTestimonialSwipe();
+            });
+        }
+
+        function handleTestimonialSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                // Swipe left
+                currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+                updateTestimonialCarousel();
+            }
+            if (touchEndX > touchStartX + 50) {
+                // Swipe right
+                currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+                updateTestimonialCarousel();
+            }
+        }
+
+        // Initialize
+        updateTestimonialCarousel();
+    </script>
+</body>
+</html>

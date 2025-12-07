@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section - Updated Design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        
+        .faq-answer.active {
+            max-height: 500px;
+            transition: max-height 0.5s ease-in, padding 0.3s ease-in;
+        }
+
+        .category-tab {
+            color: #6b7280;
+        }
+
+        .category-tab.active {
+            color: #f97316;
+            border-bottom-color: #f97316;
+        }
+
+        .category-tab:hover {
+            color: #f97316;
+        }
+
+        .faq-item {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .faq-item.hidden-filter {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- FAQ Section -->
+    <section class="py-16 lg:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <p class="text-orange-500 font-semibold text-sm uppercase tracking-wide mb-3">
+                    Your Questions. Our Answers
+                </p>
+                <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6">
+                    Frequently Asked Questions
+                </h2>
+                <p class="text-gray-600 text-base lg:text-lg max-w-3xl mx-auto mb-8">
+                    You will find answers to all of your most common Electrical Services related questions located here.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="mb-8 overflow-x-auto">
+                <div class="flex gap-2 border-b border-gray-200 min-w-max pb-px">
+                    <button class="category-tab active px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="all">
+                        All Questions
+                    </button>
+                    <button class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="installation">
+                        Installation & Setup
+                    </button>
+                    <button class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="service">
+                        Service & Maintenance
+                    </button>
+                    <button class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="safety">
+                        Safety & Compliance
+                    </button>
+                    <button class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="emergency">
+                        Emergency Services
+                    </button>
+                </div>
+            </div>
+
+            <!-- Results Count -->
+            <div class="flex items-center justify-between mb-6 pb-4 border-b border-gray-200">
+                <p class="text-gray-600 font-semibold">8 Results</p>
+                <div class="flex items-center gap-4">
+                    <span class="text-gray-600">Page 1 of 1</span>
+                </div>
+            </div>
+
+            <!-- FAQ List -->
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border-b border-gray-200" data-category="installation">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Does conduit need to go inside the transformer box?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">No. Conduit should be stopped just short of the box.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border-b border-gray-200" data-category="installation">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">How close to the pole do I bring my conduit to?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Bring your conduit as close to the pole as possible without interfering with the utility company's equipment and maintain proper clearances.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border-b border-gray-200" data-category="installation">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Is additional conduit required beyond what is installed in the ditch?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Yes, additional conduit may be required depending on local codes and the specific installation requirements. Our electricians will assess your situation and provide recommendations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border-b border-gray-200" data-category="safety">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Does someone need to inspect the ditch before covering the conduit?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Yes, most jurisdictions require an inspection before the ditch is covered to ensure proper installation and compliance with electrical codes.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border-b border-gray-200" data-category="service">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Is there a difference in meter bases?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Yes, meter bases vary in size, configuration, and capacity depending on your electrical service requirements. Residential and commercial properties often require different meter bases.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-b border-gray-200" data-category="installation">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Can septic lines be installed under power lines?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Generally yes, but proper clearances must be maintained and local codes should be consulted. It's important to coordinate with both electrical and plumbing contractors.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item border-b border-gray-200" data-category="safety">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Can permanent service be installed if the house has had a ruff in inspection?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Typically, permanent service can only be installed after all necessary inspections have been completed and approved, including the rough-in inspection and final inspection.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item border-b border-gray-200" data-category="service">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">What about outdoor lighting?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">We install a variety of outdoor lighting solutions including landscape lighting, security lighting, motion sensors, and decorative fixtures. All installations are weatherproof and code-compliant.</p>
+                    </div>
+                </div>
+            </div>
+                <!-- FAQ Item 1 -->
+                <div class="faq-item border-b border-gray-200">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Does conduit need to go inside the transformer box?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">No. Conduit should be stopped just short of the box.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item border-b border-gray-200">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">How close to the pole do I bring my conduit to?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Bring your conduit as close to the pole as possible without interfering with the utility company's equipment and maintain proper clearances.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item border-b border-gray-200">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Is additional conduit required beyond what is installed in the ditch?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Yes, additional conduit may be required depending on local codes and the specific installation requirements. Our electricians will assess your situation and provide recommendations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item border-b border-gray-200">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Does someone need to inspect the ditch before covering the conduit?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Yes, most jurisdictions require an inspection before the ditch is covered to ensure proper installation and compliance with electrical codes.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item border-b border-gray-200">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Is there a difference in meter bases?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Yes, meter bases vary in size, configuration, and capacity depending on your electrical service requirements. Residential and commercial properties often require different meter bases.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item border-b border-gray-200">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Can septic lines be installed under power lines?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Generally yes, but proper clearances must be maintained and local codes should be consulted. It's important to coordinate with both electrical and plumbing contractors.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item border-b border-gray-200">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Can permanent service be installed if the house has had a ruff in inspection?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">Typically, permanent service can only be installed after all necessary inspections have been completed and approved, including the rough-in inspection and final inspection.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item border-b border-gray-200">
+                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                        </div>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">What about outdoor lighting?</span>
+                        <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
+                            <i class="fas fa-plus text-gray-400 text-xl"></i>
+                        </div>
+                    </button>
+                    <div class="faq-answer pl-16 pr-14">
+                        <p class="text-gray-600 leading-relaxed pb-6">We install a variety of outdoor lighting solutions including landscape lighting, security lighting, motion sensors, and decorative fixtures. All installations are weatherproof and code-compliant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // FAQ Accordion functionality
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = question.querySelector('.faq-icon i');
+                
+                // Toggle current item
+                answer.classList.toggle('active');
+                
+                // Toggle icon
+                if (answer.classList.contains('active')) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                    icon.classList.remove('text-gray-400');
+                    icon.classList.add('text-orange-500');
+                } else {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                    icon.classList.remove('text-orange-500');
+                    icon.classList.add('text-gray-400');
+                }
+            });
+        });
+
+        // Category Filter functionality
+        const categoryTabs = document.querySelectorAll('.category-tab');
+        const faqItems = document.querySelectorAll('.faq-item');
+        const resultsCount = document.querySelector('.flex.items-center.justify-between p');
+
+        categoryTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.getAttribute('data-category');
+                
+                // Update active tab
+                categoryTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Filter FAQ items
+                let visibleCount = 0;
+                faqItems.forEach(item => {
+                    const itemCategory = item.getAttribute('data-category');
+                    
+                    if (category === 'all' || itemCategory === category) {
+                        item.classList.remove('hidden-filter');
+                        visibleCount++;
+                    } else {
+                        item.classList.add('hidden-filter');
+                        // Close answer if it was open
+                        const answer = item.querySelector('.faq-answer');
+                        const icon = item.querySelector('.faq-icon i');
+                        if (answer.classList.contains('active')) {
+                            answer.classList.remove('active');
+                            icon.classList.remove('fa-minus', 'text-orange-500');
+                            icon.classList.add('fa-plus', 'text-gray-400');
+                        }
+                    }
+                });
+                
+                // Update results count
+                resultsCount.textContent = `${visibleCount} Results`;
+            });
+        });
+    </script>
+</body>
+</html>

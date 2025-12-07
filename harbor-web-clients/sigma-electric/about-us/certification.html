@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Certificates Section -->
+    <section class="py-16 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Electrician Image -->
+                <div class="relative">
+                    <div class="relative h-96 lg:h-[500px] rounded-lg overflow-hidden shadow-2xl">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1000&h=800&fit=crop" 
+                             alt="Electrician with cable" 
+                             class="absolute inset-0 w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Right Side - Content -->
+                <div>
+                    <!-- Label -->
+                    <p class="text-orange-500 font-semibold text-sm uppercase tracking-wide mb-4">
+                        Certificates
+                    </p>
+
+                    <!-- Heading -->
+                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                        We are a Qualified & Certified Electrical Company
+                    </h2>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 text-base lg:text-lg mb-8 leading-relaxed">
+                        We currently employ a team of fully qualified electricians and a number of apprentices. We have been registered with he ECA and therefore all our electricians are JIB registered. Our aim is to keep our services high and our prices very competitive.
+                    </p>
+
+                    <!-- Certificates Display -->
+                    <div class="grid grid-cols-3 gap-4">
+                        <!-- Certificate 1 -->
+                        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                            <div class="relative aspect-[3/4] bg-gray-100 rounded overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=400&h=500&fit=crop" 
+                                     alt="Certificate 1" 
+                                     class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Certificate 2 -->
+                        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                            <div class="relative aspect-[3/4] bg-gray-100 rounded overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=400&h=500&fit=crop" 
+                                     alt="Certificate 2" 
+                                     class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Certificate 3 -->
+                        <div class="bg-white rounded-lg shadow-lg p-4 hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                            <div class="relative aspect-[3/4] bg-gray-100 rounded overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1554224311-beee460ae6fb?w=400&h=500&fit=crop" 
+                                     alt="Certificate 3" 
+                                     class="absolute inset-0 w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Lightbox Modal (optional) -->
+    <div id="cert-modal" class="fixed inset-0 bg-black bg-opacity-90 z-50 hidden flex items-center justify-center p-4">
+        <button id="close-cert-modal" class="absolute top-8 right-8 text-white text-4xl hover:text-orange-500 transition-colors z-10">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="max-w-3xl w-full">
+            <img id="cert-modal-img" src="" alt="Certificate" class="w-full h-auto rounded-lg shadow-2xl">
+        </div>
+    </div>
+
+    <script>
+        // Certificate lightbox functionality
+        const certificates = document.querySelectorAll('.grid.grid-cols-3 > div');
+        const certModal = document.getElementById('cert-modal');
+        const certModalImg = document.getElementById('cert-modal-img');
+        const closeCertModal = document.getElementById('close-cert-modal');
+
+        certificates.forEach((cert) => {
+            cert.addEventListener('click', () => {
+                const img = cert.querySelector('img');
+                certModalImg.src = img.src;
+                certModal.classList.remove('hidden');
+                certModal.classList.add('flex');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        if (closeCertModal) {
+            closeCertModal.addEventListener('click', () => {
+                certModal.classList.add('hidden');
+                certModal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        // Close modal when clicking outside
+        if (certModal) {
+            certModal.addEventListener('click', (e) => {
+                if (e.target === certModal) {
+                    certModal.classList.add('hidden');
+                    certModal.classList.remove('flex');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !certModal.classList.contains('hidden')) {
+                certModal.classList.add('hidden');
+                certModal.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

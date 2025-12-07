@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .video-play-btn {
+            position: relative;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .video-play-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        .video-play-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background-color: rgba(249, 115, 22, 0.3);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- Background Split -->
+        <div class="absolute inset-0 flex">
+            <!-- Left Side - Stairs Image with Video Button -->
+            <div class="w-full lg:w-1/2 relative">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=1000&fit=crop" 
+                     alt="Modern stairs with lighting" 
+                     class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+                
+                <!-- Video Play Button -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <button class="video-play-btn w-20 h-20 bg-orange-500 hover:bg-orange-600 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 z-10">
+                        <i class="fas fa-play text-white text-2xl ml-1"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Side - Gradient Background -->
+            <div class="hidden lg:block w-1/2 bg-gradient-to-br from-purple-200 via-pink-100 to-orange-100"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-4 py-16 lg:py-24">
+            <div class="flex flex-col lg:flex-row items-center justify-end">
+                <!-- Content Card -->
+                <div class="w-full lg:w-auto max-w-2xl">
+                    <!-- White Card -->
+                    <div class="bg-white rounded-lg shadow-2xl p-8 lg:p-12 relative">
+                        <!-- Orange Left Border -->
+                        <div class="border-l-4 border-orange-500 pl-6 mb-8">
+                            <h1 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-4 leading-tight">
+                                Your <span class="text-orange-500">Best Option</span><br>
+                                in Electrical<br>
+                                Contractors 24/7
+                            </h1>
+                        </div>
+
+                        <!-- Description -->
+                        <p class="text-gray-600 text-base lg:text-lg mb-8 leading-relaxed">
+                            Our experienced electricians are highly trained in all aspects of electrical service, from office lighting and security systems to emergency repair.
+                        </p>
+
+                        <!-- CTA Button -->
+                        <a href="#services" class="inline-flex items-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                            <i class="fas fa-bolt"></i>
+                            Explore services
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator (optional) -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden lg:block">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Video Modal (optional) -->
+    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden flex items-center justify-center">
+        <button id="close-modal" class="absolute top-8 right-8 text-white text-4xl hover:text-orange-500 transition-colors">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="w-full max-w-5xl px-4">
+            <div class="relative" style="padding-bottom: 56.25%;">
+                <iframe 
+                    id="video-iframe"
+                    class="absolute inset-0 w-full h-full rounded-lg"
+                    src="" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Video modal functionality
+        const videoBtn = document.querySelector('.video-play-btn');
+        const videoModal = document.getElementById('video-modal');
+        const closeModal = document.getElementById('close-modal');
+        const videoIframe = document.getElementById('video-iframe');
+
+        // Replace this with your actual video URL
+        const videoUrl = 'https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1';
+
+        if (videoBtn) {
+            videoBtn.addEventListener('click', () => {
+                videoModal.classList.remove('hidden');
+                videoModal.classList.add('flex');
+                videoIframe.src = videoUrl;
+                document.body.style.overflow = 'hidden';
+            });
+        }
+
+        if (closeModal) {
+            closeModal.addEventListener('click', () => {
+                videoModal.classList.add('hidden');
+                videoModal.classList.remove('flex');
+                videoIframe.src = '';
+                document.body.style.overflow = 'auto';
+            });
+        }
+
+        // Close modal when clicking outside
+        if (videoModal) {
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) {
+                    videoModal.classList.add('hidden');
+                    videoModal.classList.remove('flex');
+                    videoIframe.src = '';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+                videoModal.classList.add('hidden');
+                videoModal.classList.remove('flex');
+                videoIframe.src = '';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

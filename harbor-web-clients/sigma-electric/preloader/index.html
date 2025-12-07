@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader - Electrician</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Preloader container */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #preloader.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Lightning bolt animation */
+        .lightning-bolt {
+            font-size: 80px;
+            color: #f97316;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        /* Electric circle */
+        .electric-circle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-top-color: #f97316;
+            border-right-color: #f97316;
+            animation: spin 1s linear infinite;
+        }
+
+        .electric-circle-2 {
+            width: 160px;
+            height: 160px;
+            border-top-color: #fb923c;
+            border-left-color: #fb923c;
+            animation: spin 1.5s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Particles */
+        .particle {
+            position: absolute;
+            background: #f97316;
+            border-radius: 50%;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-20px) scale(1.2);
+                opacity: 0.5;
+            }
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            width: 250px;
+            height: 4px;
+            background: rgba(249, 115, 22, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f97316, #fb923c);
+            width: 0%;
+            animation: progress 2s ease-out forwards;
+            box-shadow: 0 0 10px #f97316;
+        }
+
+        @keyframes progress {
+            0% {
+                width: 0%;
+            }
+            100% {
+                width: 100%;
+            }
+        }
+
+        /* Text animation */
+        .loading-text {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-top: 20px;
+            animation: fadeInOut 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Sparks */
+        .spark {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #f97316;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #f97316;
+            animation: sparkle 1s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .spark:nth-child(1) { top: 20%; left: 50%; animation-delay: 0s; }
+        .spark:nth-child(2) { top: 40%; left: 30%; animation-delay: 0.3s; }
+        .spark:nth-child(3) { top: 60%; left: 70%; animation-delay: 0.6s; }
+        .spark:nth-child(4) { top: 80%; left: 50%; animation-delay: 0.9s; }
+        .spark:nth-child(5) { top: 30%; left: 80%; animation-delay: 0.2s; }
+        .spark:nth-child(6) { top: 70%; left: 20%; animation-delay: 0.5s; }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="relative flex flex-col items-center justify-center">
+            <!-- Rotating circles container -->
+            <div class="relative w-[200px] h-[200px] flex items-center justify-center">
+                <div class="electric-circle"></div>
+                <div class="electric-circle electric-circle-2"></div>
+
+                <!-- Center lightning bolt -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i class="fas fa-bolt lightning-bolt"></i>
+                </div>
+
+                <!-- Sparks around -->
+                <div class="spark"></div>
+                <div class="spark"></div>
+                <div class="spark"></div>
+                <div class="spark"></div>
+                <div class="spark"></div>
+                <div class="spark"></div>
+            </div>
+
+            <!-- Loading text and progress -->
+            <div class="flex flex-col items-center mt-12">
+                <div class="loading-text">LOADING</div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content (example) -->
+    <div id="main-content" style="display: none;">
+        <div class="min-h-screen flex items-center justify-center bg-gray-50">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome!</h1>
+                <p class="text-gray-600">The preloader has finished loading.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simulate loading time
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                const preloader = document.getElementById('preloader');
+                const mainContent = document.getElementById('main-content');
+                
+                // Fade out preloader
+                preloader.classList.add('fade-out');
+                
+                // Show main content after fade out
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                    mainContent.style.display = 'block';
+                }, 500);
+            }, 2000); // 2 seconds minimum loading time
+        });
+    </script>
+</body>
+</html>

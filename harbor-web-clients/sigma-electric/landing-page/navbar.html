@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electrician Navbar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Top Info Bar -->
+    <div class="bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between text-sm">
+            <!-- Address -->
+            <div class="flex items-center gap-2">
+                <i class="fas fa-map-marker-alt text-orange-500"></i>
+                <span>8494 Signal Hill Road Manassas, VA, 20110</span>
+            </div>
+            
+            <!-- Hours -->
+            <div class="flex items-center gap-2">
+                <i class="far fa-clock text-orange-500"></i>
+                <span>Mon-Fri 08:00 AM - 05:00 PM</span>
+            </div>
+            
+            <!-- Phone and Cart -->
+            <div class="flex items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-white"></i>
+                    <span class="text-orange-500 font-semibold">1 (800) 765-43-21</span>
+                </div>
+                <button class="hover:text-orange-500 transition">
+                    <i class="fas fa-shopping-cart text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <i class="fas fa-bolt text-orange-500 text-3xl mr-2"></i>
+                    <span class="text-2xl font-bold text-gray-800">Electrician</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#" class="text-orange-500 font-semibold hover:text-orange-600 transition">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition">About Us</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition">Prices</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition">Gallery</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition">Blog</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition">Shop</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition">Faq</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition">Contact</a>
+                </div>
+
+                <!-- Appointment Button -->
+                <div class="hidden lg:block">
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center gap-2 transition">
+                        <i class="fas fa-bolt"></i>
+                        Appointment
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-orange-500 transition">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="#" class="text-orange-500 font-semibold hover:text-orange-600 transition py-2">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition py-2">About Us</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition py-2">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition py-2">Prices</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition py-2">Gallery</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition py-2">Blog</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition py-2">Shop</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition py-2">Faq</a>
+                    <a href="#" class="text-gray-700 hover:text-orange-500 transition py-2">Contact</a>
+                    <button class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center justify-center gap-2 transition mt-3">
+                        <i class="fas fa-bolt"></i>
+                        Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Demo Content (to show sticky navbar effect) -->
+    <div class="min-h-screen bg-gradient-to-b from-gray-100 to-white">
+        <div class="max-w-7xl mx-auto px-4 py-16">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Professional Electrical Services</h1>
+            <p class="text-gray-600 mb-8">Scroll down to see the sticky navbar in action!</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-lightbulb text-orange-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Lighting Installation</h3>
+                    <p class="text-gray-600">Professional lighting solutions for your home or business.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-plug text-orange-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Electrical Repairs</h3>
+                    <p class="text-gray-600">Fast and reliable electrical repair services.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <i class="fas fa-tools text-orange-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Maintenance</h3>
+                    <p class="text-gray-600">Regular maintenance to keep your systems running smoothly.</p>
+                </div>
+            </div>
+
+            <!-- Extra content for scrolling -->
+            <div class="mt-16 space-y-8">
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <h2 class="text-2xl font-bold mb-4">Why Choose Us?</h2>
+                    <p class="text-gray-600 mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="text-gray-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow">
+                    <h2 class="text-2xl font-bold mb-4">Our Services</h2>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Residential Electrical Services</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Commercial Electrical Services</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Emergency Repairs</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Panel Upgrades</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-orange-500"></i> Generator Installation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

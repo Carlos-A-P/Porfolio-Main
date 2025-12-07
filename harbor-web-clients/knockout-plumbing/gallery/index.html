@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Knockout Plumbing & Rooter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-item {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <!-- Main Header -->
+        <div class="bg-white border-b">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-6">
+                <div class="flex justify-between items-center">
+                    <!-- Logo -->
+                    <div class="flex items-center">
+                        <i class="fas fa-wrench text-cyan-500 text-2xl md:text-4xl mr-2 md:mr-3 transform -rotate-45"></i>
+                        <div>
+                            <h1 class="text-xl md:text-3xl font-bold">
+                                <span class="text-slate-800">KNOCKOUT</span>
+                            </h1>
+                            <p class="text-gray-500 text-xs md:text-sm tracking-wide">PLUMBING & ROOTER</p>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="flex items-center space-x-3 md:space-x-8">
+                        <!-- Email - Hidden on small mobile -->
+                        <div class="hidden sm:flex items-center space-x-2 md:space-x-3">
+                            <div class="bg-cyan-100 p-2 md:p-3 rounded-lg">
+                                <i class="fas fa-envelope text-cyan-600 text-lg md:text-2xl"></i>
+                            </div>
+                            <div class="hidden lg:block">
+                                <p class="text-gray-500 text-xs uppercase">Email Us</p>
+                                <a href="mailto:knockoutplumbing@gmail.com" class="text-slate-800 font-semibold text-sm lg:text-lg hover:text-cyan-600">knockoutplumbing@gmail.com</a>
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="flex items-center space-x-2 md:space-x-3">
+                            <div class="bg-cyan-500 text-white rounded-full w-10 h-10 md:w-14 md:h-14 flex items-center justify-center shadow-lg">
+                                <i class="fas fa-phone-alt text-base md:text-2xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 text-xs uppercase hidden md:block">Call Us Now</p>
+                                <a href="tel:310-493-0349" class="text-slate-800 font-bold text-sm md:text-xl hover:text-cyan-600">310-493-0349</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="bg-slate-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between md:justify-center">
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex">
+                        <a href="../" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition">HOME</a>
+                        <a href="../about-us/" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition">ABOUT US</a>
+                        <a href="../our-services/" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition">SERVICES</a>
+                        <a href="#top" class="bg-cyan-600 text-white px-6 py-4 font-semibold hover:bg-cyan-700 transition">GALLERY</a>
+                        <a href="../contact/" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition">CONTACT</a>
+                    </div>
+                    
+                    <!-- Spacer for mobile -->
+                    <div class="flex-1 md:hidden"></div>
+                    
+                    <!-- Mobile Hamburger Button -->
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-white p-4">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="md:hidden hidden bg-slate-900">
+                <div class="flex flex-col">
+                    <a href="../" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition border-b border-slate-700">HOME</a>
+                    <a href="../about-us/" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition border-b border-slate-700">ABOUT US</a>
+                    <a href="../our-services/" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition border-b border-slate-700">SERVICES</a>
+                    <a href="#top" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition border-b border-slate-700">GALLERY</a>
+                    <a href="../contact/" class="text-white px-6 py-4 font-semibold hover:bg-slate-700 transition">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Gallery Hero Section -->
+    <section class="relative h-80 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1601997123254-a9f1ad6a756b?q=80&w=2000');">
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-slate-900 opacity-70"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 h-full flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Gallery</h1>
+                <p class="text-white text-lg md:text-xl">
+                    Knockout Plumbing & Rooter has been in business for over a decade
+                    <span class="inline-block w-16 h-0.5 bg-cyan-500 ml-4 mb-1"></span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav class="flex items-center text-gray-500 text-sm">
+                <a href="../" class="hover:text-cyan-600 transition">Home</a>
+                <i class="fas fa-chevron-right text-xs mx-2"></i>
+                <span class="text-gray-700">Gallery</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <section class="py-12 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button onclick="filterGallery('all')" id="filter-all" class="px-6 py-2 text-cyan-600 font-semibold border-b-2 border-cyan-600 hover:text-cyan-700 transition">
+                    ALL PROJECTS
+                </button>
+                <button onclick="filterGallery('bathroom')" id="filter-bathroom" class="px-6 py-2 text-gray-500 font-semibold hover:text-cyan-600 transition">
+                    BATHROOM
+                </button>
+                <button onclick="filterGallery('installation')" id="filter-installation" class="px-6 py-2 text-gray-500 font-semibold hover:text-cyan-600 transition">
+                    INSTALLATION
+                </button>
+                <button onclick="filterGallery('renovation')" id="filter-renovation" class="px-6 py-2 text-gray-500 font-semibold hover:text-cyan-600 transition">
+                    RENOVATION
+                </button>
+                <button onclick="filterGallery('repairning')" id="filter-repairning" class="px-6 py-2 text-gray-500 font-semibold hover:text-cyan-600 transition">
+                    REPAIRNING
+                </button>
+                <button onclick="filterGallery('water')" id="filter-water" class="px-6 py-2 text-gray-500 font-semibold hover:text-cyan-600 transition">
+                    WATER
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="gallery-grid">
+                <!-- Gallery Item 1 - Bathroom -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="bathroom">
+                    <img src="https://images.unsplash.com/photo-1620626011761-996317b8d101?q=80&w=800&h=600&fit=crop" alt="Bathroom Project" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <!-- Gallery Item 2 - Installation -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="installation">
+                    <img src="https://images.unsplash.com/photo-1676210134188-4c05dd172f89?q=80&w=800&h=600&fit=crop" alt="Faucet Installation" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <!-- Gallery Item 3 - Renovation -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="renovation">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=800&h=600&fit=crop" alt="Bathroom Renovation" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <!-- Gallery Item 4 - Repairning -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="repairning">
+                    <img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?q=80&w=800&h=600&fit=crop" alt="Plumbing Repair" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <!-- Gallery Item 5 - Water -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="water">
+                    <img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?q=80&w=800&h=600&fit=crop" alt="Water System" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <!-- Gallery Item 6 - Installation -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="installation">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?q=80&w=800&h=600&fit=crop" alt="Water Heater Installation" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <!-- Gallery Item 7 - Repairning -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="repairning">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=800&h=600&fit=crop" alt="Gas Line Repair" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <!-- Gallery Item 8 - Water -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="water">
+                    <img src="https://images.unsplash.com/photo-1563207153-f403bf289096?q=80&w=800&h=600&fit=crop" alt="Water Treatment" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+
+                <!-- Gallery Item 9 - Bathroom -->
+                <div class="gallery-item group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition" data-category="bathroom">
+                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=800&h=600&fit=crop" alt="Commercial Bathroom" class="w-full h-72 object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Banner -->
+    <section class="py-0">
+        <div class="grid md:grid-cols-3">
+            <!-- Visit Us -->
+            <div class="bg-slate-800 text-white p-8 md:p-10 flex items-center">
+                <div class="bg-slate-900 p-6 rounded mr-6 flex-shrink-0">
+                    <i class="fas fa-map-marker-alt text-cyan-400 text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-cyan-400 text-sm font-semibold mb-2 uppercase tracking-wide">VISIT US:</h3>
+                    <p class="text-white text-lg">Lomita, CA 90717</p>
+                </div>
+            </div>
+
+            <!-- Email Us -->
+            <div class="bg-slate-700 text-white p-8 md:p-10 flex items-center">
+                <div class="bg-slate-900 p-6 rounded mr-6 flex-shrink-0">
+                    <i class="fas fa-envelope text-cyan-400 text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-cyan-400 text-sm font-semibold mb-2 uppercase tracking-wide">EMAIL US:</h3>
+                    <a href="mailto:knockoutplumbing@gmail.com" class="text-white text-lg hover:text-cyan-400 transition">knockoutplumbing@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- 24/7 Emergency Call -->
+            <div class="bg-slate-800 text-white p-8 md:p-10 flex items-center">
+                <div class="bg-slate-900 p-6 rounded mr-6 flex-shrink-0">
+                    <i class="fas fa-phone-alt text-cyan-400 text-3xl"></i>
+                </div>
+                <div>
+                    <h3 class="text-cyan-400 text-sm font-semibold mb-2 uppercase tracking-wide">24/7 EMERGENCY CALL</h3>
+                    <a href="tel:310-493-0349" class="text-white text-lg hover:text-cyan-400 transition">+310-493-0349</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-slate-900 text-gray-300 pt-16 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Main Footer Content -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- About Us Column -->
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4 relative">
+                        ABOUT US
+                        <div class="w-12 h-0.5 bg-cyan-500 mt-2"></div>
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Knockout Plumbing & Rooter is a small, family owned business that has been serving members of the South Bay for over a decade. We are licensed, bonded, and insured. Providing quality services to our customers is our top priority.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 border border-gray-600 rounded-full flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition">
+                            <i class="fab fa-google"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links Column -->
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4 relative">
+                        QUICK LINKS
+                        <div class="w-12 h-0.5 bg-cyan-500 mt-2"></div>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Our Prices
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Certification
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../about-us/" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../contact/" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="../our-services/" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                All Services
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Services Column -->
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4 relative">
+                        SERVICES
+                        <div class="w-12 h-0.5 bg-cyan-500 mt-2"></div>
+                    </h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Drain Cleaning
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Faucet Repairs
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Sewer Cleaning
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Water Heaters
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 hover:text-cyan-500 transition flex items-center">
+                                <i class="fas fa-chevron-right text-xs mr-2"></i>
+                                Gas Leaks
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Plumber Mascot Image -->
+                <div class="flex justify-center lg:justify-end items-start">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=300" alt="24H Emergency Response" class="w-64 h-auto">
+                        <div class="absolute bottom-0 right-0 bg-slate-800 text-white px-4 py-2 rounded-lg shadow-lg">
+                            <div class="text-3xl font-bold">24H</div>
+                            <div class="text-xs">EMERGENCY RESPONSE</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsletter Section -->
+            <div class="border-2 border-dashed border-gray-700 rounded-lg p-8 mb-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                    <p class="text-cyan-400 text-lg md:text-xl italic">
+                        Subscribe now and receive weekly newsletter with new tips and exciting offers or discounts.
+                    </p>
+                    <div class="flex w-full md:w-auto gap-3">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your mail address" 
+                            class="flex-1 md:w-80 px-4 py-3 bg-transparent border border-gray-600 rounded text-white placeholder-gray-500 focus:outline-none focus:border-cyan-500"
+                        >
+                        <button class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded font-bold transition whitespace-nowrap">
+                            SUBSCRIBE
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Copyright Bar -->
+            <div class="flex flex-col md:flex-row justify-between items-center pt-6 border-t border-gray-800 text-sm text-gray-500">
+                <p>Copyright © Knockout Plumbing & Rooter 2025. All rights reserved.</p>
+                <p>Developed by: <span class="text-cyan-500">Harbor Web Solutions</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Toggle mobile menu
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Filter gallery items
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('[id^="filter-"]');
+            
+            // Update button styles
+            buttons.forEach(btn => {
+                btn.classList.remove('text-cyan-600', 'border-b-2', 'border-cyan-600');
+                btn.classList.add('text-gray-500');
+            });
+            
+            const activeButton = document.getElementById(`filter-${category}`);
+            activeButton.classList.remove('text-gray-500');
+            activeButton.classList.add('text-cyan-600', 'border-b-2', 'border-cyan-600');
+            
+            // Filter items
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'scale(0.8)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
