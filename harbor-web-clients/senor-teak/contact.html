@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Señor Teak | Get A Free Quote</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#342e2e',
+                        'secondary': '#f7a145',
+                        'secondary-dark': '#e08a2c',
+                        'warm-tan': '#F5E6D3',
+                    },
+                    fontFamily: {
+                        'display': ['Lobster', 'cursive'],
+                        'body': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-in-out;
+        }
+        
+        .mobile-menu.active {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    
+    <!-- Top Contact Bar -->
+    <div class="bg-primary text-white py-2.5 hidden md:block">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center text-sm">
+                <div class="flex items-center space-x-6">
+                    <a href="tel:+1234567890" class="flex items-center hover:text-secondary transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        Call: (123) 456-7890
+                    </a>
+                    <a href="mailto:info@senorteak.com" class="flex items-center hover:text-secondary transition-colors">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        info@senorteak.com
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <span class="text-secondary font-semibold">Mon-Sun: 8AM - 6PM</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Sticky Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center group">
+                        <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-3 group-hover:bg-secondary-dark transition-colors">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h1 class="font-display text-2xl font-bold text-primary leading-none">Señor Teak</h1>
+                            <p class="text-xs text-gray-600 uppercase tracking-wider">Furniture Restoration</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-secondary font-semibold transition-colors relative group">
+                        HOME
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="about.html" class="text-gray-700 hover:text-secondary font-semibold transition-colors relative group">
+                        ABOUT US
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="services.html" class="text-gray-700 hover:text-secondary font-semibold transition-colors relative group">
+                        SERVICES
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300"></span>
+                    </a>
+                    <a href="contact.html" class="text-secondary font-semibold transition-colors relative group">
+                        CONTACT
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-secondary transition-all duration-300"></span>
+                    </a>
+                    <a href="#contact-form" class="bg-secondary text-white px-6 py-2.5 rounded-md hover:bg-secondary-dark transition-colors font-semibold shadow-md hover:shadow-lg">
+                        GET A QUOTE
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-secondary focus:outline-none">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu md:hidden">
+                <div class="py-4 space-y-4 border-t border-gray-200">
+                    <a href="index.html" class="block text-gray-700 hover:text-secondary font-semibold transition-colors px-4 py-2">HOME</a>
+                    <a href="about.html" class="block text-gray-700 hover:text-secondary font-semibold transition-colors px-4 py-2">ABOUT US</a>
+                    <a href="services.html" class="block text-gray-700 hover:text-secondary font-semibold transition-colors px-4 py-2">SERVICES</a>
+                    <a href="contact.html" class="block text-secondary font-semibold transition-colors px-4 py-2">CONTACT</a>
+                    <div class="px-4">
+                        <a href="#contact-form" class="block text-center bg-secondary text-white px-6 py-3 rounded-md hover:bg-secondary-dark transition-colors font-semibold">
+                            GET A QUOTE
+                        </a>
+                    </div>
+                    <div class="px-4 pt-4 border-t border-gray-200 space-y-3">
+                        <a href="tel:+1234567890" class="flex items-center text-gray-600 text-sm">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            (123) 456-7890
+                        </a>
+                        <p class="text-secondary font-semibold text-sm">Mon-Sun: 8AM - 6PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1600" 
+                 alt="Contact us" 
+                 class="w-full h-full object-cover"
+                 style="filter: brightness(0.5);">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center items-center text-center">
+            <p class="text-secondary font-semibold text-sm uppercase tracking-widest mb-4">GET IN TOUCH</p>
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Contact <span class="text-secondary">Us</span>
+            </h1>
+            <p class="text-xl text-gray-200 max-w-2xl">
+                Ready to restore your furniture? Get a free quote today and let's discuss your project
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Information Cards -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto -mt-32 relative z-10">
+                
+                <!-- Phone Card -->
+                <div class="bg-white p-8 rounded-lg shadow-xl text-center hover:shadow-2xl transition-shadow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Phone</h3>
+                    <a href="tel:+1234567890" class="text-gray-600 hover:text-secondary transition-colors text-lg">
+                        (123) 456-7890
+                    </a>
+                </div>
+
+                <!-- Email Card -->
+                <div class="bg-white p-8 rounded-lg shadow-xl text-center hover:shadow-2xl transition-shadow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Email</h3>
+                    <a href="mailto:info@senorteak.com" class="text-gray-600 hover:text-secondary transition-colors text-lg break-all">
+                        info@senorteak.com
+                    </a>
+                </div>
+
+                <!-- Location Card -->
+                <div class="bg-white p-8 rounded-lg shadow-xl text-center hover:shadow-2xl transition-shadow">
+                    <div class="flex justify-center mb-6">
+                        <div class="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center">
+                            <svg class="w-10 h-10 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Service Area</h3>
+                    <p class="text-gray-600 text-lg">
+                        Los Angeles, CA
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Section Header -->
+                <div class="text-center mb-12">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold text-primary mb-4">
+                        Send Us A <span class="text-secondary">Message</span>
+                    </h2>
+                    <p class="text-gray-600 text-lg">
+                        Fill out the form below and we'll get back to you within 24 hours
+                    </p>
+                </div>
+
+                <!-- Contact Form -->
+                <form class="bg-gray-50 p-8 md:p-12 rounded-2xl shadow-lg">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <!-- Name -->
+                        <div>
+                            <label for="name" class="block text-gray-700 font-semibold mb-2">Your Name *</label>
+                            <input type="text" id="name" name="name" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                                   placeholder="John Doe">
+                        </div>
+
+                        <!-- Phone -->
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-semibold mb-2">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                                   placeholder="(123) 456-7890">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <!-- Email -->
+                        <div>
+                            <label for="email" class="block text-gray-700 font-semibold mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required
+                                   class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                                   placeholder="john@example.com">
+                        </div>
+
+                        <!-- Service -->
+                        <div>
+                            <label for="service" class="block text-gray-700 font-semibold mb-2">Service Needed *</label>
+                            <select id="service" name="service" required
+                                    class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all">
+                                <option value="">Select a service</option>
+                                <option value="furniture-restoration">Furniture Restoration</option>
+                                <option value="power-washing">Power Washing</option>
+                                <option value="cushion-cleaning">Cushion Steam Cleaning</option>
+                                <option value="wood-refinishing">Wood Refinishing</option>
+                                <option value="repair-services">Repair Services</option>
+                                <option value="custom-finishing">Custom Finishing</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 font-semibold mb-2">Your Message *</label>
+                        <textarea id="message" name="message" rows="6" required
+                                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all resize-none"
+                                  placeholder="Tell us about your project..."></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit"
+                                class="bg-secondary text-white px-12 py-4 rounded-lg hover:bg-secondary-dark transition-all font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 uppercase">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="h-96 bg-gray-200">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423286.27404345275!2d-118.69192993596793!3d34.02016130653294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-3">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-display text-2xl font-bold">Señor Teak</h3>
+                            <p class="text-sm text-gray-400">Furniture Restoration</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        A family-operated business dedicated to bringing new life to your furniture. From restoration to deep cleaning, we treat every piece with the care it deserves.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-secondary transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-display text-lg font-bold mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-300 hover:text-secondary transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-300 hover:text-secondary transition-colors">About Us</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-secondary transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-display text-lg font-bold mb-6">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Furniture Restoration</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Power Washing</a></li>
+                        <li><a href="services.html" class="text-gray-300 hover:text-secondary transition-colors">Cushion Steam Cleaning</a></li>
+                        <li><a href="contact.html" class="text-gray-300 hover:text-secondary transition-colors">Free Consultation</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 Señor Teak. All rights reserved.
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        Developed by <a href="https://carlospwd.com" target="_blank" rel="noopener noreferrer" class="text-secondary hover:text-secondary-dark transition-colors font-semibold">Carlos Perez</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
