@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Section</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main brand colors
+                        'primary': '#02445F',      // Deep blue
+                        'secondary': '#062432',    // Darker blue/navy
+                        'text': '#3D4343',         // Dark gray for text
+                        'accent': '#FAD06E',       // Golden yellow
+                        'accent-alt': '#777C7B',   // Medium gray
+                        
+                        // Additional custom colors
+                        'light-blue': '#EAF4F8',   // Very light blue
+                        'gold': '#F6D092',         // Light gold
+                        'slate-blue': '#5B8698',   // Medium slate blue
+                    },
+                    fontFamily: {
+                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-text">
+
+<!-- Donation Section -->
+<section class="relative min-h-screen py-20 px-4">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920');">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto">
+        <div class="flex justify-end">
+            
+            <!-- Donation Form - Positioned to the right -->
+            <div class="w-full lg:w-1/2 xl:w-5/12 bg-secondary/90 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl">
+                
+                <!-- Form Header -->
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+                    Donate Here
+                </h2>
+                <p class="text-light-blue text-sm leading-relaxed mb-8">
+                    Finibus facilisis dapibus etiam interdum tortor ligula congue. Ad litora torquent per conubia nostra inceptos himenaeos.
+                </p>
+
+                <form>
+                    <!-- Name Fields -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div>
+                            <label class="text-white text-sm font-semibold mb-2 block">
+                                First name <span class="text-accent">*</span>
+                            </label>
+                            <input type="text" 
+                                   class="w-full px-4 py-3 rounded-lg bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent" 
+                                   required>
+                        </div>
+                        <div>
+                            <label class="text-white text-sm font-semibold mb-2 block">
+                                Last name <span class="text-accent">*</span>
+                            </label>
+                            <input type="text" 
+                                   class="w-full px-4 py-3 rounded-lg bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent" 
+                                   required>
+                        </div>
+                    </div>
+
+                    <!-- Email & Phone -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div>
+                            <label class="text-white text-sm font-semibold mb-2 block">
+                                Email <span class="text-accent">*</span>
+                            </label>
+                            <input type="email" 
+                                   class="w-full px-4 py-3 rounded-lg bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent" 
+                                   required>
+                        </div>
+                        <div>
+                            <label class="text-white text-sm font-semibold mb-2 block">
+                                Phone Number
+                            </label>
+                            <input type="tel" 
+                                   class="w-full px-4 py-3 rounded-lg bg-white text-text focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="mb-6">
+                        <h3 class="text-white text-lg font-serif font-bold uppercase mb-4">PAYMENT</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="payment" value="offline" checked 
+                                       class="w-5 h-5 text-accent focus:ring-accent">
+                                <span class="text-white text-sm font-semibold">Offline Donation</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="payment" value="stripe" 
+                                       class="w-5 h-5 text-accent focus:ring-accent">
+                                <span class="text-white text-sm font-semibold">Stripe</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="payment" value="paypal" 
+                                       class="w-5 h-5 text-accent focus:ring-accent">
+                                <span class="text-white text-sm font-semibold">PayPal</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Donation Amount -->
+                    <div class="mb-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-white text-lg font-serif font-bold uppercase">YOUR DONATION</h3>
+                            <span class="text-light-blue text-sm font-semibold">CUSTOM AMOUNT</span>
+                        </div>
+                        
+                        <div class="flex flex-wrap gap-3 mb-4">
+                            <button type="button" 
+                                    class="donation-btn px-6 py-3 rounded-lg bg-white text-secondary font-bold hover:bg-accent transition">
+                                $5.00
+                            </button>
+                            <button type="button" 
+                                    class="donation-btn px-6 py-3 rounded-lg bg-white text-secondary font-bold hover:bg-accent transition">
+                                $10.00
+                            </button>
+                            <button type="button" 
+                                    class="donation-btn active px-6 py-3 rounded-lg bg-accent text-secondary font-bold hover:bg-gold transition">
+                                $15.00
+                            </button>
+                            <button type="button" 
+                                    class="donation-btn px-6 py-3 rounded-lg bg-white text-secondary font-bold hover:bg-accent transition">
+                                $20.00
+                            </button>
+                            <input type="number" 
+                                   placeholder="Enter donation amount" 
+                                   class="flex-1 min-w-[200px] px-4 py-3 rounded-lg bg-white text-text placeholder-accent-alt focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" 
+                            class="w-full bg-accent text-secondary py-4 rounded-lg font-bold text-sm uppercase hover:bg-gold transition">
+                        DONATE
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    // Donation amount button selection
+    const donationButtons = document.querySelectorAll('.donation-btn');
+    
+    donationButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            donationButtons.forEach(btn => {
+                btn.classList.remove('active', 'bg-accent');
+                btn.classList.add('bg-white');
+            });
+            
+            // Add active class to clicked button
+            button.classList.add('active', 'bg-accent');
+            button.classList.remove('bg-white');
+        });
+    });
+</script>
+
+</body>
+</html>

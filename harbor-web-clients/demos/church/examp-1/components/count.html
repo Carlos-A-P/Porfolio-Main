@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats Counter Section</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main brand colors
+                        'primary': '#02445F',      // Deep blue
+                        'secondary': '#062432',    // Darker blue/navy
+                        'text': '#3D4343',         // Dark gray for text
+                        'accent': '#FAD06E',       // Golden yellow
+                        'accent-alt': '#777C7B',   // Medium gray
+                        
+                        // Additional custom colors
+                        'light-blue': '#EAF4F8',   // Very light blue
+                        'gold': '#F6D092',         // Light gold
+                        'slate-blue': '#5B8698',   // Medium slate blue
+                    },
+                    fontFamily: {
+                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-text">
+
+<!-- Stats Counter Section -->
+<section class="bg-white py-16 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <!-- Stat 1: Messages Shared -->
+            <div class="text-center lg:text-left">
+                <p class="text-primary text-sm mb-2 font-semibold">Messages Shared</p>
+                <div class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-3">
+                    <span class="counter" data-target="470">0</span>+
+                </div>
+                <p class="text-accent-alt text-sm leading-relaxed">
+                    Ut hendrerit semper condimentum turp Integer elementum fringilla.
+                </p>
+            </div>
+
+            <!-- Stat 2: Lives Baptized -->
+            <div class="text-center lg:text-left">
+                <p class="text-primary text-sm mb-2 font-semibold">Lives Baptized</p>
+                <div class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-3">
+                    <span class="counter" data-target="3400">0</span>+
+                </div>
+                <p class="text-accent-alt text-sm leading-relaxed">
+                    Conubia nostra inceptos, tempor egestas mieu sodales bibendum lectus.
+                </p>
+            </div>
+
+            <!-- Stat 3: Sermons Streamed -->
+            <div class="text-center lg:text-left">
+                <p class="text-primary text-sm mb-2 font-semibold">Sermons Streamed</p>
+                <div class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-3">
+                    <span class="counter" data-target="47">0</span>K+
+                </div>
+                <p class="text-accent-alt text-sm leading-relaxed">
+                    Suscipit auctor curabitur Aliquam erat volutp Nulla venenatis elit velit.
+                </p>
+            </div>
+
+            <!-- Stat 4: Years Serving -->
+            <div class="text-center lg:text-left">
+                <p class="text-primary text-sm mb-2 font-semibold">Years Serving</p>
+                <div class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-3">
+                    <span class="counter" data-target="25">0</span>Y+
+                </div>
+                <p class="text-accent-alt text-sm leading-relaxed">
+                    Dolor sit amet consectetur Cras id pellente sque neque ut efficitur.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+    // Counter Animation Function
+    function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const duration = 2000; // 2 seconds
+        const increment = target / (duration / 16); // 60fps
+        let current = 0;
+
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                element.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target;
+            }
+        };
+
+        updateCounter();
+    }
+
+    // Intersection Observer to trigger animation when section is visible
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counters = entry.target.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    if (counter.textContent === '0') {
+                        animateCounter(counter);
+                    }
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Start observing when DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+        const statsSection = document.querySelector('section');
+        observer.observe(statsSection);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Scroll Banner</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main brand colors
+                        'primary': '#02445F',      // Deep blue
+                        'secondary': '#062432',    // Darker blue/navy
+                        'text': '#3D4343',         // Dark gray for text
+                        'accent': '#FAD06E',       // Golden yellow
+                        'accent-alt': '#777C7B',   // Medium gray
+                        
+                        // Additional custom colors
+                        'light-blue': '#EAF4F8',   // Very light blue
+                        'gold': '#F6D092',         // Light gold
+                        'slate-blue': '#5B8698',   // Medium slate blue
+                    },
+                    fontFamily: {
+                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .animate-scroll {
+            animation: scroll 30s linear infinite;
+        }
+        
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="font-sans text-text">
+
+<!-- Infinite Scroll Banner -->
+<div class="bg-primary text-white py-3 overflow-hidden">
+    <div class="flex animate-scroll whitespace-nowrap">
+        <!-- First set of text (will be duplicated for seamless loop) -->
+        <div class="flex items-center">
+            <span class="text-sm font-semibold tracking-wide px-8">
+                ALL ARE WELCOME! WORSHIP WITH US ON SUNDAYS – 9:30 & 11:00 AM IN PERSON • 9:30 AM ONLINE
+            </span>
+            <span class="text-accent text-2xl px-4">•</span>
+            <span class="text-sm font-semibold tracking-wide px-8">
+                ALL ARE WELCOME! WORSHIP WITH US ON SUNDAYS – 9:30 & 11:00 AM IN PERSON • 9:30 AM ONLINE
+            </span>
+            <span class="text-accent text-2xl px-4">•</span>
+        </div>
+        
+        <!-- Duplicate for seamless loop -->
+        <div class="flex items-center">
+            <span class="text-sm font-semibold tracking-wide px-8">
+                ALL ARE WELCOME! WORSHIP WITH US ON SUNDAYS – 9:30 & 11:00 AM IN PERSON • 9:30 AM ONLINE
+            </span>
+            <span class="text-accent text-2xl px-4">•</span>
+            <span class="text-sm font-semibold tracking-wide px-8">
+                ALL ARE WELCOME! WORSHIP WITH US ON SUNDAYS – 9:30 & 11:00 AM IN PERSON • 9:30 AM ONLINE
+            </span>
+            <span class="text-accent text-2xl px-4">•</span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

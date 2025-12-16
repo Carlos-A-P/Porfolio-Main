@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pastors Section</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main brand colors
+                        'primary': '#02445F',      // Deep blue
+                        'secondary': '#062432',    // Darker blue/navy
+                        'text': '#3D4343',         // Dark gray for text
+                        'accent': '#FAD06E',       // Golden yellow
+                        'accent-alt': '#777C7B',   // Medium gray
+                        
+                        // Additional custom colors
+                        'light-blue': '#EAF4F8',   // Very light blue
+                        'gold': '#F6D092',         // Light gold
+                        'slate-blue': '#5B8698',   // Medium slate blue
+                    },
+                    fontFamily: {
+                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-text">
+
+<!-- Pastors Section -->
+<section class="bg-white py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8 mb-12">
+            <!-- Left: Title -->
+            <div>
+                <div class="flex items-center gap-2 text-primary mb-4">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
+                    </svg>
+                    <span class="text-sm font-serif">Hope Restored</span>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary">
+                    Experience His Power in Prayer
+                </h2>
+            </div>
+
+            <!-- Right: Description & Button -->
+            <div class="flex flex-col items-start lg:items-end gap-6">
+                <p class="text-accent-alt text-sm leading-relaxed max-w-md lg:text-right">
+                    Dui felis venenatis ultrices proin libero. Ut vehicula porttitor lectus, eu tincidunt eros tincidunt eget. Vivamus venenatis erat at ex accumsan.
+                </p>
+                <button class="bg-primary text-white px-8 py-4 rounded-lg font-bold text-sm hover:bg-slate-blue transition uppercase">
+                    VIEW OUR PASTORS
+                </button>
+            </div>
+        </div>
+
+        <!-- Pastors Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            
+            <!-- Pastor Card 1 -->
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group cursor-pointer h-96">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" 
+                     alt="Arno Wiegand" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent"></div>
+                
+                <!-- Text Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
+                    <h3 class="text-xl font-serif font-bold mb-1">Arno Wiegand</h3>
+                    <p class="text-sm text-accent">Church Administrator</p>
+                </div>
+            </div>
+
+            <!-- Pastor Card 2 -->
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group cursor-pointer h-96">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600" 
+                     alt="Wolfgang Thilo" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent"></div>
+                
+                <!-- Text Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
+                    <h3 class="text-xl font-serif font-bold mb-1">Wolfgang Thilo</h3>
+                    <p class="text-sm text-accent">Prayer Leader</p>
+                </div>
+            </div>
+
+            <!-- Pastor Card 3 -->
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group cursor-pointer h-96">
+                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600" 
+                     alt="Marcella Viola" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent"></div>
+                
+                <!-- Text Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
+                    <h3 class="text-xl font-serif font-bold mb-1">Marcella Viola</h3>
+                    <p class="text-sm text-accent">Associate Sister</p>
+                </div>
+            </div>
+
+            <!-- Pastor Card 4 -->
+            <div class="relative rounded-3xl overflow-hidden shadow-lg group cursor-pointer h-96">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600" 
+                     alt="Dieter Erwin" 
+                     class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                
+                <!-- Gradient Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-secondary/90 via-secondary/20 to-transparent"></div>
+                
+                <!-- Text Overlay -->
+                <div class="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
+                    <h3 class="text-xl font-serif font-bold mb-1">Dieter Erwin</h3>
+                    <p class="text-sm text-accent">Bible Study Leader</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section - Tailwind</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main brand colors
+                        'primary': '#02445F',      // Deep blue
+                        'secondary': '#062432',    // Darker blue/navy
+                        'text': '#3D4343',         // Dark gray for text
+                        'accent': '#FAD06E',       // Golden yellow
+                        'accent-alt': '#777C7B',   // Medium gray
+                        
+                        // Additional custom colors
+                        'light-blue': '#EAF4F8',   // Very light blue
+                        'gold': '#F6D092',         // Light gold
+                        'slate-blue': '#5B8698',   // Medium slate blue
+                    },
+                    fontFamily: {
+                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Sticky Nav */
+        .sticky-nav {
+            transform: translateY(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        
+        .sticky-nav.visible {
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.open {
+            display: block;
+        }
+
+        /* Background Image Slideshow */
+        .bg-slider {
+            position: absolute;
+            inset: 0;
+        }
+
+        .bg-slide {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(1);
+            transition: opacity 2s ease-in-out;
+        }
+
+        .bg-slide.active {
+            opacity: 1;
+        }
+
+        /* Start first slide visible */
+        .bg-slide:first-child {
+            opacity: 1;
+        }
+
+        /* Ken Burns Effect - Desktop Only (1024px and up) */
+        @media (min-width: 1024px) {
+            .bg-slide {
+                transition: opacity 2s ease-in-out, transform 15s ease-out;
+            }
+
+            .bg-slide.active {
+                transform: scale(1.15);
+            }
+
+            /* Keep the zoomed state when fading out */
+            .bg-slide.zoomed {
+                transform: scale(1.15);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-text">
+
+<!-- Sticky Navigation (appears on scroll) -->
+<nav class="sticky-nav fixed top-0 left-0 right-0 bg-secondary shadow-lg z-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex items-center justify-between py-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 border-4 border-accent rounded flex items-center justify-center">
+                    <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L4 7v10c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V7l-8-5z"/>
+                    </svg>
+                </div>
+                <span class="text-white text-xl font-serif">Parish Church</span>
+            </div>
+
+            <!-- Nav Links -->
+            <div class="hidden md:flex items-center gap-6">
+                <a href="#home" class="text-white hover:text-accent transition text-sm font-semibold">HOME</a>
+                <a href="#about" class="text-white hover:text-accent transition text-sm font-semibold">ABOUT</a>
+                <a href="#sermons" class="text-white hover:text-accent transition text-sm font-semibold">SERMONS</a>
+                <a href="#ministries" class="text-white hover:text-accent transition text-sm font-semibold">MINISTRIES</a>
+                <a href="#contact" class="text-white hover:text-accent transition text-sm font-semibold">CONTACT</a>
+                <button class="bg-accent text-secondary px-6 py-2 rounded font-bold hover:bg-gold transition text-sm uppercase">
+                    DONATE NOW
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="stickyMobileMenuBtn" class="md:hidden text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="stickyMobileMenu" class="mobile-menu md:hidden bg-secondary">
+            <div class="py-4 space-y-3 border-t border-white/20">
+                <a href="#home" class="block text-white hover:text-accent transition text-sm font-semibold py-2">HOME</a>
+                <a href="#about" class="block text-white hover:text-accent transition text-sm font-semibold py-2">ABOUT</a>
+                <a href="#sermons" class="block text-white hover:text-accent transition text-sm font-semibold py-2">SERMONS</a>
+                <a href="#ministries" class="block text-white hover:text-accent transition text-sm font-semibold py-2">MINISTRIES</a>
+                <a href="#contact" class="block text-white hover:text-accent transition text-sm font-semibold py-2">CONTACT</a>
+                <button class="w-full bg-accent text-secondary px-6 py-2 rounded font-bold hover:bg-gold transition text-sm mt-2 uppercase">
+                    DONATE NOW
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="relative h-screen w-full overflow-hidden">
+    <!-- Background Image Slider -->
+    <div class="bg-slider">
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1920');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1920');"></div>
+        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920');"></div>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+    <!-- Navigation -->
+    <nav class="relative z-50">
+        <div class="px-4 md:px-8 py-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 border-4 border-accent rounded flex items-center justify-center">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L4 7v10c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V7l-8-5z"/>
+                        </svg>
+                    </div>
+                    <span class="text-white text-2xl font-serif">Parish Church</span>
+                </div>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <div class="flex items-center gap-6 text-white font-medium">
+                        <a href="#home" class="hover:text-accent transition">
+                            HOME
+                        </a>
+                        <a href="#about" class="hover:text-accent transition">
+                            ABOUT
+                        </a>
+                        <a href="#sermons" class="hover:text-accent transition">SERMONS</a>
+                        <a href="#ministries" class="hover:text-accent transition">
+                            MINISTRIES
+                        </a>
+                        <a href="#contact" class="hover:text-accent transition">CONTACTS</a>
+                    </div>
+                    
+                    <!-- Search & Donate -->
+                    <div class="flex items-center gap-4">
+                        <button class="text-white hover:text-accent transition">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </button>
+                        <button class="bg-white text-secondary px-6 py-2.5 rounded font-bold hover:bg-light-blue transition uppercase">
+                            DONATE NOW
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="heroMobileMenuBtn" class="md:hidden text-white p-2 bg-white/10 rounded">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu for Hero Nav -->
+        <div id="heroMobileMenu" class="mobile-menu md:hidden px-4 absolute left-0 right-0 top-full z-60">
+            <div class="py-4 space-y-3 border-t border-white/30 bg-black/60 backdrop-blur-sm rounded-lg px-4">
+                <a href="#home" class="block text-white hover:text-accent transition font-medium py-2 text-lg">HOME</a>
+                <a href="#about" class="block text-white hover:text-accent transition font-medium py-2 text-lg">PAGES</a>
+                <a href="#sermons" class="block text-white hover:text-accent transition font-medium py-2 text-lg">SERMONS</a>
+                <a href="#ministries" class="block text-white hover:text-accent transition font-medium py-2 text-lg">MINISTRIES</a>
+                <a href="#contact" class="block text-white hover:text-accent transition font-medium py-2 text-lg">CONTACTS</a>
+                <div class="pt-2 pb-2">
+                    <button class="w-full bg-white text-secondary px-6 py-3 rounded font-bold hover:bg-light-blue transition uppercase">
+                        DONATE NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Content -->
+    <div class="relative z-20 flex flex-col items-center justify-center h-full px-4 -mt-32">
+        <h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-serif text-center leading-tight mb-6">
+            Welcome to<br>Parish Church
+        </h1>
+        <p class="text-white text-xl md:text-2xl font-serif text-center mb-10 max-w-3xl opacity-90">
+            A place of prayer, tradition, and fellowship in Christ.
+        </p>
+        
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4">
+            <button class="bg-white text-secondary px-8 py-4 rounded font-bold text-sm hover:bg-light-blue transition uppercase">
+                JOIN US THIS SUNDAY
+            </button>
+            <button class="bg-accent text-secondary px-8 py-4 rounded font-bold text-sm hover:bg-gold transition uppercase">
+                GET INVOLVED
+            </button>
+        </div>
+    </div>
+
+</section>
+
+<!-- Placeholder content -->
+<div class="h-screen bg-light-blue flex items-center justify-center">
+    <div class="text-center">
+        <p class="text-3xl text-primary font-serif mb-4">Your Color Palette</p>
+        <div class="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
+            <div class="text-center">
+                <div class="w-24 h-24 bg-primary rounded-lg shadow-lg mb-2"></div>
+                <p class="text-sm font-semibold">Primary</p>
+                <p class="text-xs text-accent-alt">#02445F</p>
+            </div>
+            <div class="text-center">
+                <div class="w-24 h-24 bg-secondary rounded-lg shadow-lg mb-2"></div>
+                <p class="text-sm font-semibold">Secondary</p>
+                <p class="text-xs text-accent-alt">#062432</p>
+            </div>
+            <div class="text-center">
+                <div class="w-24 h-24 bg-text rounded-lg shadow-lg mb-2"></div>
+                <p class="text-sm font-semibold">Text</p>
+                <p class="text-xs text-accent-alt">#3D4343</p>
+            </div>
+            <div class="text-center">
+                <div class="w-24 h-24 bg-accent rounded-lg shadow-lg mb-2"></div>
+                <p class="text-sm font-semibold">Accent</p>
+                <p class="text-xs text-accent-alt">#FAD06E</p>
+            </div>
+            <div class="text-center">
+                <div class="w-24 h-24 bg-accent-alt rounded-lg shadow-lg mb-2"></div>
+                <p class="text-sm font-semibold">Accent Alt</p>
+                <p class="text-xs text-accent-alt">#777C7B</p>
+            </div>
+            <div class="text-center">
+                <div class="w-24 h-24 bg-light-blue rounded-lg shadow-lg mb-2"></div>
+                <p class="text-sm font-semibold">Light Blue</p>
+                <p class="text-xs text-accent-alt">#EAF4F8</p>
+            </div>
+            <div class="text-center">
+                <div class="w-24 h-24 bg-gold rounded-lg shadow-lg mb-2"></div>
+                <p class="text-sm font-semibold">Gold</p>
+                <p class="text-xs text-accent-alt">#F6D092</p>
+            </div>
+            <div class="text-center">
+                <div class="w-24 h-24 bg-slate-blue rounded-lg shadow-lg mb-2"></div>
+                <p class="text-sm font-semibold">Slate Blue</p>
+                <p class="text-xs text-accent-alt">#5B8698</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Background Image Slider with Ken Burns Effect (Desktop Only)
+    const slides = document.querySelectorAll('.bg-slide');
+    let currentSlide = 0;
+    const isDesktop = window.innerWidth >= 1024;
+
+    // Trigger the zoom animation on the first slide when page loads (desktop only)
+    if (isDesktop) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                slides[0].classList.add('active');
+            }, 100);
+        });
+    }
+
+    function nextSlide() {
+        if (isDesktop) {
+            slides[currentSlide].classList.add('zoomed');
+        }
+        
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        if (isDesktop) {
+            setTimeout(() => {
+                slides.forEach((slide, index) => {
+                    if (index !== currentSlide) {
+                        slide.classList.remove('zoomed');
+                    }
+                });
+            }, 2000);
+        }
+        
+        slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(nextSlide, isDesktop ? 13000 : 8000);
+
+    // Mobile Menu Toggle - Hero Nav
+    const heroMobileMenuBtn = document.getElementById('heroMobileMenuBtn');
+    const heroMobileMenu = document.getElementById('heroMobileMenu');
+    
+    if (heroMobileMenuBtn && heroMobileMenu) {
+        heroMobileMenuBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            heroMobileMenu.classList.toggle('open');
+        });
+    }
+
+    // Mobile Menu Toggle - Sticky Nav
+    const stickyMobileMenuBtn = document.getElementById('stickyMobileMenuBtn');
+    const stickyMobileMenu = document.getElementById('stickyMobileMenu');
+    
+    if (stickyMobileMenuBtn && stickyMobileMenu) {
+        stickyMobileMenuBtn.addEventListener('click', () => {
+            stickyMobileMenu.classList.toggle('open');
+        });
+    }
+
+    // Close mobile menus when clicking on a link
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (heroMobileMenu) heroMobileMenu.classList.remove('open');
+            if (stickyMobileMenu) stickyMobileMenu.classList.remove('open');
+        });
+    });
+
+    // Sticky Nav on Scroll
+    const stickyNav = document.querySelector('.sticky-nav');
+    
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            stickyNav.classList.add('visible');
+            heroMobileMenu.classList.remove('open');
+        } else {
+            stickyNav.classList.remove('visible');
+        }
+    });
+</script>
+
+</body>
+</html>

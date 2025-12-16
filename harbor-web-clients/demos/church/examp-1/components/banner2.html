@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Text Banner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes scroll-text {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .animate-scroll-text {
+            animation: scroll-text 20s linear infinite;
+        }
+
+        .text-gradient-overlay {
+            background: linear-gradient(
+                to right,
+                rgba(0, 0, 0, 0.8) 0%,
+                rgba(0, 0, 0, 0.4) 25%,
+                rgba(0, 0, 0, 0.4) 75%,
+                rgba(0, 0, 0, 0.8) 100%
+            );
+        }
+    </style>
+</head>
+<body>
+
+<!-- Scrolling Text Banner Section -->
+<section class="relative h-64 overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1920');">
+        <!-- Dark overlay for better text visibility -->
+        <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+
+    <!-- Gradient Overlay on Text -->
+    <div class="absolute inset-0 text-gradient-overlay"></div>
+
+    <!-- Scrolling Text Container - Positioned 11px below bottom -->
+    <div class="absolute -bottom-[11px] left-0 right-0 overflow-hidden">
+        <div class="flex animate-scroll-text whitespace-nowrap">
+            <!-- First set of text -->
+            <div class="flex items-center">
+                <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 opacity-20 leading-none">
+                    LIVE WITH GRACE LOVE WITHOUT
+                </span>
+            </div>
+            
+            <!-- Duplicate for seamless loop -->
+            <div class="flex items-center">
+                <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 opacity-20 leading-none">
+                    LIVE WITH GRACE LOVE WITHOUT
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

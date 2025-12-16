@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Content Section</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main brand colors
+                        'primary': '#02445F',      // Deep blue
+                        'secondary': '#062432',    // Darker blue/navy
+                        'text': '#3D4343',         // Dark gray for text
+                        'accent': '#FAD06E',       // Golden yellow
+                        'accent-alt': '#777C7B',   // Medium gray
+                        
+                        // Additional custom colors
+                        'light-blue': '#EAF4F8',   // Very light blue
+                        'gold': '#F6D092',         // Light gold
+                        'slate-blue': '#5B8698',   // Medium slate blue
+                    },
+                    fontFamily: {
+                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-text">
+
+<!-- Split Content Section -->
+<section class="bg-white py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            <!-- Left Column - Text Content -->
+            <div class="space-y-6">
+                <!-- Small Icon + Label -->
+                <div class="flex items-center gap-2 text-primary">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4zM12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
+                    </svg>
+                    <span class="text-sm font-serif">Hope in Christ</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-secondary">
+                    Experience God's Love and Grace, 
+                    <span class="text-accent">Uniting You</span> 
+                    Through The Hope, Healing.
+                </h2>
+
+                <!-- Description Paragraph -->
+                <p class="text-accent-alt text-base leading-relaxed">
+                    Tempus leo eu aenean, id condimentum turpis. Integer elementum felis vel fringilla rutrum. Aene bibendum consectetur justo, non feugiat velit accumsan quis. Vivamus et leo elementum, dignissimeli eget, tincidunt sapien. Nam eget nibh ligula.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button class="bg-accent text-secondary px-8 py-4 rounded font-bold text-sm hover:bg-gold transition uppercase">
+                        ABOUT US
+                    </button>
+                    <button class="bg-primary text-white px-8 py-4 rounded font-bold text-sm hover:bg-slate-blue transition uppercase">
+                        DONATE NOW
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Column - Image with Badge -->
+            <div class="relative">
+                <!-- Circular Badge -->
+                <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 lg:left-0 lg:translate-x-0 z-10">
+                    <div class="w-32 h-32 bg-accent rounded-full flex items-center justify-center border-8 border-white shadow-lg">
+                        <div class="text-center">
+                            <svg class="w-12 h-12 mx-auto mb-1 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                            </svg>
+                            <div class="text-xs font-bold leading-tight text-secondary font-serif">
+                                <div class="text-[8px]">A WORLD OF</div>
+                                <div class="text-[10px]">COMPASSION</div>
+                                <div class="text-[8px] mt-0.5">STARTS HERE</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Image -->
+                <div class="rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800" 
+                         alt="Woman praying" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worship Experience Section</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main brand colors
+                        'primary': '#02445F',      // Deep blue
+                        'secondary': '#062432',    // Darker blue/navy
+                        'text': '#3D4343',         // Dark gray for text
+                        'accent': '#FAD06E',       // Golden yellow
+                        'accent-alt': '#777C7B',   // Medium gray
+                        
+                        // Additional custom colors
+                        'light-blue': '#EAF4F8',   // Very light blue
+                        'gold': '#F6D092',         // Light gold
+                        'slate-blue': '#5B8698',   // Medium slate blue
+                    },
+                    fontFamily: {
+                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-text">
+
+<!-- Worship Experience Section -->
+<section class="py-20 px-4 bg-cover bg-center" style="background-image: url('https://www.transparenttextures.com/patterns/paper.png'), linear-gradient(to bottom, #EAF4F8, #EAF4F8);">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <!-- Small Icon + Label -->
+            <div class="flex items-center justify-center gap-2 text-primary mb-4">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
+                </svg>
+                <span class="text-sm font-serif">Divine Adoration</span>
+            </div>
+
+            <!-- Main Heading -->
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-secondary mb-8">
+                Heartfelt Worship Experience
+            </h2>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <button class="bg-accent text-secondary px-8 py-4 rounded-lg font-bold text-sm hover:bg-gold transition uppercase flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                    </svg>
+                    READ SERMONS
+                </button>
+                <button class="bg-primary text-white px-8 py-4 rounded-lg font-bold text-sm hover:bg-slate-blue transition uppercase flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z"/>
+                    </svg>
+                    LISTEN SERMONS
+                </button>
+            </div>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            
+            <!-- Card 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
+                <div class="overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" 
+                         alt="Praying hands" 
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                        A Church That Prays Heal The World, Share His Grace
+                    </h3>
+                    <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
+                        VIEW DETAILS
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
+                <div class="overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600" 
+                         alt="Hands together" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                        Build Your Life In Christ A Place To Gather And Worship
+                    </h3>
+                    <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
+                        VIEW DETAILS
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
+                <div class="overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=600" 
+                         alt="Pastor preaching" 
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                        Encounter Authentic Relationships Are Welcome
+                    </h3>
+                    <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
+                        VIEW DETAILS
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
+                <div class="overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?w=600" 
+                         alt="Musicians" 
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                        Develop Lasting Friendships, Serve Together In Christ
+                    </h3>
+                    <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
+                        VIEW DETAILS
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="text-center">
+            <button class="bg-primary text-white px-10 py-4 rounded-lg font-bold text-sm hover:bg-slate-blue transition uppercase">
+                VIEW ALL SERMONS
+            </button>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

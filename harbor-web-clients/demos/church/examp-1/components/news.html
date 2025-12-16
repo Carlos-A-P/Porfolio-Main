@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Church News Section</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Main brand colors
+                        'primary': '#02445F',      // Deep blue
+                        'secondary': '#062432',    // Darker blue/navy
+                        'text': '#3D4343',         // Dark gray for text
+                        'accent': '#FAD06E',       // Golden yellow
+                        'accent-alt': '#777C7B',   // Medium gray
+                        
+                        // Additional custom colors
+                        'light-blue': '#EAF4F8',   // Very light blue
+                        'gold': '#F6D092',         // Light gold
+                        'slate-blue': '#5B8698',   // Medium slate blue
+                    },
+                    fontFamily: {
+                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'sans': ['system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-text">
+
+<!-- Church News Section -->
+<section class="bg-light-blue py-20 px-4">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <div class="flex items-center justify-center gap-2 text-primary mb-4">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
+                </svg>
+                <span class="text-sm font-serif">Sermons & News</span>
+            </div>
+            <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary">
+                Church News & Stories
+            </h2>
+        </div>
+
+        <!-- Blog Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            
+            <!-- Blog Post 1 -->
+            <div class="flex flex-col md:flex-row gap-6 group">
+                <!-- Image -->
+                <div class="w-full md:w-72 flex-shrink-0">
+                    <div class="rounded-3xl overflow-hidden shadow-lg w-full h-72">
+                        <img src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600" 
+                             alt="Church interior" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="flex-1 flex flex-col">
+                    <!-- Meta -->
+                    <div class="flex items-center gap-4 text-accent-alt text-sm mb-3">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
+                            </svg>
+                            <span>July 3, 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                            </svg>
+                            <span>1 Comment</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-2xl font-serif font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
+                        Journey Together in Faith, Hope, and Divine Love
+                    </h3>
+                    
+                    <!-- Excerpt -->
+                    <p class="text-accent-alt text-sm leading-relaxed mb-4 flex-grow">
+                        Nulla tristique ornare gravida Nam nec sem laoreet lobortis elit vitae facilisis...
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <button class="bg-accent text-secondary px-6 py-3 rounded-lg font-bold text-sm hover:bg-gold transition uppercase self-start">
+                        VIEW ARTICLE
+                    </button>
+                </div>
+            </div>
+
+            <!-- Blog Post 2 -->
+            <div class="flex flex-col md:flex-row gap-6 group">
+                <!-- Image -->
+                <div class="w-full md:w-72 flex-shrink-0">
+                    <div class="rounded-3xl overflow-hidden shadow-lg w-full h-72">
+                        <img src="https://images.unsplash.com/photo-1519491050282-cf00c82424b4?w=600" 
+                             alt="Church wedding" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="flex-1 flex flex-col">
+                    <!-- Meta -->
+                    <div class="flex items-center gap-4 text-accent-alt text-sm mb-3">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
+                            </svg>
+                            <span>July 3, 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                            </svg>
+                            <span>3 Comments</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-2xl font-serif font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
+                        Step Into Beauty: Where Worship Meets Wedding Bliss
+                    </h3>
+                    
+                    <!-- Excerpt -->
+                    <p class="text-accent-alt text-sm leading-relaxed mb-4 flex-grow">
+                        Et soluta dolor non perferendis voluptatibus qui optio nesciunt id tempore iure...
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <button class="bg-accent text-secondary px-6 py-3 rounded-lg font-bold text-sm hover:bg-gold transition uppercase self-start">
+                        VIEW ARTICLE
+                    </button>
+                </div>
+            </div>
+
+            <!-- Blog Post 3 -->
+            <div class="flex flex-col md:flex-row gap-6 group">
+                <!-- Image -->
+                <div class="w-full md:w-72 flex-shrink-0">
+                    <div class="rounded-3xl overflow-hidden shadow-lg w-full h-72">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600" 
+                             alt="Worship hands raised" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="flex-1 flex flex-col">
+                    <!-- Meta -->
+                    <div class="flex items-center gap-4 text-accent-alt text-sm mb-3">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
+                            </svg>
+                            <span>July 3, 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                            </svg>
+                            <span>3 Comments</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-2xl font-serif font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
+                        Experience Spirit-Led Worship in Our Church Community
+                    </h3>
+                    
+                    <!-- Excerpt -->
+                    <p class="text-accent-alt text-sm leading-relaxed mb-4 flex-grow">
+                        Aut explicabo tempora ut soluta dolores non culpa tempora et voluptates voluptates...
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <button class="bg-accent text-secondary px-6 py-3 rounded-lg font-bold text-sm hover:bg-gold transition uppercase self-start">
+                        VIEW ARTICLE
+                    </button>
+                </div>
+            </div>
+
+            <!-- Blog Post 4 -->
+            <div class="flex flex-col md:flex-row gap-6 group">
+                <!-- Image -->
+                <div class="w-full md:w-72 flex-shrink-0">
+                    <div class="rounded-3xl overflow-hidden shadow-lg w-full h-72">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" 
+                             alt="Praise worship" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                </div>
+                
+                <!-- Content -->
+                <div class="flex-1 flex flex-col">
+                    <!-- Meta -->
+                    <div class="flex items-center gap-4 text-accent-alt text-sm mb-3">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11z"/>
+                            </svg>
+                            <span>July 3, 2025</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21.99 4c0-1.1-.89-2-1.99-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h14l4 4-.01-18zM18 14H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                            </svg>
+                            <span>1 Comment</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Title -->
+                    <h3 class="text-2xl font-serif font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
+                        Joyful Praise Echoes Through a Faithful Congregation
+                    </h3>
+                    
+                    <!-- Excerpt -->
+                    <p class="text-accent-alt text-sm leading-relaxed mb-4 flex-grow">
+                        Aut quod delectus ut laudantium rerum et excepturi omnis eos totam officiis...
+                    </p>
+                    
+                    <!-- CTA Button -->
+                    <button class="bg-accent text-secondary px-6 py-3 rounded-lg font-bold text-sm hover:bg-gold transition uppercase self-start">
+                        VIEW ARTICLE
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Bottom CTA -->
+        <div class="text-center">
+            <button class="bg-primary text-white px-10 py-4 rounded-lg font-bold text-sm hover:bg-slate-blue transition uppercase">
+                VIEW ALL BLOGS
+            </button>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
