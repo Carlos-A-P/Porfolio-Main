@@ -20,6 +20,7 @@
                         'primary': '#2a7d9f',      // light blue
                         'secondary': '#062432',    // Darker blue
                         'custom': '#02445F',       // Deep blue
+                        'custom2': '#699aff',       // Deep blue
                         'text': '#3D4343',         // Dark gray for text
                         'accent': '#FAD06E',       // Golden yellow
                         'accent-alt': '#777C7B',   // Medium gray
@@ -566,7 +567,32 @@
 </section>
 
 <!-- Worship Experience Section -->
-<section class="py-20 px-4 bg-cover bg-center" style="background-image: url('https://www.transparenttextures.com/patterns/paper.png'), linear-gradient(to bottom, #EAF4F8, #EAF4F8);">
+<section class="relative overflow-hidden py-20 px-4 bg-light-blue/10">
+  <!-- Top-right cross -->
+  <div class="pointer-events-none absolute top-6 right-6 opacity-15">
+  <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 8v48M14 26h36"
+          stroke="currentColor" class="text-primary"
+          stroke-width="4" stroke-linecap="round"/>
+    <circle cx="32" cy="26" r="10"
+            stroke="currentColor" class="text-primary"
+            stroke-width="3"/>
+  </svg>
+</div>
+
+  <!-- Bottom-left wispy flourish (mirrored) -->
+  <div class="pointer-events-none absolute -bottom-20 -left-24 opacity-15">
+    <svg class="w-[420px] h-[420px] md:w-[520px] md:h-[520px] scale-x-[-1] scale-y-[-1]"
+         viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="currentColor" class="text-primary" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M120 160c120-80 250-70 360 30 40 36 60 84 40 130-25 55-95 70-160 40"/>
+        <path d="M170 220c80-60 170-55 250 10 30 24 45 58 30 90-18 40-70 52-118 30"/>
+        <path d="M210 290c55-40 120-38 175 6 20 16 30 40 20 62-12 28-50 38-82 22"/>
+        <path d="M360 140c40 40 55 90 25 140-26 45-82 62-140 45"/>
+      </g>
+    </svg>
+  </div>
+
     <div class="max-w-7xl mx-auto">
         
         <!-- Section Header -->

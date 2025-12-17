@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Worship Experience Section</title>
     
-    <!-- Google Fonts -->
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Engagement&family=Hedvig+Letters+Serif:opsz@12..24&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Damion&display=swap" rel="stylesheet">
+    <!-- /fonts -->
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,19 +19,22 @@
                 extend: {
                     colors: {
                         // Main brand colors
-                        'primary': '#02445F',      // Deep blue
-                        'secondary': '#062432',    // Darker blue/navy
+                        'primary': '#2a7d9f',      // light blue
+                        'secondary': '#062432',    // Darker blue
+                        'custom': '#02445F',       // Deep blue
+                        'custom2': '#699aff',       // Deep blue
                         'text': '#3D4343',         // Dark gray for text
                         'accent': '#FAD06E',       // Golden yellow
                         'accent-alt': '#777C7B',   // Medium gray
                         
                         // Additional custom colors
                         'light-blue': '#EAF4F8',   // Very light blue
-                        'gold': '#F6D092',         // Light gold
+                        'gold': '#FAD06E',         // Light gold
                         'slate-blue': '#5B8698',   // Medium slate blue
                     },
                     fontFamily: {
-                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'cursive': ['courgette', 'cursive'],
+                        'serif': ['Hedvig Letters Serif', 'serif'],
                         'sans': ['system-ui', '-apple-system', 'sans-serif'],
                     }
                 }
@@ -39,8 +44,34 @@
 </head>
 <body class="font-sans text-text">
 
-<!-- Worship Experience Section -->
-<section class="py-20 px-4 bg-cover bg-center" style="background-image: url('https://www.transparenttextures.com/patterns/paper.png'), linear-gradient(to bottom, #EAF4F8, #EAF4F8);">
+<section class="relative overflow-hidden py-20 px-4 bg-light-blue/10">
+
+  <div class="pointer-events-none absolute top-6 right-6 opacity-15">
+  <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M32 8v48M14 26h36"
+          stroke="currentColor" class="text-primary"
+          stroke-width="4" stroke-linecap="round"/>
+    <circle cx="32" cy="26" r="10"
+            stroke="currentColor" class="text-primary"
+            stroke-width="3"/>
+  </svg>
+</div>
+
+
+
+  <!-- Bottom-left wispy flourish (mirrored) -->
+  <div class="pointer-events-none absolute -bottom-24 -left-24 opacity-15">
+    <svg class="w-[420px] h-[420px] md:w-[520px] md:h-[520px] scale-x-[-1] scale-y-[-1]"
+         viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="currentColor" class="text-primary" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M120 160c120-80 250-70 360 30 40 36 60 84 40 130-25 55-95 70-160 40"/>
+        <path d="M170 220c80-60 170-55 250 10 30 24 45 58 30 90-18 40-70 52-118 30"/>
+        <path d="M210 290c55-40 120-38 175 6 20 16 30 40 20 62-12 28-50 38-82 22"/>
+        <path d="M360 140c40 40 55 90 25 140-26 45-82 62-140 45"/>
+      </g>
+    </svg>
+  </div>
+
     <div class="max-w-7xl mx-auto">
         
         <!-- Section Header -->
@@ -50,11 +81,11 @@
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
                 </svg>
-                <span class="text-sm font-serif">Divine Adoration</span>
+                <span class="text-sm font-sans">Divine Adoration</span>
             </div>
 
             <!-- Main Heading -->
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-secondary mb-8">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-cursive font-bold text-secondary mb-8">
                 Heartfelt Worship Experience
             </h2>
 
@@ -81,12 +112,12 @@
             <!-- Card 1 -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
                 <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" 
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600" 
                          alt="Praying hands" 
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                    <h3 class="text-secondary font-sans font-bold text-lg leading-tight mb-4">
                         A Church That Prays Heal The World, Share His Grace
                     </h3>
                     <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
@@ -100,10 +131,10 @@
                 <div class="overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600" 
                          alt="Hands together" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                    <h3 class="text-secondary font-sans font-bold text-lg leading-tight mb-4">
                         Build Your Life In Christ A Place To Gather And Worship
                     </h3>
                     <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
@@ -120,7 +151,7 @@
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                    <h3 class="text-secondary font-sans font-bold text-lg leading-tight mb-4">
                         Encounter Authentic Relationships Are Welcome
                     </h3>
                     <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
@@ -137,7 +168,7 @@
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                    <h3 class="text-secondary font-sans font-bold text-lg leading-tight mb-4">
                         Develop Lasting Friendships, Serve Together In Christ
                     </h3>
                     <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
@@ -157,6 +188,8 @@
 
     </div>
 </section>
+
+
 
 </body>
 </html>
