@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parish Church - Hero Section</title>
+    <title>Church Demo</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Engagement&family=Hedvig+Letters+Serif:opsz@12..24&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Damion&display=swap" rel="stylesheet">
+    <!-- /fonts -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,7 +29,8 @@
                         'slate-blue': '#5B8698',   // Medium slate blue
                     },
                     fontFamily: {
-                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'cursive': ['courgette', 'cursive'],
+                        'serif': ['Hedvig Letters Serif', 'serif'],
                         'sans': ['system-ui', '-apple-system', 'sans-serif'],
                     }
                 }
@@ -203,6 +210,17 @@
                 rgba(0, 0, 0, 0.8) 100%
             );
         }
+
+        /* Fade the scrolling text vertically (bottom -> top) */
+        .text-fade-up {
+        -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,1) 100%);
+        mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 45%, rgba(0,0,0,1) 100%);
+        }
+
+        /* Optional: make the bottom area darker so the fade feels dramatic */
+        .bottom-darken {
+        background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 70%);
+        }
     </style>
     <style>
         .testimonial-slide {
@@ -231,7 +249,7 @@
                         <path d="M12 2L4 7v10c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V7l-8-5z"/>
                     </svg>
                 </div>
-                <span class="text-white text-xl font-serif">Parish Church</span>
+                <span class="text-white text-xl font-sans">Parish Church</span>
             </div>
 
             <!-- Nav Links -->
@@ -294,7 +312,7 @@
                             <path d="M12 2L4 7v10c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V7l-8-5z"/>
                         </svg>
                     </div>
-                    <span class="text-white text-2xl font-serif">Parish Church</span>
+                    <span class="text-white text-2xl font-sans">Parish Church</span>
                 </div>
 
                 <!-- Desktop Nav Links -->
@@ -354,10 +372,10 @@
 
     <!-- Hero Content -->
     <div class="relative z-20 flex flex-col items-center justify-center h-full px-4 -mt-32">
-        <h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-serif text-center leading-tight mb-6">
+        <h1 class="text-white text-5xl md:text-7xl lg:text-8xl font-cursive text-center leading-tight mb-6">
             Welcome to<br>Parish Church
         </h1>
-        <p class="text-white text-xl md:text-2xl font-serif text-center mb-10 max-w-3xl opacity-90">
+        <p class="text-white text-xl md:text-2xl font-sans text-center mb-10 max-w-3xl opacity-90">
             A place of prayer, tradition, and fellowship in Christ.
         </p>
         
@@ -382,11 +400,11 @@
             <span class="text-sm font-semibold tracking-wide px-8">
                 ALL ARE WELCOME! WORSHIP WITH US ON SUNDAYS – 9:30 & 11:00 AM IN PERSON • 9:30 AM ONLINE
             </span>
-            <span class="text-accent text-2xl px-4">•</span>
+            <span class="text-accent text-2xl px-4 pb-1">•</span>
             <span class="text-sm font-semibold tracking-wide px-8">
                 ALL ARE WELCOME! WORSHIP WITH US ON SUNDAYS – 9:30 & 11:00 AM IN PERSON • 9:30 AM ONLINE
             </span>
-            <span class="text-accent text-2xl px-4">•</span>
+            <span class="text-accent text-2xl px-4 pb-1">•</span>
         </div>
         
         <!-- Duplicate for seamless loop -->
@@ -394,11 +412,11 @@
             <span class="text-sm font-semibold tracking-wide px-8">
                 ALL ARE WELCOME! WORSHIP WITH US ON SUNDAYS – 9:30 & 11:00 AM IN PERSON • 9:30 AM ONLINE
             </span>
-            <span class="text-accent text-2xl px-4">•</span>
+            <span class="text-accent text-2xl px-4 pb-1">•</span>
             <span class="text-sm font-semibold tracking-wide px-8">
                 ALL ARE WELCOME! WORSHIP WITH US ON SUNDAYS – 9:30 & 11:00 AM IN PERSON • 9:30 AM ONLINE
             </span>
-            <span class="text-accent text-2xl px-4">•</span>
+            <span class="text-accent text-2xl px-4 pb-1">•</span>
         </div>
     </div>
 </div>
@@ -415,11 +433,11 @@
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4zM12 11c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/>
                     </svg>
-                    <span class="text-sm font-serif">Hope in Christ</span>
+                    <span class="text-sm font-sans">Hope in Christ</span>
                 </div>
 
                 <!-- Main Heading -->
-                <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold leading-tight text-secondary">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-cursive font-bold leading-tight text-secondary">
                     Experience God's Love and Grace, 
                     <span class="text-accent">Uniting You</span> 
                     Through The Hope, Healing.
@@ -450,7 +468,7 @@
                             <svg class="w-12 h-12 mx-auto mb-1 text-secondary" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
                             </svg>
-                            <div class="text-xs font-bold leading-tight text-secondary font-serif">
+                            <div class="text-xs font-bold leading-tight text-secondary font-sans">
                                 <div class="text-[8px]">A WORLD OF</div>
                                 <div class="text-[10px]">COMPASSION</div>
                                 <div class="text-[8px] mt-0.5">STARTS HERE</div>
@@ -479,7 +497,7 @@
             <!-- Stat 1: Messages Shared -->
             <div class="text-center lg:text-left">
                 <p class="text-primary text-sm mb-2 font-semibold">Messages Shared</p>
-                <div class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-3">
+                <div class="text-5xl md:text-6xl font-sans font-bold text-secondary mb-3">
                     <span class="counter" data-target="470">0</span>+
                 </div>
                 <p class="text-accent-alt text-sm leading-relaxed">
@@ -490,7 +508,7 @@
             <!-- Stat 2: Lives Baptized -->
             <div class="text-center lg:text-left">
                 <p class="text-primary text-sm mb-2 font-semibold">Lives Baptized</p>
-                <div class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-3">
+                <div class="text-5xl md:text-6xl font-sans font-bold text-secondary mb-3">
                     <span class="counter" data-target="3400">0</span>+
                 </div>
                 <p class="text-accent-alt text-sm leading-relaxed">
@@ -501,7 +519,7 @@
             <!-- Stat 3: Sermons Streamed -->
             <div class="text-center lg:text-left">
                 <p class="text-primary text-sm mb-2 font-semibold">Sermons Streamed</p>
-                <div class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-3">
+                <div class="text-5xl md:text-6xl font-sans font-bold text-secondary mb-3">
                     <span class="counter" data-target="47">0</span>K+
                 </div>
                 <p class="text-accent-alt text-sm leading-relaxed">
@@ -512,7 +530,7 @@
             <!-- Stat 4: Years Serving -->
             <div class="text-center lg:text-left">
                 <p class="text-primary text-sm mb-2 font-semibold">Years Serving</p>
-                <div class="text-5xl md:text-6xl font-serif font-bold text-secondary mb-3">
+                <div class="text-5xl md:text-6xl font-sans font-bold text-secondary mb-3">
                     <span class="counter" data-target="25">0</span>Y+
                 </div>
                 <p class="text-accent-alt text-sm leading-relaxed">
@@ -535,11 +553,11 @@
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
                 </svg>
-                <span class="text-sm font-serif">Divine Adoration</span>
+                <span class="text-sm font-sans">Divine Adoration</span>
             </div>
 
             <!-- Main Heading -->
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-secondary mb-8">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-cursive font-bold text-secondary mb-8">
                 Heartfelt Worship Experience
             </h2>
 
@@ -571,7 +589,7 @@
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                    <h3 class="text-secondary font-sans font-bold text-lg leading-tight mb-4">
                         A Church That Prays Heal The World, Share His Grace
                     </h3>
                     <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
@@ -585,10 +603,10 @@
                 <div class="overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600" 
                          alt="Hands together" 
-                         class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                    <h3 class="text-secondary font-sans font-bold text-lg leading-tight mb-4">
                         Build Your Life In Christ A Place To Gather And Worship
                     </h3>
                     <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
@@ -605,7 +623,7 @@
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                    <h3 class="text-secondary font-sans font-bold text-lg leading-tight mb-4">
                         Encounter Authentic Relationships Are Welcome
                     </h3>
                     <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
@@ -622,7 +640,7 @@
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
                 <div class="p-6">
-                    <h3 class="text-secondary font-serif font-bold text-lg leading-tight mb-4">
+                    <h3 class="text-secondary font-sans font-bold text-lg leading-tight mb-4">
                         Develop Lasting Friendships, Serve Together In Christ
                     </h3>
                     <a href="#" class="text-primary font-bold text-sm uppercase underline hover:text-accent transition">
@@ -655,11 +673,11 @@
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
                     </svg>
-                    <span class="text-sm font-serif">Love, Light, Grace</span>
+                    <span class="text-sm font-sans">Love, Light, Grace</span>
                 </div>
 
                 <!-- Main Heading -->
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary mb-8 leading-tight">
+                <h2 class="text-4xl md:text-5xl font-cursive font-bold text-secondary mb-8 leading-tight">
                     A Spiritual Home <span class="text-accent">Guiding Journey</span><br>
                     <span class="text-accent">With A</span> Hope and Grace.
                 </h2>
@@ -682,7 +700,7 @@
                     <!-- Mission Tab -->
                     <div class="tab-content fade-in" id="mission">
                         <div class="mb-6">
-                            <h3 class="text-secondary font-serif font-bold text-lg mb-2">Feugiat tristique :</h3>
+                            <h3 class="text-secondary font-sans font-bold text-lg mb-2">Feugiat tristique :</h3>
                             <p class="text-accent-alt text-sm leading-relaxed">
                                 Semper vel class aptent facilisi cubilia taciti sociosqu ad litora, interdum, nisl diam blandit neque, eget sollicitudin lectus erat nec odio. Donec mollis neque sed nisl hendrerit, justo, non feugiat velit accumsan quis. Vivamus et leo elementum, dignissimeli eget, tincidunt sapien. Nam eget nibh aliquet nisl sodales ligula.
                             </p>
@@ -719,7 +737,7 @@
                     <!-- Vision Tab (hidden by default) -->
                     <div class="tab-content hidden absolute top-0 left-0 w-full" id="vision">
                         <div class="mb-6">
-                            <h3 class="text-secondary font-serif font-bold text-lg mb-2">Our Vision for the Future:</h3>
+                            <h3 class="text-secondary font-sans font-bold text-lg mb-2">Our Vision for the Future:</h3>
                             <p class="text-accent-alt text-sm leading-relaxed">
                                 We envision a community where faith transforms lives and spreads hope throughout the world. Our vision is to create lasting impact through compassionate service, meaningful worship, and authentic relationships that reflect Christ's love to all people.
                             </p>
@@ -754,7 +772,7 @@
                     <!-- Values Tab (hidden by default) -->
                     <div class="tab-content hidden absolute top-0 left-0 w-full" id="values">
                         <div class="mb-6">
-                            <h3 class="text-secondary font-serif font-bold text-lg mb-2">Core Values We Live By:</h3>
+                            <h3 class="text-secondary font-sans font-bold text-lg mb-2">Core Values We Live By:</h3>
                             <p class="text-accent-alt text-sm leading-relaxed">
                                 Our values guide every decision we make and every action we take. Rooted in scripture and lived out daily, these principles shape our church community and define who we are as followers of Christ.
                             </p>
@@ -845,24 +863,31 @@
     <!-- Gradient Overlay on Text -->
     <div class="absolute inset-0 text-gradient-overlay"></div>
 
-    <!-- Scrolling Text Container - Positioned 11px below bottom -->
-    <div class="absolute -bottom-[11px] left-0 right-0 overflow-hidden">
-        <div class="flex animate-scroll-text whitespace-nowrap">
-            <!-- First set of text -->
+    <!-- Scrolling Text Container -->
+    <div class="absolute -bottom-[11px] left-0 right-0 overflow-hidden text-fade-up">
+        <div class="absolute inset-0 bottom-darken pointer-events-none"></div>
+
+        <div class="flex animate-scroll-text whitespace-nowrap relative">
             <div class="flex items-center">
-                <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 opacity-20 leading-none">
+                <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 leading-none">
                     LIVE WITH GRACE LOVE WITHOUT
                 </span>
             </div>
-            
-            <!-- Duplicate for seamless loop -->
+
             <div class="flex items-center">
-                <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 opacity-20 leading-none">
+                <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 leading-none">
+                    LIVE WITH GRACE LOVE WITHOUT
+                </span>
+            </div>
+
+            <div class="flex items-center">
+                <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 leading-none">
                     LIVE WITH GRACE LOVE WITHOUT
                 </span>
             </div>
         </div>
     </div>
+
 </section>
 
 <!-- Pastors Section -->
@@ -877,9 +902,9 @@
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
                     </svg>
-                    <span class="text-sm font-serif">Hope Restored</span>
+                    <span class="text-sm font-sans">Hope Restored</span>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary">
+                <h2 class="text-4xl md:text-5xl font-cursive font-bold text-secondary">
                     Experience His Power in Prayer
                 </h2>
             </div>
@@ -909,7 +934,7 @@
                 
                 <!-- Text Overlay -->
                 <div class="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
-                    <h3 class="text-xl font-serif font-bold mb-1">Arno Wiegand</h3>
+                    <h3 class="text-xl font-sans font-bold mb-1">Arno Wiegand</h3>
                     <p class="text-sm text-accent">Church Administrator</p>
                 </div>
             </div>
@@ -925,7 +950,7 @@
                 
                 <!-- Text Overlay -->
                 <div class="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
-                    <h3 class="text-xl font-serif font-bold mb-1">Wolfgang Thilo</h3>
+                    <h3 class="text-xl font-sans font-bold mb-1">Wolfgang Thilo</h3>
                     <p class="text-sm text-accent">Prayer Leader</p>
                 </div>
             </div>
@@ -941,7 +966,7 @@
                 
                 <!-- Text Overlay -->
                 <div class="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
-                    <h3 class="text-xl font-serif font-bold mb-1">Marcella Viola</h3>
+                    <h3 class="text-xl font-sans font-bold mb-1">Marcella Viola</h3>
                     <p class="text-sm text-accent">Associate Sister</p>
                 </div>
             </div>
@@ -957,7 +982,7 @@
                 
                 <!-- Text Overlay -->
                 <div class="absolute bottom-0 left-0 right-0 p-6 text-center text-white">
-                    <h3 class="text-xl font-serif font-bold mb-1">Dieter Erwin</h3>
+                    <h3 class="text-xl font-sans font-bold mb-1">Dieter Erwin</h3>
                     <p class="text-sm text-accent">Bible Study Leader</p>
                 </div>
             </div>
@@ -976,9 +1001,9 @@
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
                 </svg>
-                <span class="text-sm font-serif">Sermons & News</span>
+                <span class="text-sm font-sans">Sermons & News</span>
             </div>
-            <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary">
+            <h2 class="text-4xl md:text-5xl font-cursive font-bold text-secondary">
                 Church News & Stories
             </h2>
         </div>
@@ -1016,7 +1041,7 @@
                     </div>
                     
                     <!-- Title -->
-                    <h3 class="text-2xl font-serif font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
+                    <h3 class="text-2xl font-sans font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
                         Journey Together in Faith, Hope, and Divine Love
                     </h3>
                     
@@ -1062,7 +1087,7 @@
                     </div>
                     
                     <!-- Title -->
-                    <h3 class="text-2xl font-serif font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
+                    <h3 class="text-2xl font-sans font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
                         Step Into Beauty: Where Worship Meets Wedding Bliss
                     </h3>
                     
@@ -1108,7 +1133,7 @@
                     </div>
                     
                     <!-- Title -->
-                    <h3 class="text-2xl font-serif font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
+                    <h3 class="text-2xl font-sans font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
                         Experience Spirit-Led Worship in Our Church Community
                     </h3>
                     
@@ -1154,7 +1179,7 @@
                     </div>
                     
                     <!-- Title -->
-                    <h3 class="text-2xl font-serif font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
+                    <h3 class="text-2xl font-sans font-bold text-secondary mb-3 leading-tight group-hover:text-primary transition">
                         Joyful Praise Echoes Through a Faithful Congregation
                     </h3>
                     
@@ -1184,11 +1209,28 @@
 
 <!-- Donation Section -->
 <section class="relative min-h-screen py-20 px-4">
-    <!-- Background Image -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920');">
-        <!-- Dark overlay -->
+    <!-- Background Media -->
+    <div class="absolute inset-0">
+        <!-- Image fallback (mobile & tablet) -->
+        <div
+            class="absolute inset-0 bg-cover bg-center lg:hidden"
+            style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920');"
+        ></div>
+        <!-- Video background (desktop only) -->
+        <video
+            class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+        >
+            <source src="assets/prayer.mp4" type="video/mp4">
+            <!-- optional fallback text -->
+        </video>
+        <!-- Dark overlay (shared) -->
         <div class="absolute inset-0 bg-black/60"></div>
     </div>
+
 
     <div class="relative z-10 max-w-7xl mx-auto">
         <div class="flex justify-end">
@@ -1197,7 +1239,7 @@
             <div class="w-full lg:w-1/2 xl:w-5/12 bg-secondary/90 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl">
                 
                 <!-- Form Header -->
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-white mb-6">
+                <h2 class="text-4xl md:text-5xl font-cursive font-bold text-white mb-6">
                     Donate Here
                 </h2>
                 <p class="text-light-blue text-sm leading-relaxed mb-8">
@@ -1246,7 +1288,7 @@
 
                     <!-- Payment Method -->
                     <div class="mb-6">
-                        <h3 class="text-white text-lg font-serif font-bold uppercase mb-4">PAYMENT</h3>
+                        <h3 class="text-white text-lg font-cursive font-bold mb-4">Payment</h3>
                         <div class="flex flex-wrap gap-4">
                             <label class="flex items-center gap-2 cursor-pointer">
                                 <input type="radio" name="payment" value="offline" checked 
@@ -1269,7 +1311,7 @@
                     <!-- Donation Amount -->
                     <div class="mb-6">
                         <div class="flex justify-between items-center mb-4">
-                            <h3 class="text-white text-lg font-serif font-bold uppercase">YOUR DONATION</h3>
+                            <h3 class="text-white text-lg font-cursive font-bold">Your Donation</h3>
                             <span class="text-light-blue text-sm font-semibold">CUSTOM AMOUNT</span>
                         </div>
                         
@@ -1336,10 +1378,10 @@
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
         </svg>
-        <span class="text-sm font-serif">Feedback</span>
+        <span class="text-sm font-sans">Feedback</span>
       </div>
 
-      <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary">
+      <h2 class="text-4xl md:text-5xl font-cursive font-bold text-secondary">
         Happy Member Reviews
       </h2>
     </div>
@@ -1374,7 +1416,7 @@
                      alt="Albina Rahel"
                      class="w-full h-full object-cover">
               </div>
-              <h4 class="text-secondary font-serif font-bold text-lg uppercase">Albina Rahel</h4>
+              <h4 class="text-secondary font-sans font-bold text-lg uppercase">Albina Rahel</h4>
               <p class="text-accent-alt text-sm">— Member</p>
             </div>
           </div>
@@ -1400,7 +1442,7 @@
                      alt="John Smith"
                      class="w-full h-full object-cover">
               </div>
-              <h4 class="text-secondary font-serif font-bold text-lg uppercase">John Smith</h4>
+              <h4 class="text-secondary font-sans font-bold text-lg uppercase">John Smith</h4>
               <p class="text-accent-alt text-sm">— Member</p>
             </div>
           </div>
@@ -1426,7 +1468,7 @@
                      alt="Maria Garcia"
                      class="w-full h-full object-cover">
               </div>
-              <h4 class="text-secondary font-serif font-bold text-lg uppercase">Maria Garcia</h4>
+              <h4 class="text-secondary font-sans font-bold text-lg uppercase">Maria Garcia</h4>
               <p class="text-accent-alt text-sm">— Member</p>
             </div>
           </div>
@@ -1485,10 +1527,10 @@
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
           <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
         </svg>
-        <span class="text-sm font-serif">Stay In Touch</span>
+        <span class="text-sm font-sans">Stay In Touch</span>
       </div>
 
-      <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary">
+      <h2 class="text-4xl md:text-5xl font-cursive font-bold text-secondary">
         <span class="text-primary">#</span> Post on <span class="text-accent">Instagram</span>
       </h2>
 
@@ -1611,10 +1653,10 @@
             <svg class="w-5 h-5 text-accent" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7z"/>
             </svg>
-            <span class="text-sm font-serif">Get Involved</span>
+            <span class="text-sm font-sans">Get Involved</span>
           </div>
 
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight mb-4">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-sans font-bold text-white leading-tight mb-4">
             Ready to <span class="text-accent">Serve Others</span>?
           </h2>
 
@@ -1660,7 +1702,7 @@
               <rect x="28" y="30" width="4" height="8"/>
             </svg>
           </div>
-          <span class="text-2xl font-serif font-bold tracking-wide">CRUCIFIX</span>
+          <span class="text-2xl font-sans font-bold tracking-wide">CRUCIFIX</span>
         </div>
 
         <p class="text-sm font-semibold uppercase text-white/80 mb-4">
@@ -1721,7 +1763,7 @@
 
       <!-- Column 2 - Contact -->
       <div>
-        <h3 class="text-lg font-serif font-bold uppercase mb-6">Contact Us</h3>
+        <h3 class="text-lg font-sans font-bold uppercase mb-6">Contact Us</h3>
         <ul class="space-y-4 text-sm text-white/70">
           <li class="flex items-start gap-3">
             <svg class="w-5 h-5 text-accent flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
@@ -1752,7 +1794,7 @@
 
       <!-- Column 3 - Pages -->
       <div>
-        <h3 class="text-lg font-serif font-bold uppercase mb-6">Pages</h3>
+        <h3 class="text-lg font-sans font-bold uppercase mb-6">Pages</h3>
         <ul class="space-y-3 text-sm text-white/70">
           <li><a href="#" class="hover:text-accent transition">Our Team</a></li>
           <li><a href="#" class="hover:text-accent transition">Sermons</a></li>
@@ -1764,7 +1806,7 @@
 
       <!-- Column 4 - Quick Access -->
       <div>
-        <h3 class="text-lg font-serif font-bold uppercase mb-6">Quick Access</h3>
+        <h3 class="text-lg font-sans font-bold uppercase mb-6">Quick Access</h3>
         <ul class="space-y-3 text-sm text-white/70">
           <li><a href="#" class="hover:text-accent transition">FAQs</a></li>
           <li><a href="#" class="hover:text-accent transition">Shop</a></li>
@@ -1776,7 +1818,7 @@
 
       <!-- Column 5 - Resources -->
       <div>
-        <h3 class="text-lg font-serif font-bold uppercase mb-6">Resources</h3>
+        <h3 class="text-lg font-sans font-bold uppercase mb-6">Resources</h3>
         <ul class="space-y-3 text-sm text-white/70">
           <li><a href="#" class="hover:text-accent transition">Events</a></li>
           <li><a href="#" class="hover:text-accent transition">Blog</a></li>
@@ -1793,7 +1835,7 @@
       <div class="flex flex-col md:flex-row justify-between items-center gap-6">
 
         <p class="text-sm text-white/55">
-          © Wedesigntech — All rights reserved.
+          © Developed By CarlosPWD.dev
         </p>
 
         <div class="flex items-center gap-3">
@@ -1817,6 +1859,44 @@
 
 
 <script>
+
+    // Background Image Slider with Ken Burns Effect (Desktop Only)
+    const slides = document.querySelectorAll('.bg-slide');
+    let currentSlide = 0;
+    const isDesktop = window.innerWidth >= 1024;
+
+    // Trigger the zoom animation on the first slide when page loads (desktop only)
+    if (isDesktop) {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                slides[0].classList.add('active');
+            }, 100);
+        });
+    }
+
+    function nextSlide() {
+        if (isDesktop) {
+            slides[currentSlide].classList.add('zoomed');
+        }
+        
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        if (isDesktop) {
+            setTimeout(() => {
+                slides.forEach((slide, index) => {
+                    if (index !== currentSlide) {
+                        slide.classList.remove('zoomed');
+                    }
+                });
+            }, 2000);
+        }
+        
+        slides[currentSlide].classList.add('active');
+    }
+
+    setInterval(nextSlide, isDesktop ? 13000 : 8000);
+
     // Mobile Menu Toggle - Hero Nav
     const heroMobileMenuBtn = document.getElementById('heroMobileMenuBtn');
     const heroMobileMenu = document.getElementById('heroMobileMenu');
@@ -1859,6 +1939,8 @@
         }
     });
 </script>
+
+
 
 <script>
     // Counter Animation Function
@@ -2003,34 +2085,34 @@
 
 <script>
     // Testimonial Carousel
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.testimonial-slide');
+    let currentSlideTestimonial = 0;
+    const slidesTestimonials = document.querySelectorAll('.testimonial-slide');
     const dots = document.querySelectorAll('.dot');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
 
     function showSlide(index) {
-        // Hide all slides
-        slides.forEach(slide => slide.classList.remove('active'));
+        // Hide all slidesTestimonials
+        slidesTestimonials.forEach(slide => slide.classList.remove('active'));
         
         // Update dots
         dots.forEach(dot => dot.classList.remove('bg-teal-600'));
         dots.forEach(dot => dot.classList.add('bg-gray-400'));
         
         // Show current slide
-        slides[index].classList.add('active');
+        slidesTestimonials[index].classList.add('active');
         dots[index].classList.remove('bg-gray-400');
         dots[index].classList.add('bg-teal-600');
     }
 
     function nextSlide() {
-        currentSlide = (currentSlide + 1) % slides.length;
-        showSlide(currentSlide);
+        currentSlideTestimonial = (currentSlideTestimonial + 1) % slidesTestimonials.length;
+        showSlide(currentSlideTestimonial);
     }
 
     function prevSlide() {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        showSlide(currentSlide);
+        currentSlideTestimonial = (currentSlideTestimonial - 1 + slidesTestimonials.length) % slidesTestimonials.length;
+        showSlide(currentSlideTestimonial);
     }
 
     // Event listeners
@@ -2039,8 +2121,8 @@
 
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
-            currentSlide = index;
-            showSlide(currentSlide);
+            currentSlideTestimonial = index;
+            showSlide(currentSlideTestimonial);
         });
     });
 

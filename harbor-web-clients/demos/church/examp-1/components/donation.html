@@ -41,11 +41,28 @@
 
 <!-- Donation Section -->
 <section class="relative min-h-screen py-20 px-4">
-    <!-- Background Image -->
-    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920');">
-        <!-- Dark overlay -->
+    <!-- Background Media -->
+    <div class="absolute inset-0">
+        <!-- Image fallback (mobile & tablet) -->
+        <div
+            class="absolute inset-0 bg-cover bg-center lg:hidden"
+            style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920');"
+        ></div>
+        <!-- Video background (desktop only) -->
+        <video
+            class="hidden lg:block absolute inset-0 w-full h-full object-cover"
+            autoplay
+            muted
+            loop
+            playsinline
+        >
+            <source src="../assets/prayer.mp4" type="video/mp4">
+            <!-- optional fallback text -->
+        </video>
+        <!-- Dark overlay (shared) -->
         <div class="absolute inset-0 bg-black/60"></div>
     </div>
+
 
     <div class="relative z-10 max-w-7xl mx-auto">
         <div class="flex justify-end">
