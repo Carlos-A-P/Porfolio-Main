@@ -110,7 +110,19 @@
         }
         
         .animate-scroll {
-            animation: scroll 30s linear infinite;
+            animation: scroll 10s linear infinite;
+        }
+
+        @media (min-width: 768px) {
+            .animate-scroll {
+                animation: scroll 26s linear infinite; /* medium on tablet+ */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .animate-scroll {
+                animation: scroll 30s linear infinite;
+            }
         }
         
         .animate-scroll:hover {
@@ -199,7 +211,19 @@
         }
         
         .animate-scroll-text {
-            animation: scroll-text 20s linear infinite;
+            animation: scroll-text 10s linear infinite;
+        }
+
+                @media (min-width: 768px) {
+            .animate-scroll-text {
+                animation: scroll 16s linear infinite; /* medium on tablet+ */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .animate-scroll-text {
+                animation: scroll 20s linear infinite;
+            }
         }
 
         .text-gradient-overlay {
@@ -240,7 +264,7 @@
 <body class="font-sans">
 
 <!-- Sticky Navigation (appears on scroll) -->
-<nav class="sticky-nav fixed top-0 left-0 right-0 bg-secondary shadow-lg z-50">
+<nav class="sticky-nav fixed top-0 left-0 right-0 bg-secondary shadow-lg z-[100]">
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex items-center justify-between py-4">
             <!-- Logo -->
@@ -261,7 +285,7 @@
                 <a href="#ministries" class="text-white hover:text-accent transition text-sm font-semibold">MINISTRIES</a>
                 <a href="#contact" class="text-white hover:text-accent transition text-sm font-semibold">CONTACT</a>
                 <button class="bg-accent text-secondary px-6 py-2 rounded font-bold hover:bg-gold transition text-sm uppercase">
-                    DONATE NOW
+                    DONATE
                 </button>
             </div>
 
@@ -282,7 +306,7 @@
                 <a href="#ministries" class="block text-white hover:text-accent transition text-sm font-semibold py-2">MINISTRIES</a>
                 <a href="#contact" class="block text-white hover:text-accent transition text-sm font-semibold py-2">CONTACT</a>
                 <button class="w-full bg-accent text-secondary px-6 py-2 rounded font-bold hover:bg-gold transition text-sm mt-2 uppercase">
-                    DONATE NOW
+                    DONATE
                 </button>
             </div>
         </div>
@@ -338,7 +362,7 @@
                             </svg>
                         </button>
                         <button class="bg-white text-secondary px-6 py-2.5 rounded font-bold hover:bg-slate-blue hover:text-white transition uppercase">
-                            DONATE NOW
+                            DONATE
                         </button>
                     </div>
                 </div>
@@ -362,7 +386,7 @@
                 <a href="#contact" class="block text-white hover:text-accent transition font-medium py-2 text-lg">CONTACTS</a>
                 <div class="pt-2 pb-2">
                     <button class="w-full bg-white text-secondary px-6 py-3 rounded font-bold hover:bg-slate-blue hover:text-white transition uppercase">
-                        DONATE NOW
+                        DONATE
                     </button>
                 </div>
             </div>
@@ -453,7 +477,7 @@
                         ABOUT US
                     </button>
                     <button class="bg-primary text-white px-8 py-4 rounded font-bold text-sm hover:bg-slate-blue hover:text-white transition uppercase">
-                        DONATE NOW
+                        DONATE
                     </button>
                 </div>
             </div>
@@ -461,7 +485,7 @@
             <!-- Right Column - Image with Badge -->
             <div class="relative">
                 <!-- Circular Badge -->
-                <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 lg:left-0 lg:translate-x-0 z-10">
+                <div class="absolute -top-8 transform left-0 translate-x-0 z-10">
                     <div class="w-32 h-32 bg-accent rounded-full flex items-center justify-center border-8 border-white shadow-lg">
                         <div class="text-center">
                             <svg class="w-12 h-12 mx-auto mb-1 text-secondary" fill="currentColor" viewBox="0 0 24 24">
@@ -869,13 +893,7 @@
         <div class="flex animate-scroll-text whitespace-nowrap relative">
             <div class="flex items-center">
                 <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 leading-none">
-                    LIVE WITH GRACE LOVE WITHOUT
-                </span>
-            </div>
-
-            <div class="flex items-center">
-                <span class="text-7xl md:text-8xl lg:text-9xl font-black text-white uppercase px-12 leading-none">
-                    LIVE WITH GRACE LOVE WITHOUT
+                    LIVE WITH GRACE LOVE WITHOUT LIVE WITH GRACE LOVE WITHOUT
                 </span>
             </div>
 
@@ -1672,7 +1690,7 @@
             class="bg-accent text-secondary px-8 py-4 rounded-lg font-bold text-sm uppercase
                    hover:bg-gold transition whitespace-nowrap shadow-lg"
           >
-            Join With Us
+            Learn More About Us
           </a>
         </div>
 
