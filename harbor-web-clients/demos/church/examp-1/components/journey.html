@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spiritual Journey Section</title>
     
-    <!-- Google Fonts -->
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Engagement&family=Hedvig+Letters+Serif:opsz@12..24&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Damion&display=swap" rel="stylesheet">
+    <!-- /fonts -->
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -25,11 +27,12 @@
                         
                         // Additional custom colors
                         'light-blue': '#EAF4F8',   // Very light blue
-                        'gold': '#F6D092',         // Light gold
+                        'gold': '#FAD06E',         // Light gold
                         'slate-blue': '#5B8698',   // Medium slate blue
                     },
                     fontFamily: {
-                        'serif': ['"Hedvig Letters Serif"', 'Georgia', 'serif'],
+                        'cursive': ['courgette', 'cursive'],
+                        'serif': ['Hedvig Letters Serif', 'serif'],
                         'sans': ['system-ui', '-apple-system', 'sans-serif'],
                     }
                 }
@@ -111,7 +114,7 @@
 <body class="font-sans text-text">
 
 <!-- Spiritual Journey Section -->
-<section class="bg-light-blue py-20 px-4">
+<section class="bg-stone-50 py-20 px-4">
     <div class="max-w-7xl mx-auto">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             
@@ -122,11 +125,11 @@
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2L3 9v11c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V9l-9-7zm0 2.2l7 5.4v8.4H5V9.6l7-5.4z"/>
                     </svg>
-                    <span class="text-sm font-serif">Love, Light, Grace</span>
+                    <span class="text-sm font-sans">Love, Light, Grace</span>
                 </div>
 
                 <!-- Main Heading -->
-                <h2 class="text-4xl md:text-5xl font-serif font-bold text-secondary mb-8 leading-tight">
+                <h2 class="text-4xl md:text-5xl font-cursive font-bold text-secondary mb-8 leading-tight">
                     A Spiritual Home <span class="text-accent">Guiding Journey</span><br>
                     <span class="text-accent">With A</span> Hope and Grace.
                 </h2>
@@ -136,10 +139,10 @@
                     <button class="tab-btn active bg-primary text-white px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-slate-blue transition" data-tab="mission">
                         OUR MISSION
                     </button>
-                    <button class="tab-btn bg-white text-text px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-light-blue transition border border-accent-alt/20" data-tab="vision">
+                    <button class="tab-btn bg-stone-200 text-text px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-slate-blue hover:text-white transition border border-accent-alt/20" data-tab="vision">
                         OUR VISION
                     </button>
-                    <button class="tab-btn bg-white text-text px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-light-blue transition border border-accent-alt/20" data-tab="values">
+                    <button class="tab-btn bg-stone-200 text-text px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-slate-blue hover:text-white transition border border-accent-alt/20" data-tab="values">
                         OUR VALUES
                     </button>
                 </div>
@@ -149,7 +152,7 @@
                     <!-- Mission Tab -->
                     <div class="tab-content fade-in" id="mission">
                         <div class="mb-6">
-                            <h3 class="text-secondary font-serif font-bold text-lg mb-2">Feugiat tristique :</h3>
+                            <h3 class="text-secondary font-sans font-bold text-lg mb-2">Feugiat tristique :</h3>
                             <p class="text-accent-alt text-sm leading-relaxed">
                                 Semper vel class aptent facilisi cubilia taciti sociosqu ad litora, interdum, nisl diam blandit neque, eget sollicitudin lectus erat nec odio. Donec mollis neque sed nisl hendrerit, justo, non feugiat velit accumsan quis. Vivamus et leo elementum, dignissimeli eget, tincidunt sapien. Nam eget nibh aliquet nisl sodales ligula.
                             </p>
@@ -186,7 +189,7 @@
                     <!-- Vision Tab (hidden by default) -->
                     <div class="tab-content hidden absolute top-0 left-0 w-full" id="vision">
                         <div class="mb-6">
-                            <h3 class="text-secondary font-serif font-bold text-lg mb-2">Our Vision for the Future:</h3>
+                            <h3 class="text-secondary font-sans font-bold text-lg mb-2">Our Vision for the Future:</h3>
                             <p class="text-accent-alt text-sm leading-relaxed">
                                 We envision a community where faith transforms lives and spreads hope throughout the world. Our vision is to create lasting impact through compassionate service, meaningful worship, and authentic relationships that reflect Christ's love to all people.
                             </p>
@@ -221,7 +224,7 @@
                     <!-- Values Tab (hidden by default) -->
                     <div class="tab-content hidden absolute top-0 left-0 w-full" id="values">
                         <div class="mb-6">
-                            <h3 class="text-secondary font-serif font-bold text-lg mb-2">Core Values We Live By:</h3>
+                            <h3 class="text-secondary font-sans font-bold text-lg mb-2">Core Values We Live By:</h3>
                             <p class="text-accent-alt text-sm leading-relaxed">
                                 Our values guide every decision we make and every action we take. Rooted in scripture and lived out daily, these principles shape our church community and define who we are as followers of Christ.
                             </p>
@@ -312,13 +315,24 @@
             
             // Remove active class from all buttons
             tabButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-primary', 'text-white');
-                btn.classList.add('bg-white', 'text-text', 'border', 'border-accent-alt/20');
+                btn.classList.remove(
+                    'active',
+                    'bg-primary',
+                    'text-white',
+                    'hover:bg-primary',
+                    'hover:bg-slate-blue'
+                );
+                btn.classList.add(
+                    'bg-stone-200',
+                    'text-gray-700',
+                    'hover:bg-slate-blue',
+                    'hover:text-white'
+                );
             });
             
             // Add active class to clicked button
             button.classList.add('active', 'bg-primary', 'text-white');
-            button.classList.remove('bg-white', 'text-text', 'border', 'border-accent-alt/20');
+            button.classList.remove('bg-stone-200', 'text-gray-700');
             
             // Hide all tab contents
             tabContents.forEach(content => {

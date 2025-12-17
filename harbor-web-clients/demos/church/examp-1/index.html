@@ -17,10 +17,11 @@
                 extend: {
                     colors: {
                         // Main brand colors
-                        'primary': '#02445F',      // Deep blue
-                        'secondary': '#062432',    // Darker blue/navy
+                        'primary': '#2a7d9f',      // light blue
+                        'secondary': '#062432',    // Darker blue
+                        'custom': '#02445F',       // Deep blue
                         'text': '#3D4343',         // Dark gray for text
-                        'accent': '#ffc107',       // Golden yellow
+                        'accent': '#FAD06E',       // Golden yellow
                         'accent-alt': '#777C7B',   // Medium gray
                         
                         // Additional custom colors
@@ -293,9 +294,7 @@
     <!-- Background Image Slider -->
     <div class="bg-slider">
         <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1920');"></div>
-        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=1920');"></div>
         <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1920');"></div>
-        <div class="bg-slide" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1920');"></div>
     </div>
 
     <!-- Dark Overlay -->
@@ -338,7 +337,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                             </svg>
                         </button>
-                        <button class="bg-white text-secondary px-6 py-2.5 rounded font-bold hover:bg-light-blue transition uppercase">
+                        <button class="bg-white text-secondary px-6 py-2.5 rounded font-bold hover:bg-slate-blue hover:text-white transition uppercase">
                             DONATE NOW
                         </button>
                     </div>
@@ -362,7 +361,7 @@
                 <a href="#ministries" class="block text-white hover:text-accent transition font-medium py-2 text-lg">MINISTRIES</a>
                 <a href="#contact" class="block text-white hover:text-accent transition font-medium py-2 text-lg">CONTACTS</a>
                 <div class="pt-2 pb-2">
-                    <button class="w-full bg-white text-secondary px-6 py-3 rounded font-bold hover:bg-light-blue transition uppercase">
+                    <button class="w-full bg-white text-secondary px-6 py-3 rounded font-bold hover:bg-slate-blue hover:text-white transition uppercase">
                         DONATE NOW
                     </button>
                 </div>
@@ -381,7 +380,7 @@
         
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4">
-            <button class="bg-white text-secondary px-8 py-4 rounded font-bold text-sm hover:bg-light-blue transition uppercase">
+            <button class="bg-white text-secondary px-8 py-4 rounded font-bold text-sm hover:bg-slate-blue hover:text-white transition uppercase">
                 JOIN US THIS SUNDAY
             </button>
             <button class="bg-accent text-secondary px-8 py-4 rounded font-bold text-sm hover:bg-gold transition uppercase">
@@ -453,7 +452,7 @@
                     <button class="bg-accent text-secondary px-8 py-4 rounded font-bold text-sm hover:bg-gold transition uppercase">
                         ABOUT US
                     </button>
-                    <button class="bg-primary text-white px-8 py-4 rounded font-bold text-sm hover:bg-slate-blue transition uppercase">
+                    <button class="bg-primary text-white px-8 py-4 rounded font-bold text-sm hover:bg-slate-blue hover:text-white transition uppercase">
                         DONATE NOW
                     </button>
                 </div>
@@ -584,7 +583,7 @@
             <!-- Card 1 -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition group">
                 <div class="overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" 
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600" 
                          alt="Praying hands" 
                          class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
@@ -687,10 +686,10 @@
                     <button class="tab-btn active bg-primary text-white px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-slate-blue transition" data-tab="mission">
                         OUR MISSION
                     </button>
-                    <button class="tab-btn bg-white text-text px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-light-blue transition border border-accent-alt/20" data-tab="vision">
+                    <button class="tab-btn bg-stone-200 text-text px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-slate-blue hover:text-white transition border border-accent-alt/20" data-tab="vision">
                         OUR VISION
                     </button>
-                    <button class="tab-btn bg-white text-text px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-light-blue transition border border-accent-alt/20" data-tab="values">
+                    <button class="tab-btn bg-stone-200 text-text px-6 py-3 rounded-lg font-bold text-sm uppercase hover:bg-slate-blue hover:text-white transition border border-accent-alt/20" data-tab="values">
                         OUR VALUES
                     </button>
                 </div>
@@ -853,11 +852,11 @@
 </div>
 
 <!-- Scrolling Text Banner Section -->
-<section class="relative h-64 overflow-hidden">
+<section class="relative h-96 overflow-hidden">
     <!-- Background Image -->
     <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=1920');">
         <!-- Dark overlay for better text visibility -->
-        <div class="absolute inset-0 bg-black/40"></div>
+        <div class="absolute inset-0 bg-black/5"></div>
     </div>
 
     <!-- Gradient Overlay on Text -->
@@ -1154,7 +1153,7 @@
                 <!-- Image -->
                 <div class="w-full md:w-72 flex-shrink-0">
                     <div class="rounded-3xl overflow-hidden shadow-lg w-full h-72">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" 
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=600" 
                              alt="Praise worship" 
                              class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                     </div>
@@ -1228,7 +1227,7 @@
             <!-- optional fallback text -->
         </video>
         <!-- Dark overlay (shared) -->
-        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-black/30"></div>
     </div>
 
 
@@ -1236,14 +1235,14 @@
         <div class="flex justify-end">
             
             <!-- Donation Form - Positioned to the right -->
-            <div class="w-full lg:w-1/2 xl:w-5/12 bg-secondary/90 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl">
+            <div class="w-full lg:w-1/2 xl:w-5/12 bg-secondary/40 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl">
                 
                 <!-- Form Header -->
                 <h2 class="text-4xl md:text-5xl font-cursive font-bold text-white mb-6">
                     Donate Here
                 </h2>
                 <p class="text-light-blue text-sm leading-relaxed mb-8">
-                    Finibus facilisis dapibus etiam interdum tortor ligula congue. Ad litora torquent per conubia nostra inceptos himenaeos.
+                    Finibus facilisis dapibus fetiam interdum tortor ligula congue. Ad litora torquent per conubia nostra inceptos himenaeos.
                 </p>
 
                 <form>
@@ -1633,7 +1632,7 @@
 <!-- CTA Banner -->
 <section class="bg-secondary py-12 px-4 font-sans">
   <div class="max-w-7xl mx-auto">
-    <div class="bg-primary rounded-3xl overflow-hidden shadow-xl">
+    <div class="bg-custom rounded-3xl overflow-hidden shadow-xl">
       <div class="grid grid-cols-1 lg:grid-cols-12 items-stretch">
 
         <!-- Left - Image -->
@@ -2001,12 +2000,23 @@
             
             // Remove active class from all buttons
             tabButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-teal-900', 'text-white');
-                btn.classList.add('bg-stone-200', 'text-gray-700');
+                btn.classList.remove(
+                    'active',
+                    'bg-primary',
+                    'text-white',
+                    'hover:bg-primary',
+                    'hover:bg-slate-blue'
+                );
+                btn.classList.add(
+                    'bg-stone-200',
+                    'text-gray-700',
+                    'hover:bg-slate-blue',
+                    'hover:text-white'
+                );
             });
             
             // Add active class to clicked button
-            button.classList.add('active', 'bg-teal-900', 'text-white');
+            button.classList.add('active', 'bg-primary', 'text-white');
             button.classList.remove('bg-stone-200', 'text-gray-700');
             
             // Hide all tab contents
@@ -2031,7 +2041,7 @@
     const videoFrame = document.getElementById('videoFrame');
     
     // Example YouTube video ID - replace with actual video
-    const youtubeVideoId = 'dQw4w9WgXcQ'; // Replace with your video ID
+    const youtubeVideoId = '9Tp3osP3cbI'; // Replace with your video ID
     
     // Open lightbox
     videoThumbnail.addEventListener('click', () => {
