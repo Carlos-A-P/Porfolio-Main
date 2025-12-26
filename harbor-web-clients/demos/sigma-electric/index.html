@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Preload critical hero image for better LCP -->
-    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=1080&fit=crop">
+    <link rel="preload" as="image"
+        href="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=1080&fit=crop">
     <style>
         /* Preloader Styles */
-        #preloader {
+        /* #preloader {
             position: fixed;
             top: 0;
             left: 0;
@@ -27,7 +29,7 @@
         #preloader.fade-out {
             opacity: 0;
             pointer-events: none;
-        }
+        } */
 
         .lightning-bolt {
             font-size: 80px;
@@ -36,10 +38,13 @@
         }
 
         @keyframes pulse {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: scale(1);
                 opacity: 1;
             }
+
             50% {
                 transform: scale(1.2);
                 opacity: 0.8;
@@ -72,6 +77,7 @@
             0% {
                 transform: translate(-50%, -50%) rotate(0deg);
             }
+
             100% {
                 transform: translate(-50%, -50%) rotate(360deg);
             }
@@ -95,8 +101,13 @@
         }
 
         @keyframes progress {
-            0% { width: 0%; }
-            100% { width: 100%; }
+            0% {
+                width: 0%;
+            }
+
+            100% {
+                width: 100%;
+            }
         }
 
         .loading-text {
@@ -109,8 +120,15 @@
         }
 
         @keyframes fadeInOut {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
+
+            0%,
+            100% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
         }
 
         /* Preload critical images */
@@ -130,18 +148,23 @@
             opacity: 0;
             transition: opacity 2s ease-in-out;
         }
-        
+
         .hero-slide.active {
             opacity: 1;
         }
-        
+
         .hero-slide img {
             animation: kenburns 20s ease-out forwards;
         }
-        
+
         @keyframes kenburns {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.15); }
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.15);
+            }
         }
 
         /* Scroll Animations */
@@ -199,9 +222,11 @@
             .md\:clip-path-left {
                 clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
             }
+
             .md\:clip-path-center {
                 clip-path: polygon(0 0, 100% 0, 97% 100%, 6% 100%);
             }
+
             .md\:clip-path-right {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
             }
@@ -211,14 +236,14 @@
         .gallery-item {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .gallery-item.hide {
             opacity: 0;
             transform: scale(0.8);
             position: absolute;
             pointer-events: none;
         }
-        
+
         .gallery-item.show {
             opacity: 1;
             transform: scale(1);
@@ -228,7 +253,7 @@
         .gallery-item img {
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover img {
             transform: scale(1.05);
         }
@@ -265,11 +290,11 @@
             cursor: pointer;
             transition: transform 0.3s ease;
         }
-        
+
         .video-play-btn:hover {
             transform: scale(1.1);
         }
-        
+
         .video-play-btn::before {
             content: '';
             position: absolute;
@@ -282,12 +307,13 @@
             border-radius: 50%;
             animation: videoPulse 2s infinite;
         }
-        
+
         @keyframes videoPulse {
             0% {
                 transform: translate(-50%, -50%) scale(1);
                 opacity: 1;
             }
+
             100% {
                 transform: translate(-50%, -50%) scale(1.5);
                 opacity: 0;
@@ -295,9 +321,10 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Preloader -->
-    <div id="preloader">
+    <!-- <div id="preloader">
         <div class="relative flex flex-col items-center justify-center">
             <div class="relative w-[200px] h-[200px] flex items-center justify-center">
                 <div class="electric-circle"></div>
@@ -313,27 +340,38 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Main Content -->
-    <div id="main-content" style="display: none;">
+    <div id="main-content">
         <!-- Top Info Bar -->
         <div class="bg-gray-800 text-white">
             <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between text-sm gap-4">
+
+                <!-- Service Area (no fake address) -->
                 <div class="flex items-center gap-2">
-                    <i class="fas fa-map-marker-alt text-orange-500"></i>
-                    <span>8494 Signal Hill Road Manassas, VA, 20110</span>
+                    <i class="fas fa-map-marked-alt text-orange-500"></i>
+                    <span class="text-white/90">
+                        Serving LA, Orange, Riverside, San Bernardino, Ventura &amp; Santa Barbara Counties
+                    </span>
                 </div>
+
+                <!-- Hours -->
                 <div class="flex items-center gap-2">
                     <i class="far fa-clock text-orange-500"></i>
-                    <span>Mon-Fri 08:00 AM - 05:00 PM</span>
+                    <span class="text-white/90">
+                        Mon–Fri 7:00 AM – 5:00 PM • Sat 8:00 AM – 2:00 PM
+                    </span>
                 </div>
-                <div class="flex items-center gap-6">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-phone-alt text-white"></i>
-                        <span class="text-orange-500 font-semibold">1 (800) 765-43-21</span>
-                    </div>
+
+                <!-- Phone -->
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-white"></i>
+                    <a href="tel:13236401388" class="text-orange-500 font-semibold hover:text-orange-400 transition">
+                        (323) 640-1388
+                    </a>
                 </div>
+
             </div>
         </div>
 
@@ -341,64 +379,94 @@
         <nav class="bg-white shadow-md sticky top-0 z-50">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="flex items-center justify-between h-20">
-                    <div class="flex items-center">
+
+                    <!-- Brand -->
+                    <a href="#top" class="flex items-center">
                         <i class="fas fa-bolt text-orange-500 text-3xl mr-2"></i>
-                        <span class="text-2xl font-bold text-gray-800">Electrician</span>
-                    </div>
+                        <span class="text-xl sm:text-2xl font-bold text-gray-800">
+                            Sigma C &amp; S Electric LLC
+                        </span>
+                    </a>
+
+                    <!-- Desktop Nav -->
                     <div class="hidden lg:flex items-center space-x-8">
-                        <a href="index.html" class="text-orange-500 font-semibold hover:text-orange-600 transition">Home</a>
-                        <a href="about-us.html" class="text-gray-700 hover:text-orange-500 transition">About Us</a>
+                        <a href="about-us.html" class="text-gray-700 hover:text-orange-500 transition">About</a>
                         <a href="services.html" class="text-gray-700 hover:text-orange-500 transition">Services</a>
-                        <a href="gallery.html" class="text-gray-700 hover:text-orange-500 transition">Gallery</a>
+                        <a href="gallery.html" class="text-gray-700 hover:text-orange-500 transition">Projects</a>
                         <a href="contact.html" class="text-gray-700 hover:text-orange-500 transition">Contact</a>
                     </div>
-                    <div class="hidden lg:block">
-                        <button onclick="scrollToForm()" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center gap-2 transition">
-                            <i class="fas fa-bolt"></i>
-                            Appointment
+
+                    <!-- Desktop CTA -->
+                    <div class="hidden lg:flex items-center gap-3">
+                        <a href="tel:13236401388"
+                            class="border border-gray-200 hover:border-orange-500 text-gray-800 px-5 py-3 rounded font-semibold flex items-center gap-2 transition">
+                            <i class="fas fa-phone-alt text-orange-500"></i>
+                            Call
+                        </a>
+
+                        <button onclick="scrollToForm()"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center gap-2 transition">
+                            <i class="fas fa-calendar-check"></i>
+                            Request Service
                         </button>
                     </div>
-                    <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-orange-500 transition">
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-orange-500 transition"
+                        aria-label="Open menu">
                         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
+
+                <!-- Mobile Menu -->
                 <div id="mobile-menu" class="hidden lg:hidden pb-4">
                     <div class="flex flex-col space-y-3">
-                        <a href="index.html" class="text-orange-500 font-semibold py-2">Home</a>
-                        <a href="about-us.html" class="text-gray-700 hover:text-orange-500 py-2">About Us</a>
+                        <a href="about-us.html" class="text-gray-700 hover:text-orange-500 py-2">About</a>
                         <a href="services.html" class="text-gray-700 hover:text-orange-500 py-2">Services</a>
-                        <a href="#gallery" class="text-gray-700 hover:text-orange-500 py-2">Gallery</a>
-                        <a href="#testimonials" class="text-gray-700 hover:text-orange-500 py-2">Testimonials</a>
+                        <a href="gallery.html" class="text-gray-700 hover:text-orange-500 py-2">Projects</a>
                         <a href="contact.html" class="text-gray-700 hover:text-orange-500 py-2">Contact</a>
-                        <button onclick="scrollToForm()" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center justify-center gap-2 mt-3">
-                            <i class="fas fa-bolt"></i>
-                            Appointment
-                        </button>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                            <a href="tel:13236401388"
+                                class="bg-white border border-gray-200 text-gray-900 px-6 py-3 rounded font-semibold flex items-center justify-center gap-2">
+                                <i class="fas fa-phone-alt text-orange-500"></i>
+                                Call Now
+                            </a>
+
+                            <button onclick="scrollToForm()"
+                                class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center justify-center gap-2">
+                                <i class="fas fa-calendar-check"></i>
+                                Request Service
+                            </button>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </nav>
+
 
         <!-- Hero Section -->
         <section id="home" class="relative min-h-screen flex items-center bg-gray-900 overflow-hidden">
             <div class="absolute inset-0">
                 <div class="hero-slide active">
-                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=1080&fit=crop" 
-                         alt="Electrician at work" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=1080&fit=crop"
+                        alt="Electrician at work" class="w-full h-full object-cover">
                 </div>
                 <div class="hero-slide">
-                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&h=1080&fit=crop" 
-                         alt="Electrical panel" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&h=1080&fit=crop"
+                        alt="Electrical panel" class="w-full h-full object-cover">
                 </div>
                 <div class="hero-slide">
-                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop" 
-                         alt="Electrician with tools" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1920&h=1080&fit=crop"
+                        alt="Electrician with tools" class="w-full h-full object-cover">
                 </div>
                 <div class="hero-slide">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&h=1080&fit=crop" 
-                         alt="Modern lighting" class="w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&h=1080&fit=crop"
+                        alt="Modern lighting" class="w-full h-full object-cover">
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/90 to-gray-900/80"></div>
             </div>
@@ -406,19 +474,25 @@
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     <div class="text-white fade-in">
                         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                            Reliable Electrician Services You Can Trust
+                            Licensed Electrical Services You Can Trust in Southern California
                         </h1>
                         <p class="text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">
-                            Need fast and safe electrical solutions for your home or business? Our licensed electricians are ready to tackle any job, big or small.
+                            25+ years of experience delivering safe, code-compliant electrical work for homes,
+                            businesses, and new construction projects.
+                        </p>
+                        <p class="text-lg lg:text-xl text-gray-300 mb-8 leading-relaxed">
+                            📍 Serving Los Angeles, Orange, Riverside, San Bernardino, Ventura & Santa Barbara Counties
                         </p>
                         <div class="flex flex-col sm:flex-row gap-4">
-                            <a href="tel:18775556666" class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl">
+                            <a href="tel:13236401388"
+                                class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-xl hover:shadow-2xl">
                                 <i class="fas fa-phone-alt"></i>
-                                CALL: +1 877 555 6666
+                                CALL: (323) 640-1388
                             </a>
-                            <button onclick="scrollToForm()" class="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300">
+                            <button onclick="scrollToForm()"
+                                class="inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300">
                                 <i class="fas fa-file-alt"></i>
-                                FREE QUOTE
+                                GET A FREE ESTIMATE
                             </button>
                         </div>
                     </div>
@@ -452,292 +526,544 @@
             <div class="max-w-6xl mx-auto px-4">
                 <div class="bg-white rounded-2xl shadow-2xl p-8 scale-in">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                        <!-- Licensed / Insured -->
                         <div class="flex items-center gap-4">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-phone-alt text-white text-2xl"></i>
+                            <div
+                                class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
                             </div>
                             <div>
-                                <p class="text-gray-600 text-sm mb-1">Get a Free Quote Today!</p>
-                                <p class="text-gray-800 font-bold text-xl">+1 877-555-6666</p>
+                                <p class="text-gray-600 text-sm mb-1">Licensed • Bonded • Insured</p>
+                                <p class="text-gray-800 font-bold text-xl">C-10 #1085988</p>
+                                <p class="text-gray-500 text-sm mt-1">Code-compliant work (NEC + California)</p>
                             </div>
                         </div>
+
+                        <!-- Free Estimates -->
                         <div class="flex items-center gap-4">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-star text-white text-2xl"></i>
+                            <div
+                                class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-file-invoice-dollar text-white text-2xl"></i>
                             </div>
                             <div>
-                                <p class="text-gray-600 text-sm mb-1">Based on Real Reviews</p>
-                                <p class="text-gray-800 font-bold text-xl">5 Star Service</p>
+                                <p class="text-gray-600 text-sm mb-1">No Hidden Fees</p>
+                                <p class="text-gray-800 font-bold text-xl">Free Estimates</p>
+                                <p class="text-gray-500 text-sm mt-1">Upfront pricing, honest recommendations</p>
                             </div>
                         </div>
+
+                        <!-- Experience -->
                         <div class="flex items-center gap-4">
-                            <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-award text-white text-2xl"></i>
                             </div>
                             <div>
-                                <p class="text-gray-600 text-sm mb-1">Years of Experience</p>
-                                <p class="text-gray-800 font-bold text-xl">25+ years</p>
+                                <p class="text-gray-600 text-sm mb-1">Hands-On Experience</p>
+                                <p class="text-gray-800 font-bold text-xl">25+ Years</p>
+                                <p class="text-gray-500 text-sm mt-1">Residential • Commercial • New Construction</p>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
+
 
         <!-- About Us Section -->
         <section id="about" class="py-16 lg:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-12 items-center">
+
                     <div class="relative slide-in-left">
                         <div class="relative z-10">
-                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop" 
-                                 alt="Electrician" class="w-full h-auto rounded-lg shadow-xl">
+                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&h=600&fit=crop"
+                                alt="Electrician at work" class="w-full h-auto rounded-lg shadow-xl">
                         </div>
                         <div class="absolute bottom-0 left-0 w-2/5 z-20 transform -translate-x-8 translate-y-8">
-                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=300&fit=crop" 
-                                 alt="Equipment" class="w-full h-auto rounded-lg shadow-2xl border-4 border-white">
+                            <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=400&h=300&fit=crop"
+                                alt="Electrical tools and equipment"
+                                class="w-full h-auto rounded-lg shadow-2xl border-4 border-white">
                         </div>
                     </div>
+
                     <div class="slide-in-right">
                         <div class="text-orange-500 font-semibold text-sm uppercase tracking-wide mb-4">About Us</div>
+
                         <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-                            Outstanding Residential & Commercial Services
+                            Clean Work. Honest Pricing. No “Small” Jobs.
                         </h2>
+
                         <p class="text-gray-600 text-base lg:text-lg mb-8 leading-relaxed">
-                            All of our services are backed by our 100% satisfaction guarantee. Our electricians can install anything from new security lighting to whole home generators.
+                            At Sigma C &amp; S Electric LLC, we focus on doing the job right the first time —
+                            with clear communication, tidy workmanship, and solutions that meet code.
+                            Whether it’s a quick fix, an upgrade, or a larger project, you’ll get the same
+                            attention and respect from start to finish.
                         </p>
+
                         <div class="space-y-4 mb-10">
                             <div class="flex items-start gap-3">
                                 <i class="fas fa-check text-orange-500 mt-1"></i>
-                                <span class="text-gray-700 text-base lg:text-lg">Full-service electrical layout, design</span>
+                                <span class="text-gray-700 text-base lg:text-lg">
+                                    Clear communication and honest recommendations from start to finish.
+                                </span>
                             </div>
+
                             <div class="flex items-start gap-3">
                                 <i class="fas fa-check text-orange-500 mt-1"></i>
-                                <span class="text-gray-700 text-base lg:text-lg">Wiring and installation/upgrades</span>
+                                <span class="text-gray-700 text-base lg:text-lg">
+                                    Clean, organized job sites — your home or business is treated with respect.
+                                </span>
                             </div>
+
                             <div class="flex items-start gap-3">
                                 <i class="fas fa-check text-orange-500 mt-1"></i>
-                                <span class="text-gray-700 text-base lg:text-lg">Emergency power solutions</span>
+                                <span class="text-gray-700 text-base lg:text-lg">
+                                    Code-compliant work focused on safety, reliability, and long-term performance.
+                                </span>
                             </div>
+
                             <div class="flex items-start gap-3">
                                 <i class="fas fa-check text-orange-500 mt-1"></i>
-                                <span class="text-gray-700 text-base lg:text-lg">Virtually any electrical needs you have</span>
+                                <span class="text-gray-700 text-base lg:text-lg">
+                                    Free estimates and guaranteed workmanship — no surprises.
+                                </span>
                             </div>
                         </div>
-                        <div class="flex items-center gap-4 pt-6 border-t border-gray-200">
-                            <img src="https://i.pravatar.cc/80?img=12" alt="Mark Smith" class="w-16 h-16 rounded-full">
-                            <div class="flex-1">
-                                <h4 class="font-bold text-gray-800 text-lg">Mark Smith</h4>
-                                <p class="text-gray-500 text-sm">Your own electrician</p>
-                            </div>
+
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="tel:13236401388"
+                                class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                                <i class="fas fa-phone-alt"></i>
+                                Call: (323) 640-1388
+                            </a>
+
+                            <button onclick="scrollToForm()"
+                                class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                                <i class="fas fa-file-alt"></i>
+                                Get a Free Estimate
+                            </button>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
 
+
+
         <!-- Services Section -->
-        <section id="services" class="relative overflow-hidden fade-in">
-            <div class="hidden md:flex">
-                <div class="group relative h-[500px] flex-1 overflow-hidden cursor-pointer">
-                    <div class="absolute inset-0 md:clip-path-left">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop" 
-                             alt="Commercial" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
-                    </div>
-                    <div class="relative h-full flex flex-col items-center justify-center text-white p-6 z-10">
-                        <h3 class="text-3xl lg:text-4xl font-bold mb-6">Commercial</h3>
-                        <button class="w-16 h-16 rounded-full bg-orange-500 hover:bg-orange-600 flex items-center justify-center transition-all duration-300 transform group-hover:scale-110">
-                            <i class="fas fa-arrow-right text-white text-xl"></i>
+        <section id="services" class="relative overflow-hidden fade-in bg-gray-900">
+            <div class="hidden md:grid grid-cols-3">
+
+                <!-- Residential -->
+                <div class="relative h-[520px] group">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&h=800&fit=crop"
+                        alt="Residential Electrical Services" class="absolute inset-0 w-full h-full object-cover">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/30"></div>
+
+                    <div class="relative h-full flex flex-col justify-end p-10 text-white">
+                        <div class="mb-4">
+                            <i class="fas fa-home text-orange-500 text-4xl mb-4"></i>
+                            <h3 class="text-3xl font-bold mb-2">Residential</h3>
+                            <p class="text-white/90 text-sm max-w-sm">
+                                Panel upgrades, EV chargers, lighting installs, and reliable home electrical repairs.
+                            </p>
+                        </div>
+
+                        <button onclick="scrollToForm()"
+                            class="mt-6 inline-flex items-center gap-3 w-fit bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded font-semibold transition">
+                            Get a Free Estimate
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
-                <div class="group relative h-[500px] flex-1 overflow-hidden cursor-pointer -ml-12">
-                    <div class="absolute inset-0 md:clip-path-center">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=800&fit=crop" 
-                             alt="Industrial" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
-                    </div>
-                    <div class="relative h-full flex flex-col items-center justify-center text-white p-6 z-10">
-                        <h3 class="text-3xl lg:text-4xl font-bold mb-6">Industrial</h3>
-                        <button class="w-16 h-16 rounded-full bg-orange-500 hover:bg-orange-600 flex items-center justify-center transition-all duration-300 transform group-hover:scale-110">
-                            <i class="fas fa-arrow-right text-white text-xl"></i>
+
+                <!-- Commercial -->
+                <div class="relative h-[520px] group">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&h=800&fit=crop"
+                        alt="Commercial Electrical Services" class="absolute inset-0 w-full h-full object-cover">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/30"></div>
+
+                    <div class="relative h-full flex flex-col justify-end p-10 text-white">
+                        <div class="mb-4">
+                            <i class="fas fa-building text-orange-500 text-4xl mb-4"></i>
+                            <h3 class="text-3xl font-bold mb-2">Commercial</h3>
+                            <p class="text-white/90 text-sm max-w-sm">
+                                Electrical service for offices and businesses, including upgrades, lighting, and
+                                troubleshooting.
+                            </p>
+                        </div>
+
+                        <button onclick="scrollToForm()"
+                            class="mt-6 inline-flex items-center gap-3 w-fit bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded font-semibold transition">
+                            Get a Free Estimate
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
-                <div class="group relative h-[500px] flex-1 overflow-hidden cursor-pointer -ml-12">
-                    <div class="absolute inset-0 md:clip-path-right">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&h=800&fit=crop" 
-                             alt="Residential" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                        <div class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300"></div>
-                    </div>
-                    <div class="relative h-full flex flex-col items-center justify-center text-white p-6 z-10">
-                        <h3 class="text-3xl lg:text-4xl font-bold mb-6">Residential</h3>
-                        <button class="w-16 h-16 rounded-full bg-orange-500 hover:bg-orange-600 flex items-center justify-center transition-all duration-300 transform group-hover:scale-110">
-                            <i class="fas fa-arrow-right text-white text-xl"></i>
+
+                <!-- New Construction & ADUs -->
+                <div class="relative h-[520px] group">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&h=800&fit=crop"
+                        alt="New Construction and ADU Electrical" class="absolute inset-0 w-full h-full object-cover">
+
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/55 to-black/30"></div>
+
+                    <div class="relative h-full flex flex-col justify-end p-10 text-white">
+                        <div class="mb-4">
+                            <i class="fas fa-tools text-orange-500 text-4xl mb-4"></i>
+                            <h3 class="text-3xl font-bold mb-2">New Construction & ADUs</h3>
+                            <p class="text-white/90 text-sm max-w-sm">
+                                Complete electrical systems for new builds, remodels, underground runs, and ADU
+                                projects.
+                            </p>
+                        </div>
+
+                        <button onclick="scrollToForm()"
+                            class="mt-6 inline-flex items-center gap-3 w-fit bg-orange-500 hover:bg-orange-600 px-6 py-3 rounded font-semibold transition">
+                            Get a Free Estimate
+                            <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
                 </div>
+
             </div>
         </section>
+
+
 
         <!-- Gallery Section -->
         <section id="gallery" class="py-16 lg:py-24 bg-white fade-in">
             <div class="max-w-7xl mx-auto px-4">
-                <div class="text-center mb-12">
+
+                <div class="text-center mb-10">
                     <p class="text-orange-500 font-semibold text-sm uppercase tracking-wide mb-3">Our Portfolio</p>
-                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-6">Recent Projects</h2>
+                    <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-4">Recent Projects</h2>
+
+                    <p class="text-gray-600 max-w-2xl mx-auto">
+                        A few examples of the work we do across Southern California — residential, commercial, and new
+                        construction.
+                    </p>
+
+                    <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="tel:13236401388"
+                            class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded font-semibold transition shadow-lg">
+                            <i class="fas fa-phone-alt"></i>
+                            Call: (323) 640-1388
+                        </a>
+
+                        <button onclick="scrollToForm()"
+                            class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-3 rounded font-semibold transition shadow-lg">
+                            <i class="fas fa-file-alt"></i>
+                            Get a Free Estimate
+                        </button>
+                    </div>
                 </div>
-                <div class="flex justify-center gap-4 mb-8 flex-wrap">
-                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-orange-500 text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition active" data-filter="all">All Projects</button>
-                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-semibold hover:border-orange-500 hover:text-orange-500 transition" data-filter="commercial">Commercial</button>
-                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-semibold hover:border-orange-500 hover:text-orange-500 transition" data-filter="residential">Residential</button>
-                    <button class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-600 font-semibold hover:border-orange-500 hover:text-orange-500 transition" data-filter="industrial">Industrial</button>
+
+                <div class="flex justify-center gap-3 mb-10 flex-wrap">
+                    <button
+                        class="filter-btn px-6 py-2 rounded-full border-2 border-orange-500 text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition active"
+                        data-filter="all">
+                        All Projects
+                    </button>
+
+                    <button
+                        class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-semibold hover:border-orange-500 hover:text-orange-500 transition"
+                        data-filter="residential">
+                        Residential
+                    </button>
+
+                    <button
+                        class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-semibold hover:border-orange-500 hover:text-orange-500 transition"
+                        data-filter="commercial">
+                        Commercial
+                    </button>
+
+                    <button
+                        class="filter-btn px-6 py-2 rounded-full border-2 border-gray-300 text-gray-700 font-semibold hover:border-orange-500 hover:text-orange-500 transition"
+                        data-filter="construction">
+                        New Construction & ADUs
+                    </button>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="gallery-item show" data-category="commercial">
-                        <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Commercial Project" class="w-full h-64 object-cover">
-                            <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></i>
-                            </div>
-                        </div>
-                    </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Item 1 -->
                     <div class="gallery-item show" data-category="residential">
-                        <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop" alt="Residential Project" class="w-full h-64 object-cover">
-                            <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></i>
+                        <div class="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&h=600&fit=crop"
+                                alt="Residential electrical project"
+                                class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white font-semibold">Residential Upgrade</p>
+                                <p class="text-white/80 text-sm">Lighting • Repairs • EV Charger</p>
+                            </div>
+
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-search-plus text-white"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="gallery-item show" data-category="industrial">
-                        <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop" alt="Industrial Project" class="w-full h-64 object-cover">
-                            <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></i>
-                            </div>
-                        </div>
-                    </div>
+
+                    <!-- Item 2 -->
                     <div class="gallery-item show" data-category="commercial">
-                        <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop" alt="Commercial Project" class="w-full h-64 object-cover">
-                            <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></i>
+                        <div class="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop"
+                                alt="Commercial electrical project"
+                                class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white font-semibold">Commercial Service</p>
+                                <p class="text-white/80 text-sm">Troubleshooting • Upgrades • Lighting</p>
+                            </div>
+
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-search-plus text-white"></i>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Item 3 -->
+                    <div class="gallery-item show" data-category="construction">
+                        <div class="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&h=600&fit=crop"
+                                alt="New construction electrical project"
+                                class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white font-semibold">New Construction / ADU</p>
+                                <p class="text-white/80 text-sm">Rough-in • Underground • Final</p>
+                            </div>
+
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-search-plus text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Keep 3 more items if you want (same structure) -->
+                    <div class="gallery-item show" data-category="commercial">
+                        <div class="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=800&h=600&fit=crop"
+                                alt="Commercial electrical upgrade"
+                                class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white font-semibold">Commercial Upgrade</p>
+                                <p class="text-white/80 text-sm">Panels • Circuits • Maintenance</p>
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-search-plus text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="gallery-item show" data-category="residential">
-                        <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" alt="Residential Project" class="w-full h-64 object-cover">
-                            <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></i>
+                        <div class="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&h=600&fit=crop"
+                                alt="Residential lighting installation"
+                                class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white font-semibold">Lighting Installation</p>
+                                <p class="text-white/80 text-sm">Recessed • Retrofit • Design</p>
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-search-plus text-white"></i>
                             </div>
                         </div>
                     </div>
-                    <div class="gallery-item show" data-category="industrial">
-                        <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
-                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop" alt="Industrial Project" class="w-full h-64 object-cover">
-                            <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                                <i class="fas fa-search-plus text-white text-3xl opacity-0 hover:opacity-100 transition-opacity duration-300"></i>
+
+                    <div class="gallery-item show" data-category="construction">
+                        <div class="relative overflow-hidden rounded-xl shadow-lg cursor-pointer group">
+                            <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&h=600&fit=crop"
+                                alt="Construction electrical work"
+                                class="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            </div>
+                            <div
+                                class="absolute bottom-0 left-0 right-0 p-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <p class="text-white font-semibold">Project Wiring</p>
+                                <p class="text-white/80 text-sm">New Build • Remodel • ADU</p>
+                            </div>
+                            <div
+                                class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/15 backdrop-blur flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                <i class="fas fa-search-plus text-white"></i>
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- Statistics & Testimonials -->
-        <section id="testimonials" class="relative bg-gray-800 text-white overflow-hidden">
-            <div class="relative z-10 py-12 lg:py-16 fade-in">
-                <div class="max-w-7xl mx-auto px-4">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div class="text-center lg:text-left">
-                            <p class="text-orange-500 font-semibold text-sm uppercase mb-2">Our Statistics</p>
-                            <h3 class="text-2xl lg:text-3xl font-bold">Some Important<br>Facts</h3>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl lg:text-5xl font-bold mb-2">5000+</div>
-                            <p class="text-gray-300 text-sm lg:text-base">Residential Projects</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl lg:text-5xl font-bold mb-2">1500+</div>
-                            <p class="text-gray-300 text-sm lg:text-base">Commercial Projects</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="text-4xl lg:text-5xl font-bold mb-2">1000+</div>
-                            <p class="text-gray-300 text-sm lg:text-base">Industrial Projects</p>
+
+        <!-- Trust & Testimonials Section -->
+        <section id="testimonials" class="bg-gray-800 text-white py-16 lg:py-20">
+
+            <!-- Credentials Snapshot -->
+            <div class="max-w-7xl mx-auto px-4 mb-12 fade-in">
+                <div class="mb-6">
+                    <p class="text-orange-500 text-sm font-semibold uppercase tracking-wide">
+                        Licensed • Experienced • Local
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center sm:text-left">
+
+                    <!-- License -->
+                    <div class="flex items-center gap-4 justify-center sm:justify-start">
+                        <i class="fas fa-id-card text-orange-500 text-3xl"></i>
+                        <div>
+                            <p class="text-2xl font-bold text-white">C-10</p>
+                            <p class="text-gray-400 text-sm">License #1085988</p>
                         </div>
                     </div>
+
+                    <!-- Experience -->
+                    <div class="flex items-center gap-4 justify-center sm:justify-start">
+                        <i class="fas fa-award text-orange-500 text-3xl"></i>
+                        <div>
+                            <p class="text-2xl font-bold text-white">25+ Years</p>
+                            <p class="text-gray-400 text-sm">Hands-On Experience</p>
+                        </div>
+                    </div>
+
+                    <!-- Coverage -->
+                    <div class="flex items-center gap-4 justify-center sm:justify-start">
+                        <i class="fas fa-map-marked-alt text-orange-500 text-3xl"></i>
+                        <div>
+                            <p class="text-2xl font-bold text-white">6 Counties</p>
+                            <p class="text-gray-400 text-sm">Serving Southern California</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="relative">
-                <div class="max-w-7xl mx-auto px-4 pb-16 lg:pb-24">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                        <div class="bg-white text-gray-800 rounded-lg shadow-xl p-8 lg:p-12 relative slide-in-left">
-                            <div class="flex items-start gap-6 mb-6">
-                                <div class="text-orange-500 text-6xl lg:text-7xl leading-none font-serif">"</div>
-                                <div class="flex-1">
-                                    <p class="text-orange-500 font-semibold text-sm uppercase mb-3">What Our Clients Say</p>
+
+
+            <!-- Testimonials + Info -->
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+
+                    <!-- Testimonials -->
+                    <div class="bg-white text-gray-800 rounded-xl shadow-lg p-8 lg:p-10 slide-in-left">
+                        <p class="text-orange-500 font-semibold text-sm uppercase mb-4">What Clients Say</p>
+
+                        <div class="relative overflow-hidden">
+                            <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-out">
+
+                                <div class="w-full flex-shrink-0">
+                                    <p class="text-lg font-semibold mb-4">
+                                        Clean Work & Fair Pricing
+                                    </p>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                        Very professional, showed up on time, and kept everything clean.
+                                        The work matched the estimate and passed inspection with no issues.
+                                    </p>
+                                    <p class="font-semibold text-gray-800">— Verified Customer</p>
                                 </div>
-                            </div>
-                            <div class="relative overflow-hidden mb-8">
-                                <div id="testimonial-carousel" class="flex transition-transform duration-500 ease-out">
-                                    <div class="w-full flex-shrink-0">
-                                        <h4 class="text-2xl lg:text-3xl font-bold mb-6">Professional, Reliable<br>& Cost Effective</h4>
-                                        <p class="text-gray-600 mb-6 leading-relaxed">
-                                            We've been using your company and from the very beginning found him and his team to be extremely professional and knowledgeable.
-                                        </p>
-                                        <p class="font-semibold text-gray-800">- Teresa and Kevin K.</p>
-                                    </div>
-                                    <div class="w-full flex-shrink-0">
-                                        <h4 class="text-2xl lg:text-3xl font-bold mb-6">Outstanding Service<br>& Attention to Detail</h4>
-                                        <p class="text-gray-600 mb-6 leading-relaxed">
-                                            The team was incredibly professional and completed our electrical upgrade ahead of schedule. Highly recommended!
-                                        </p>
-                                        <p class="font-semibold text-gray-800">- Michael and Sarah T.</p>
-                                    </div>
+
+                                <div class="w-full flex-shrink-0">
+                                    <p class="text-lg font-semibold mb-4">
+                                        Reliable and Easy to Work With
+                                    </p>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">
+                                        Good communication, solid work, and no surprises.
+                                        Would definitely use them again.
+                                    </p>
+                                    <p class="font-semibold text-gray-800">— Local Homeowner</p>
                                 </div>
-                            </div>
-                            <div class="absolute -top-8 left-12 w-20 h-20 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                                <img src="https://i.pravatar.cc/80?img=5" alt="Client" class="w-full h-full object-cover">
-                            </div>
-                            <div class="flex gap-2 justify-center lg:justify-start">
-                                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-800" data-index="0"></button>
-                                <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300" data-index="1"></button>
+
                             </div>
                         </div>
-                        <div class="relative h-96 lg:h-full min-h-[400px] rounded-lg overflow-hidden shadow-xl slide-in-right">
-                            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1200&h=800&fit=crop" 
-                                 alt="Electrician" class="absolute inset-0 w-full h-full object-cover">
-                            <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-                            <div class="absolute bottom-0 left-0 right-0 bg-orange-500 p-8 lg:p-10">
-                                <h3 class="text-2xl lg:text-3xl font-bold text-white mb-4">Emergency Service</h3>
-                                <p class="text-white text-sm lg:text-base mb-4">
-                                    If this is an emergency outside of normal business hours, call us
-                                </p>
-                                <a href="tel:18007654321" class="inline-flex items-center gap-3 text-white text-xl lg:text-2xl font-bold hover:text-gray-100">
-                                    <i class="fas fa-phone-alt"></i>
-                                    1 (800) 765-43-21
-                                </a>
-                            </div>
+
+                        <div class="flex gap-2 mt-6">
+                            <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-800" data-index="0"></button>
+                            <button class="testimonial-dot w-3 h-3 rounded-full bg-gray-300" data-index="1"></button>
                         </div>
                     </div>
+
+                    <!-- Business Info + CTA -->
+                    <div class="bg-gray-900 rounded-xl p-8 lg:p-10 flex flex-col justify-between slide-in-right">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+
+                            <p class="text-gray-300 mb-6">
+                                Serving residential, commercial, and new construction projects
+                                throughout Southern California.
+                            </p>
+
+                            <p class="text-gray-300 text-sm mb-4">
+                                <strong>Business Hours:</strong><br>
+                                Mon–Fri: 7:00 AM – 5:00 PM<br>
+                                Sat: 8:00 AM – 2:00 PM
+                            </p>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="tel:13236401388"
+                                class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold transition">
+                                <i class="fas fa-phone-alt"></i>
+                                Call: (323) 640-1388
+                            </a>
+
+                            <button onclick="scrollToForm()"
+                                class="inline-flex items-center justify-center gap-3 bg-white text-gray-900 px-6 py-3 rounded font-semibold hover:bg-gray-100 transition">
+                                <i class="fas fa-file-alt"></i>
+                                Free Estimate
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
+
 
         <!-- CTA Section -->
         <section class="relative py-24 lg:py-32 overflow-hidden fade-in">
             <div class="absolute inset-0 flex">
                 <div class="w-1/2 relative">
-                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&h=800&fit=crop" 
-                         alt="Equipment" class="absolute inset-0 w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=1200&h=800&fit=crop"
+                        alt="Equipment" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-30"></div>
                 </div>
                 <div class="w-1/2 relative">
-                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&h=800&fit=crop" 
-                         alt="Electrician" class="absolute inset-0 w-full h-full object-cover">
+                    <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1200&h=800&fit=crop"
+                        alt="Electrician" class="absolute inset-0 w-full h-full object-cover">
                     <div class="absolute inset-0 bg-black bg-opacity-30"></div>
                 </div>
             </div>
@@ -752,11 +1078,13 @@
                         Our electrical repair and service options are proudly offered to clients. Give us a call today!
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="tel:18007654321" class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <a href="tel:18007654321"
+                            class="inline-flex items-center justify-center gap-3 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                             <i class="fas fa-phone-alt"></i>
                             Give Us a Call
                         </a>
-                        <a href="contact.html" class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                             <i class="fas fa-bolt"></i>
                             Free Estimate
                         </a>
@@ -773,100 +1101,129 @@
                         Why Choose Us
                     </p>
                     <h2 class="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
-                        Professional Electrical Services
+                        Skilled, Thorough, and Built to Code
                     </h2>
                     <p class="text-gray-600 max-w-2xl mx-auto">
-                        We provide comprehensive electrical solutions with a commitment to safety, quality, and customer satisfaction.
+                        Sigma C &amp; S Electric LLC handles a wide range of electrical work with attention to detail,
+                        safety, and long-term reliability.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
                     <!-- Feature 1 -->
-                    <div class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                         <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
                             <i class="fas fa-shield-alt text-orange-500 text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Licensed & Insured</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Licensed & Code-Compliant</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Fully licensed, bonded and insured for your protection and peace of mind. All work meets code requirements.
+                            All work is completed to NEC and California electrical code standards — clean, safe, and
+                            inspection-ready.
                         </p>
                     </div>
 
                     <!-- Feature 2 -->
-                    <div class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                         <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-clock text-orange-500 text-3xl"></i>
+                            <i class="fas fa-bolt text-orange-500 text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">24/7 Emergency Service</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Panel & Power Upgrades</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Round-the-clock emergency service available when you need us most. We're always just a phone call away.
+                            Main panel upgrades, circuit breakers, load calculations, and system improvements to support
+                            modern demand.
                         </p>
                     </div>
 
                     <!-- Feature 3 -->
-                    <div class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                         <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-users text-orange-500 text-3xl"></i>
+                            <i class="fas fa-charging-station text-orange-500 text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Expert Team</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">EV, Solar & Energy Systems</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Highly trained and certified electricians with years of experience in residential and commercial projects.
+                            EV chargers, solar panels, battery storage systems, and energy-efficient electrical
+                            solutions.
                         </p>
                     </div>
 
                     <!-- Feature 4 -->
-                    <div class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                         <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-dollar-sign text-orange-500 text-3xl"></i>
+                            <i class="fas fa-lightbulb text-orange-500 text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Fair Pricing</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Lighting & Fixtures</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Competitive rates with no hidden fees. We provide upfront estimates so you know exactly what to expect.
+                            Recessed and retrofit lighting, chandeliers, ceiling fans, landscape lighting, and
+                            low-voltage systems.
                         </p>
                     </div>
 
                     <!-- Feature 5 -->
-                    <div class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                         <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-certificate text-orange-500 text-3xl"></i>
+                            <i class="fas fa-search text-orange-500 text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Quality Guarantee</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Troubleshooting & Repairs</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            All our work is backed by a satisfaction guarantee. We stand behind the quality of our services.
+                            Electrical diagnostics, repairs, safety issues, and problem-solving when something isn’t
+                            working right.
                         </p>
                     </div>
 
                     <!-- Feature 6 -->
-                    <div class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div
+                        class="bg-white rounded-lg p-8 shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                         <div class="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <i class="fas fa-bolt text-orange-500 text-3xl"></i>
+                            <i class="fas fa-broom text-orange-500 text-3xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">Fast Response</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">No Job Too Small</h3>
                         <p class="text-gray-600 leading-relaxed">
-                            Quick turnaround times for all projects. We respect your time and complete work efficiently.
+                            From small fixes to full projects, every job is handled with the same care, organization,
+                            and professionalism.
                         </p>
                     </div>
+
                 </div>
             </div>
         </section>
 
+
+
         <!-- Footer -->
         <footer id="contact" class="bg-gray-800 text-white relative pt-60 md:pt-56 lg:pt-64">
+
+            <!-- Contact Form Card -->
             <div class="absolute top-0 left-0 right-0 transform -translate-y-1/2 z-20">
                 <div class="max-w-5xl mx-auto px-4">
                     <div class="bg-orange-500 rounded-2xl shadow-2xl p-8 lg:p-12 fade-in">
-                        <h3 class="text-white font-bold text-2xl lg:text-3xl mb-6 text-center">Get in Touch</h3>
+                        <h3 class="text-white font-bold text-2xl lg:text-3xl mb-2 text-center">Contact Sigma Electric
+                        </h3>
+                        <p class="text-white/90 text-center mb-6">
+                            Tell us about your project and we’ll get back to you as soon as possible.
+                        </p>
+
                         <form class="space-y-4">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <input type="text" placeholder="Your name" required
+                                <input type="text" name="name" placeholder="Your name" required
                                     class="px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-600 shadow-md">
-                                <input type="tel" placeholder="Your phone number" required
+                                <input type="tel" name="phone" placeholder="Your phone number" required
                                     class="px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-600 shadow-md">
                             </div>
-                            <input type="email" placeholder="Your e-mail address" required
+
+                            <input type="email" name="email" placeholder="Your email address" required
                                 class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-600 shadow-md">
-                            <textarea placeholder="Your message" rows="4" required
+
+                            <textarea name="message"
+                                placeholder="How can we help? (panel upgrade, EV charger, lighting, troubleshooting, etc.)"
+                                rows="4" required
                                 class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-600 resize-none shadow-md"></textarea>
+
                             <div class="flex justify-center">
                                 <button type="submit"
                                     class="bg-gray-800 hover:bg-gray-900 text-white px-10 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:scale-105">
@@ -874,83 +1231,149 @@
                                     Send Message
                                 </button>
                             </div>
+
+                            <p class="text-white/80 text-xs text-center mt-4">
+                                By submitting this form, you agree to be contacted by phone or email.
+                            </p>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class="py-12 lg:py-16">
+
+            <!-- Footer Content -->
+            <div class="py-24 lg:py-16">
                 <div class="max-w-7xl mx-auto px-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+
+                        <!-- Brand / Links -->
                         <div class="lg:col-span-4">
                             <div class="flex items-center mb-6">
                                 <i class="fas fa-bolt text-orange-500 text-3xl mr-2"></i>
-                                <span class="text-2xl font-bold">Electrician</span>
+                                <span class="text-2xl font-bold">Sigma C &amp; S Electric LLC</span>
                             </div>
+
                             <p class="text-gray-400 mb-6 leading-relaxed">
-                                Our experienced electricians are highly trained in all aspects of electrical service.
+                                Licensed C-10 electrical contractor serving Southern California with safe,
+                                code-compliant work and clean workmanship.
                             </p>
+
                             <div class="grid grid-cols-2 gap-x-8 gap-y-3">
-                                <a href="index.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                                <a href="#top"
+                                    class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
                                     <i class="fas fa-check text-orange-500 text-xs"></i>Home
                                 </a>
-                                <a href="about-us.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
-                                    <i class="fas fa-check text-orange-500 text-xs"></i>About Us
+                                <a href="#about"
+                                    class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                                    <i class="fas fa-check text-orange-500 text-xs"></i>About
                                 </a>
-                                <a href="services.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                                <a href="#services"
+                                    class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
                                     <i class="fas fa-check text-orange-500 text-xs"></i>Services
                                 </a>
-                                <a href="#gallery" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                                <a href="#gallery"
+                                    class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
                                     <i class="fas fa-check text-orange-500 text-xs"></i>Gallery
                                 </a>
                             </div>
                         </div>
+
+                        <!-- Contact Info -->
                         <div class="lg:col-span-4 space-y-6">
                             <div class="flex items-start gap-4">
-                                <i class="fas fa-map-marker-alt text-orange-500 text-xl"></i>
-                                <p class="text-gray-400">8494 Signal Hill Road Manassas,<br>VA, 20110</p>
+                                <i class="fas fa-id-badge text-orange-500 text-xl"></i>
+                                <p class="text-gray-400">C-10 License #1085988</p>
                             </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-map-marked-alt text-orange-500 text-xl"></i>
+                                <p class="text-gray-400">
+                                    Serving Los Angeles, Orange, Riverside,<br>
+                                    San Bernardino, Ventura &amp; Santa Barbara Counties
+                                </p>
+                            </div>
+
                             <div class="flex items-start gap-4">
                                 <i class="far fa-clock text-orange-500 text-xl"></i>
-                                <p class="text-gray-400">Mon-Fri 08:00 AM - 05:00 PM</p>
+                                <p class="text-gray-400">
+                                    Mon–Fri: 7:00 AM – 5:00 PM<br>
+                                    Sat: 8:00 AM – 2:00 PM
+                                </p>
                             </div>
+
                             <div class="flex items-start gap-4">
                                 <i class="fas fa-phone-alt text-orange-500 text-xl"></i>
-                                <a href="tel:18007654321" class="text-gray-400 hover:text-orange-500 transition">1 (800) 765-43-21</a>
+                                <a href="tel:13236401388" class="text-gray-400 hover:text-orange-500 transition">
+                                    (323) 640-1388
+                                </a>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-envelope text-orange-500 text-xl"></i>
+                                <a href="mailto:sigmaelectriccllc@gmail.com"
+                                    class="text-gray-400 hover:text-orange-500 transition">
+                                    sigmaelectriccllc@gmail.com
+                                </a>
                             </div>
                         </div>
+
+                        <!-- Map / Placeholder -->
                         <div class="lg:col-span-4">
-                            <div class="bg-gray-700 rounded-lg overflow-hidden h-64">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.7474479892967!2d-77.5084!3d38.7509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQ1JzAzLjIiTiA3N8KwMzAnMzAuMiJX!5e0!3m2!1sen!2sus!4v1234567890" 
-                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="grayscale"></iframe>
+                            <div
+                                class="bg-gray-700 rounded-lg overflow-hidden h-64 flex items-center justify-center text-center p-8">
+                                <div>
+                                    <p class="font-semibold mb-2">Service Area</p>
+                                    <p class="text-gray-300 text-sm">
+                                        We travel throughout Southern California. If you’re not sure whether we serve
+                                        your area, call us.
+                                    </p>
+                                    <a href="tel:13236401388"
+                                        class="inline-flex items-center gap-2 mt-4 text-white font-semibold hover:text-gray-100">
+                                        <i class="fas fa-phone-alt"></i> (323) 640-1388
+                                    </a>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
+            <!-- Bottom Bar -->
             <div class="border-t border-gray-700 py-6">
                 <div class="max-w-7xl mx-auto px-4">
                     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                        <p class="text-gray-400 text-sm">© 2024 Electrical Services. All Rights Reserved.</p>
+                        <p class="text-gray-400 text-sm">© 2025 Sigma C &amp; S Electric LLC. All Rights Reserved.</p>
+
                         <div class="flex gap-3">
-                            <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
-                                <i class="fab fa-twitter text-white"></i>
-                            </a>
-                            <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
+                            <!-- Replace # with real profiles when you have them -->
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                                aria-label="Facebook">
                                 <i class="fab fa-facebook-f text-white"></i>
                             </a>
-                            <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                                aria-label="Instagram">
                                 <i class="fab fa-instagram text-white"></i>
                             </a>
+                            <a href="#"
+                                class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                                aria-label="YouTube">
+                                <i class="fab fa-youtube text-white"></i>
+                            </a>
                         </div>
+
                     </div>
                 </div>
             </div>
         </footer>
+
     </div>
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
-        <button id="lightbox-close" class="absolute top-8 right-8 text-white text-4xl hover:text-orange-500 transition-colors z-50">
+        <button id="lightbox-close"
+            class="absolute top-8 right-8 text-white text-4xl hover:text-orange-500 transition-colors z-50">
             <i class="fas fa-times"></i>
         </button>
         <img id="lightbox-img" class="lightbox-img" src="" alt="Gallery Image">
@@ -958,17 +1381,21 @@
 
     <script>
         // Preloader
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                const preloader = document.getElementById('preloader');
-                const mainContent = document.getElementById('main-content');
-                preloader.classList.add('fade-out');
-                setTimeout(function() {
-                    preloader.style.display = 'none';
-                    mainContent.style.display = 'block';
-                    initScrollAnimations();
-                }, 500);
-            }, 1200); // Reduced from 2500ms to 1200ms for better LCP
+        // window.addEventListener('load', function() {
+        //     setTimeout(function() {
+        //         const preloader = document.getElementById('preloader');
+        //         const mainContent = document.getElementById('main-content');
+        //         preloader.classList.add('fade-out');
+        //         setTimeout(function() {
+        //             preloader.style.display = 'none';
+        //             mainContent.style.display = 'block';
+        //             initScrollAnimations();
+        //         }, 500);
+        //     }, 1200); // Reduced from 2500ms to 1200ms for better LCP
+        // });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initScrollAnimations();
         });
 
         // Hero Slideshow
@@ -1041,15 +1468,15 @@
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const filter = btn.dataset.filter;
-                
+
                 filterBtns.forEach(b => {
                     b.classList.remove('active', 'bg-orange-500', 'text-white', 'border-orange-500');
                     b.classList.add('border-gray-300', 'text-gray-600');
                 });
-                
+
                 btn.classList.add('active', 'bg-orange-500', 'text-white', 'border-orange-500');
                 btn.classList.remove('border-gray-300', 'text-gray-600');
-                
+
                 galleryItems.forEach(item => {
                     if (filter === 'all' || item.dataset.category === filter) {
                         item.classList.remove('hide');
@@ -1127,4 +1554,5 @@
         }
     </script>
 </body>
+
 </html>
