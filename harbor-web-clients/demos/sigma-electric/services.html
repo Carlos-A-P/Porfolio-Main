@@ -13,10 +13,10 @@
             scroll-behavior: smooth;
         }
 
-        html,
+        /* html,
         body {
             overflow-x: hidden;
-        }
+        } */
 
         /* Scroll Animations */
         .fade-in {
@@ -65,6 +65,23 @@
             .md\:clip-path-right {
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 5% 100%);
             }
+        }
+
+        /* Prevent horizontal overflow caused by slide-in animations on small screens */
+        @media (max-width: 767px) {
+
+            .slide-in-left,
+            .slide-in-right {
+                transform: translateY(30px) translateX(0);
+            }
+        }
+
+        /* Helps prevent animated elements from affecting layout width */
+        .fade-in,
+        .slide-in-left,
+        .slide-in-right,
+        .scale-in {
+            will-change: transform, opacity;
         }
     </style>
 </head>
