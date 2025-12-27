@@ -11,6 +11,11 @@
     <link rel="preload" as="image"
         href="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=1080&fit=crop">
     <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
         /* Preloader Styles */
         /* #preloader {
             position: fixed;
@@ -318,6 +323,23 @@
                 transform: translate(-50%, -50%) scale(1.5);
                 opacity: 0;
             }
+        }
+
+        /* Prevent horizontal overflow caused by slide-in animations on small screens */
+        @media (max-width: 767px) {
+
+            .slide-in-left,
+            .slide-in-right {
+                transform: translateY(30px) translateX(0);
+            }
+        }
+
+        /* Helps prevent animated elements from affecting layout width */
+        .fade-in,
+        .slide-in-left,
+        .slide-in-right,
+        .scale-in {
+            will-change: transform, opacity;
         }
     </style>
 </head>
