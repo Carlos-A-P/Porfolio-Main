@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +17,14 @@
         .gallery-item {
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .gallery-item.hide {
             opacity: 0;
             transform: scale(0.8);
             position: absolute;
             pointer-events: none;
         }
-        
+
         .gallery-item.show {
             opacity: 1;
             transform: scale(1);
@@ -33,7 +34,7 @@
         .gallery-item img {
             transition: transform 0.3s ease;
         }
-        
+
         .gallery-item:hover img {
             transform: scale(1.05);
         }
@@ -100,6 +101,7 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Top Info Bar -->
     <div class="bg-gray-800 text-white">
@@ -125,51 +127,81 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center">
+
+                <!-- Brand -->
+                <a href="#top" class="flex items-center">
                     <i class="fas fa-bolt text-orange-500 text-3xl mr-2"></i>
-                    <span class="text-2xl font-bold text-gray-800">Electrician</span>
+                    <span class="text-xl sm:text-2xl font-bold text-gray-800">
+                        Sigma C &amp; S Electric LLC
+                    </span>
                 </a>
+
+                <!-- Desktop Nav -->
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-orange-500 transition">Home</a>
-                    <a href="about-us.html" class="text-gray-700 hover:text-orange-500 transition">About Us</a>
+                    <a href="about-us.html" class="text-gray-700 hover:text-orange-500 transition">About</a>
                     <a href="services.html" class="text-gray-700 hover:text-orange-500 transition">Services</a>
-                    <a href="#gallery" class="text-orange-500 font-semibold hover:text-orange-600 transition">Gallery</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-orange-500 transition">Projects</a>
                     <a href="contact.html" class="text-gray-700 hover:text-orange-500 transition">Contact</a>
                 </div>
-                <div class="hidden lg:block">
-                    <a href="index.html#home" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center gap-2 transition">
-                        <i class="fas fa-bolt"></i>
-                        Appointment
+
+                <!-- Desktop CTA -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="tel:13236401388"
+                        class="border border-gray-200 hover:border-orange-500 text-gray-800 px-5 py-3 rounded font-semibold flex items-center gap-2 transition">
+                        <i class="fas fa-phone-alt text-orange-500"></i>
+                        Call
                     </a>
+
+                    <button onclick="scrollToForm()"
+                        class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center gap-2 transition">
+                        <i class="fas fa-calendar-check"></i>
+                        Request Service
+                    </button>
                 </div>
-                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-orange-500 transition">
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-orange-500 transition"
+                    aria-label="Open menu">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
+
+            <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden lg:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="index.html" class="text-gray-700 hover:text-orange-500 py-2">Home</a>
-                    <a href="about-us.html" class="text-gray-700 hover:text-orange-500 py-2">About Us</a>
+                    <a href="about-us.html" class="text-gray-700 hover:text-orange-500 py-2">About</a>
                     <a href="services.html" class="text-gray-700 hover:text-orange-500 py-2">Services</a>
-                    <a href="#gallery" class="text-orange-500 font-semibold py-2">Gallery</a>
-                    <a href="faq-page.html" class="text-gray-700 hover:text-orange-500 py-2">FAQ</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-orange-500 py-2">Projects</a>
                     <a href="contact.html" class="text-gray-700 hover:text-orange-500 py-2">Contact</a>
-                    <a href="index.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center justify-center gap-2 mt-3">
-                        <i class="fas fa-bolt"></i>
-                        Appointment
-                    </a>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <a href="tel:13236401388"
+                            class="bg-white border border-gray-200 text-gray-900 px-6 py-3 rounded font-semibold flex items-center justify-center gap-2">
+                            <i class="fas fa-phone-alt text-orange-500"></i>
+                            Call Now
+                        </a>
+
+                        <button onclick="scrollToForm()"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center justify-center gap-2">
+                            <i class="fas fa-calendar-check"></i>
+                            Request Service
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section id="gallery" class="relative py-20 lg:py-32 bg-gradient-to-br from-gray-800 to-gray-900 text-white overflow-hidden">
+    <section id="gallery"
+        class="relative py-20 lg:py-32 bg-gradient-to-br from-gray-800 to-gray-900 text-white overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=800&fit=crop" 
-                 alt="Background" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=800&fit=crop"
+                alt="Background" class="w-full h-full object-cover">
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
             <p class="text-orange-500 font-semibold text-sm uppercase tracking-wide mb-4">Our Work</p>
@@ -187,16 +219,24 @@
         <div class="max-w-7xl mx-auto px-4">
             <!-- Filter Buttons -->
             <div class="flex justify-center gap-4 mb-12 flex-wrap fade-in">
-                <button class="filter-btn px-8 py-3 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-all duration-300 shadow-lg active" data-filter="all">
+                <button
+                    class="filter-btn px-8 py-3 rounded-full bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-all duration-300 shadow-lg active"
+                    data-filter="all">
                     All Projects
                 </button>
-                <button class="filter-btn px-8 py-3 rounded-full border-2 border-orange-500 text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300" data-filter="commercial">
+                <button
+                    class="filter-btn px-8 py-3 rounded-full border-2 border-orange-500 text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
+                    data-filter="commercial">
                     Commercial
                 </button>
-                <button class="filter-btn px-8 py-3 rounded-full border-2 border-orange-500 text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300" data-filter="residential">
+                <button
+                    class="filter-btn px-8 py-3 rounded-full border-2 border-orange-500 text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
+                    data-filter="residential">
                     Residential
                 </button>
-                <button class="filter-btn px-8 py-3 rounded-full border-2 border-orange-500 text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300" data-filter="industrial">
+                <button
+                    class="filter-btn px-8 py-3 rounded-full border-2 border-orange-500 text-orange-500 font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300"
+                    data-filter="industrial">
                     Industrial
                 </button>
             </div>
@@ -211,10 +251,10 @@
                 <!-- Gallery Item 1 -->
                 <div class="gallery-item show" data-category="commercial">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" 
-                             alt="Commercial Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop"
+                            alt="Commercial Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Office Building Rewiring</h3>
                             <p class="text-gray-200 text-sm">Commercial Project</p>
                             <div class="mt-4">
@@ -227,10 +267,10 @@
                 <!-- Gallery Item 2 -->
                 <div class="gallery-item show" data-category="residential">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop" 
-                             alt="Residential Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=600&h=400&fit=crop"
+                            alt="Residential Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Home Panel Upgrade</h3>
                             <p class="text-gray-200 text-sm">Residential Project</p>
                             <div class="mt-4">
@@ -243,10 +283,10 @@
                 <!-- Gallery Item 3 -->
                 <div class="gallery-item show" data-category="industrial">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop" 
-                             alt="Industrial Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=400&fit=crop"
+                            alt="Industrial Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Factory Electrical System</h3>
                             <p class="text-gray-200 text-sm">Industrial Project</p>
                             <div class="mt-4">
@@ -259,10 +299,10 @@
                 <!-- Gallery Item 4 -->
                 <div class="gallery-item show" data-category="commercial">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop" 
-                             alt="Commercial Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=400&fit=crop"
+                            alt="Commercial Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Retail Store Lighting</h3>
                             <p class="text-gray-200 text-sm">Commercial Project</p>
                             <div class="mt-4">
@@ -275,10 +315,10 @@
                 <!-- Gallery Item 5 -->
                 <div class="gallery-item show" data-category="residential">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop" 
-                             alt="Residential Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&h=400&fit=crop"
+                            alt="Residential Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Modern Home Lighting</h3>
                             <p class="text-gray-200 text-sm">Residential Project</p>
                             <div class="mt-4">
@@ -291,10 +331,10 @@
                 <!-- Gallery Item 6 -->
                 <div class="gallery-item show" data-category="industrial">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop" 
-                             alt="Industrial Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop"
+                            alt="Industrial Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Warehouse Power Distribution</h3>
                             <p class="text-gray-200 text-sm">Industrial Project</p>
                             <div class="mt-4">
@@ -307,10 +347,10 @@
                 <!-- Gallery Item 7 -->
                 <div class="gallery-item show" data-category="commercial">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop" 
-                             alt="Commercial Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop"
+                            alt="Commercial Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Corporate Office Setup</h3>
                             <p class="text-gray-200 text-sm">Commercial Project</p>
                             <div class="mt-4">
@@ -323,10 +363,10 @@
                 <!-- Gallery Item 8 -->
                 <div class="gallery-item show" data-category="residential">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop" 
-                             alt="Residential Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&h=400&fit=crop"
+                            alt="Residential Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Kitchen Renovation Wiring</h3>
                             <p class="text-gray-200 text-sm">Residential Project</p>
                             <div class="mt-4">
@@ -339,10 +379,10 @@
                 <!-- Gallery Item 9 -->
                 <div class="gallery-item show" data-category="industrial">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop" 
-                             alt="Industrial Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&h=400&fit=crop"
+                            alt="Industrial Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Manufacturing Plant Upgrade</h3>
                             <p class="text-gray-200 text-sm">Industrial Project</p>
                             <div class="mt-4">
@@ -355,10 +395,10 @@
                 <!-- Gallery Item 10 -->
                 <div class="gallery-item show" data-category="commercial">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" 
-                             alt="Commercial Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop"
+                            alt="Commercial Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">High-Rise Building Installation</h3>
                             <p class="text-gray-200 text-sm">Commercial Project</p>
                             <div class="mt-4">
@@ -371,10 +411,10 @@
                 <!-- Gallery Item 11 -->
                 <div class="gallery-item show" data-category="residential">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop" 
-                             alt="Residential Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&h=400&fit=crop"
+                            alt="Residential Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Smart Home Integration</h3>
                             <p class="text-gray-200 text-sm">Residential Project</p>
                             <div class="mt-4">
@@ -387,10 +427,10 @@
                 <!-- Gallery Item 12 -->
                 <div class="gallery-item show" data-category="residential">
                     <div class="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop" 
-                             alt="Residential Project" 
-                             class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=400&fit=crop"
+                            alt="Residential Project" class="w-full h-64 object-cover">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                             <h3 class="text-white font-bold text-xl mb-2">Outdoor Landscape Lighting</h3>
                             <p class="text-gray-200 text-sm">Residential Project</p>
                             <div class="mt-4">
@@ -413,15 +453,18 @@
                             Ready to Start Your Project?
                         </h2>
                         <p class="text-lg opacity-90">
-                            Let us bring your electrical project to life. Contact us today for a free consultation and quote.
+                            Let us bring your electrical project to life. Contact us today for a free consultation and
+                            quote.
                         </p>
                     </div>
                     <div class="flex flex-col sm:flex-row gap-4 lg:justify-end">
-                        <a href="tel:18007654321" class="inline-flex items-center justify-center gap-3 bg-white text-orange-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <a href="tel:18007654321"
+                            class="inline-flex items-center justify-center gap-3 bg-white text-orange-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                             <i class="fas fa-phone-alt"></i>
                             Call Now
                         </a>
-                        <a href="contact.html" class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                             <i class="fas fa-envelope"></i>
                             Get a Quote
                         </a>
@@ -436,67 +479,124 @@
         <div class="py-12 lg:py-16">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+
+                    <!-- Brand / Links -->
                     <div class="lg:col-span-4">
                         <div class="flex items-center mb-6">
                             <i class="fas fa-bolt text-orange-500 text-3xl mr-2"></i>
-                            <span class="text-2xl font-bold">Electrician</span>
+                            <span class="text-2xl font-bold">Sigma C &amp; S Electric LLC</span>
                         </div>
+
                         <p class="text-gray-400 mb-6 leading-relaxed">
-                            Our experienced electricians are highly trained in all aspects of electrical service.
+                            Licensed C-10 electrical contractor serving Southern California with safe,
+                            code-compliant work and clean workmanship.
                         </p>
+
                         <div class="grid grid-cols-2 gap-x-8 gap-y-3">
-                            <a href="index.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                            <a href="#top"
+                                class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
                                 <i class="fas fa-check text-orange-500 text-xs"></i>Home
                             </a>
-                            <a href="about-us.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
-                                <i class="fas fa-check text-orange-500 text-xs"></i>About Us
+                            <a href="#about"
+                                class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                                <i class="fas fa-check text-orange-500 text-xs"></i>About
                             </a>
-                            <a href="services.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                            <a href="#services"
+                                class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
                                 <i class="fas fa-check text-orange-500 text-xs"></i>Services
                             </a>
-                            <a href="#gallery" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                            <a href="#gallery"
+                                class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
                                 <i class="fas fa-check text-orange-500 text-xs"></i>Gallery
                             </a>
                         </div>
                     </div>
+
+                    <!-- Contact Info -->
                     <div class="lg:col-span-4 space-y-6">
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-map-marker-alt text-orange-500 text-xl"></i>
-                            <p class="text-gray-400">8494 Signal Hill Road Manassas,<br>VA, 20110</p>
+                            <i class="fas fa-id-badge text-orange-500 text-xl"></i>
+                            <p class="text-gray-400">C-10 License #1085988</p>
                         </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marked-alt text-orange-500 text-xl"></i>
+                            <p class="text-gray-400">
+                                Serving Los Angeles, Orange, Riverside,<br>
+                                San Bernardino, Ventura &amp; Santa Barbara Counties
+                            </p>
+                        </div>
+
                         <div class="flex items-start gap-4">
                             <i class="far fa-clock text-orange-500 text-xl"></i>
-                            <p class="text-gray-400">Mon-Fri 08:00 AM - 05:00 PM</p>
+                            <p class="text-gray-400">
+                                Mon–Fri: 7:00 AM – 5:00 PM<br>
+                                Sat: 8:00 AM – 2:00 PM
+                            </p>
                         </div>
+
                         <div class="flex items-start gap-4">
                             <i class="fas fa-phone-alt text-orange-500 text-xl"></i>
-                            <a href="tel:18007654321" class="text-gray-400 hover:text-orange-500 transition">1 (323) 640-1388</a>
+                            <a href="tel:13236401388" class="text-gray-400 hover:text-orange-500 transition">
+                                (323) 640-1388
+                            </a>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope text-orange-500 text-xl"></i>
+                            <a href="mailto:sigmaelectriccllc@gmail.com"
+                                class="text-gray-400 hover:text-orange-500 transition">
+                                sigmaelectriccllc@gmail.com
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Map / Placeholder -->
                     <div class="lg:col-span-4">
-                        <div class="bg-gray-700 rounded-lg overflow-hidden h-64">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.7474479892967!2d-77.5084!3d38.7509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQ1JzAzLjIiTiA3N8KwMzAnMzAuMiJX!5e0!3m2!1sen!2sus!4v1234567890" 
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="grayscale"></iframe>
+                        <div
+                            class="bg-gray-700 rounded-lg overflow-hidden h-64 flex items-center justify-center text-center p-8">
+                            <div>
+                                <p class="font-semibold mb-2">Service Area</p>
+                                <p class="text-gray-300 text-sm">
+                                    We travel throughout Southern California. If you’re not sure whether we serve
+                                    your area, call us.
+                                </p>
+                                <a href="tel:13236401388"
+                                    class="inline-flex items-center gap-2 mt-4 text-white font-semibold hover:text-gray-100">
+                                    <i class="fas fa-phone-alt"></i> (323) 640-1388
+                                </a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
+        <!-- Bottom Bar -->
         <div class="border-t border-gray-700 py-6">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-gray-400 text-sm">© 2024 Electrical Services. All Rights Reserved.</p>
+                    <p class="text-gray-400 text-sm">© 2025 Sigma C &amp; S Electric LLC. All Rights Reserved.</p>
+
                     <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
-                            <i class="fab fa-twitter text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
+                        <!-- Replace # with real profiles when you have them -->
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Facebook">
                             <i class="fab fa-facebook-f text-white"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Instagram">
                             <i class="fab fa-instagram text-white"></i>
                         </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -504,7 +604,8 @@
 
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox">
-        <button id="lightbox-close" class="absolute top-8 right-8 text-white text-4xl hover:text-orange-500 transition-colors z-50">
+        <button id="lightbox-close"
+            class="absolute top-8 right-8 text-white text-4xl hover:text-orange-500 transition-colors z-50">
             <i class="fas fa-times"></i>
         </button>
         <div class="lightbox-content">
@@ -532,7 +633,7 @@
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 const filter = btn.dataset.filter;
-                
+
                 // Update active button
                 filterBtns.forEach(b => {
                     b.classList.remove('bg-orange-500', 'text-white');
@@ -540,7 +641,7 @@
                 });
                 btn.classList.add('bg-orange-500', 'text-white');
                 btn.classList.remove('border-2', 'border-orange-500', 'text-orange-500');
-                
+
                 // Filter items
                 let visibleCount = 0;
                 galleryItems.forEach(item => {
@@ -553,7 +654,7 @@
                         item.classList.add('hide');
                     }
                 });
-                
+
                 // Update count
                 resultsCount.textContent = `Showing ${visibleCount} projects`;
             });
@@ -571,7 +672,7 @@
                 const img = item.querySelector('img');
                 const title = item.querySelector('h3')?.textContent || '';
                 const category = item.querySelector('p')?.textContent || '';
-                
+
                 lightboxImg.src = img.src;
                 lightboxTitle.textContent = title;
                 lightboxCategory.textContent = category;
@@ -622,4 +723,5 @@
         window.addEventListener('load', initScrollAnimations);
     </script>
 </body>
+
 </html>

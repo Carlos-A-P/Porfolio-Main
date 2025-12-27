@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,7 @@
             overflow: hidden;
             transition: max-height 0.3s ease-out, padding 0.3s ease-out;
         }
-        
+
         .faq-answer.active {
             max-height: 500px;
             transition: max-height 0.5s ease-in, padding 0.3s ease-in;
@@ -60,24 +61,36 @@
         }
     </style>
 </head>
+
 <body class="bg-gray-50">
     <!-- Top Info Bar -->
     <div class="bg-gray-800 text-white">
         <div class="max-w-7xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between text-sm gap-4">
+
+            <!-- Service Area (no fake address) -->
             <div class="flex items-center gap-2">
-                <i class="fas fa-map-marker-alt text-orange-500"></i>
-                <span>8494 Signal Hill Road Manassas, VA, 20110</span>
+                <i class="fas fa-map-marked-alt text-orange-500"></i>
+                <span class="text-white/90">
+                    Serving LA, Orange, Riverside, San Bernardino, Ventura &amp; Santa Barbara Counties
+                </span>
             </div>
+
+            <!-- Hours -->
             <div class="flex items-center gap-2">
                 <i class="far fa-clock text-orange-500"></i>
-                <span>Mon-Fri 08:00 AM - 05:00 PM</span>
+                <span class="text-white/90">
+                    Mon–Fri 7:00 AM – 5:00 PM • Sat 8:00 AM – 2:00 PM
+                </span>
             </div>
-            <div class="flex items-center gap-6">
-                <div class="flex items-center gap-2">
-                    <i class="fas fa-phone-alt text-white"></i>
-                    <span class="text-orange-500 font-semibold">1 (323) 640-1388</span>
-                </div>
+
+            <!-- Phone -->
+            <div class="flex items-center gap-2">
+                <i class="fas fa-phone-alt text-white"></i>
+                <a href="tel:13236401388" class="text-orange-500 font-semibold hover:text-orange-400 transition">
+                    (323) 640-1388
+                </a>
             </div>
+
         </div>
     </div>
 
@@ -85,56 +98,85 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex items-center justify-between h-20">
-                <a href="index.html" class="flex items-center">
+
+                <!-- Brand -->
+                <a href="#top" class="flex items-center">
                     <i class="fas fa-bolt text-orange-500 text-3xl mr-2"></i>
-                    <span class="text-2xl font-bold text-gray-800">Electrician</span>
+                    <span class="text-xl sm:text-2xl font-bold text-gray-800">
+                        Sigma C &amp; S Electric LLC
+                    </span>
                 </a>
+
+                <!-- Desktop Nav -->
                 <div class="hidden lg:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-700 hover:text-orange-500 transition">Home</a>
-                    <a href="about-us.html" class="text-gray-700 hover:text-orange-500 transition">About Us</a>
+                    <a href="about-us.html" class="text-gray-700 hover:text-orange-500 transition">About</a>
                     <a href="services.html" class="text-gray-700 hover:text-orange-500 transition">Services</a>
-                    <a href="gallery.html" class="text-gray-700 hover:text-orange-500 transition">Gallery</a>
-                    <a href="faq.html" class="text-orange-500 font-semibold hover:text-orange-600 transition">FAQ</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-orange-500 transition">Projects</a>
                     <a href="contact.html" class="text-gray-700 hover:text-orange-500 transition">Contact</a>
                 </div>
-                <div class="hidden lg:block">
-                    <a href="index.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center gap-2 transition">
-                        <i class="fas fa-bolt"></i>
-                        Appointment
+
+                <!-- Desktop CTA -->
+                <div class="hidden lg:flex items-center gap-3">
+                    <a href="tel:13236401388"
+                        class="border border-gray-200 hover:border-orange-500 text-gray-800 px-5 py-3 rounded font-semibold flex items-center gap-2 transition">
+                        <i class="fas fa-phone-alt text-orange-500"></i>
+                        Call
                     </a>
+
+                    <button onclick="scrollToForm()"
+                        class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center gap-2 transition">
+                        <i class="fas fa-calendar-check"></i>
+                        Request Service
+                    </button>
                 </div>
-                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-orange-500 transition">
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-700 hover:text-orange-500 transition"
+                    aria-label="Open menu">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
                 </button>
             </div>
+
+            <!-- Mobile Menu -->
             <div id="mobile-menu" class="hidden lg:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="index.html" class="text-gray-700 hover:text-orange-500 py-2">Home</a>
-                    <a href="about-us.html" class="text-gray-700 hover:text-orange-500 py-2">About Us</a>
+                    <a href="about-us.html" class="text-gray-700 hover:text-orange-500 py-2">About</a>
                     <a href="services.html" class="text-gray-700 hover:text-orange-500 py-2">Services</a>
-                    <a href="gallery.html" class="text-gray-700 hover:text-orange-500 py-2">Gallery</a>
-                    <a href="index.html#testimonials" class="text-gray-700 hover:text-orange-500 py-2">Testimonials</a>
-                    <a href="#faq" class="text-orange-500 font-semibold py-2">FAQ</a>
+                    <a href="gallery.html" class="text-gray-700 hover:text-orange-500 py-2">Projects</a>
                     <a href="contact.html" class="text-gray-700 hover:text-orange-500 py-2">Contact</a>
-                    <a href="index.html" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center justify-center gap-2 mt-3">
-                        <i class="fas fa-bolt"></i>
-                        Appointment
-                    </a>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <a href="tel:13236401388"
+                            class="bg-white border border-gray-200 text-gray-900 px-6 py-3 rounded font-semibold flex items-center justify-center gap-2">
+                            <i class="fas fa-phone-alt text-orange-500"></i>
+                            Call Now
+                        </a>
+
+                        <button onclick="scrollToForm()"
+                            class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded font-semibold flex items-center justify-center gap-2">
+                            <i class="fas fa-calendar-check"></i>
+                            Request Service
+                        </button>
+                    </div>
                 </div>
             </div>
+
         </div>
     </nav>
 
     <!-- Page Header -->
-    <section id="faq" class="relative py-20 lg:py-32 bg-gradient-to-br from-gray-800 to-gray-900 text-white overflow-hidden">
+    <section id="faq"
+        class="relative py-20 lg:py-32 bg-gradient-to-br from-gray-800 to-gray-900 text-white overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=800&fit=crop" 
-                 alt="Background" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=1920&h=800&fit=crop"
+                alt="Background" class="w-full h-full object-cover">
         </div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
-            <p class="text-orange-500 font-semibold text-sm uppercase tracking-wide mb-4">Your Questions. Our Answers</p>
+            <p class="text-orange-500 font-semibold text-sm uppercase tracking-wide mb-4">Your Questions. Our Answers
+            </p>
             <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
                 Frequently Asked Questions
             </h1>
@@ -150,19 +192,29 @@
             <!-- Category Filter Tabs -->
             <div class="mb-8 overflow-x-auto fade-in">
                 <div class="flex gap-2 border-b border-gray-200 min-w-max pb-px">
-                    <button class="category-tab active px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="all">
+                    <button
+                        class="category-tab active px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent"
+                        data-category="all">
                         All Questions
                     </button>
-                    <button class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="installation">
+                    <button
+                        class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent"
+                        data-category="installation">
                         Installation & Setup
                     </button>
-                    <button class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="service">
+                    <button
+                        class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent"
+                        data-category="service">
                         Service & Maintenance
                     </button>
-                    <button class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="safety">
+                    <button
+                        class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent"
+                        data-category="safety">
                         Safety & Compliance
                     </button>
-                    <button class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent" data-category="emergency">
+                    <button
+                        class="category-tab px-6 py-3 text-sm font-semibold whitespace-nowrap transition-colors border-b-2 border-transparent"
+                        data-category="emergency">
                         Emergency Services
                     </button>
                 </div>
@@ -180,129 +232,176 @@
             <div class="space-y-4 fade-in">
                 <!-- FAQ Item 1 -->
                 <div class="faq-item border-b border-gray-200" data-category="installation">
-                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
-                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
-                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                    <button
+                        class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span
+                                class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
                         </div>
-                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Does conduit need to go inside the transformer box?</span>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Does conduit need to go
+                            inside the transformer box?</span>
                         <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
                             <i class="fas fa-plus text-gray-400 text-xl"></i>
                         </div>
                     </button>
                     <div class="faq-answer pl-16 pr-14">
-                        <p class="text-gray-600 leading-relaxed pb-6">No. Conduit should be stopped just short of the box.</p>
+                        <p class="text-gray-600 leading-relaxed pb-6">No. Conduit should be stopped just short of the
+                            box.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
                 <div class="faq-item border-b border-gray-200" data-category="installation">
-                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
-                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
-                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                    <button
+                        class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span
+                                class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
                         </div>
-                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">How close to the pole do I bring my conduit to?</span>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">How close to the pole do I
+                            bring my conduit to?</span>
                         <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
                             <i class="fas fa-plus text-gray-400 text-xl"></i>
                         </div>
                     </button>
                     <div class="faq-answer pl-16 pr-14">
-                        <p class="text-gray-600 leading-relaxed pb-6">Bring your conduit as close to the pole as possible without interfering with the utility company's equipment and maintain proper clearances.</p>
+                        <p class="text-gray-600 leading-relaxed pb-6">Bring your conduit as close to the pole as
+                            possible without interfering with the utility company's equipment and maintain proper
+                            clearances.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
                 <div class="faq-item border-b border-gray-200" data-category="installation">
-                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
-                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
-                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                    <button
+                        class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span
+                                class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
                         </div>
-                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Is additional conduit required beyond what is installed in the ditch?</span>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Is additional conduit
+                            required beyond what is installed in the ditch?</span>
                         <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
                             <i class="fas fa-plus text-gray-400 text-xl"></i>
                         </div>
                     </button>
                     <div class="faq-answer pl-16 pr-14">
-                        <p class="text-gray-600 leading-relaxed pb-6">Yes, conduit must run from the meter base or disconnect to the point where the utility company will terminate their service conductors.</p>
+                        <p class="text-gray-600 leading-relaxed pb-6">Yes, conduit must run from the meter base or
+                            disconnect to the point where the utility company will terminate their service conductors.
+                        </p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
                 <div class="faq-item border-b border-gray-200" data-category="installation">
-                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
-                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
-                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                    <button
+                        class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span
+                                class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
                         </div>
-                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Can septic lines be installed under power lines?</span>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Can septic lines be
+                            installed under power lines?</span>
                         <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
                             <i class="fas fa-plus text-gray-400 text-xl"></i>
                         </div>
                     </button>
                     <div class="faq-answer pl-16 pr-14">
-                        <p class="text-gray-600 leading-relaxed pb-6">Generally yes, but proper clearances must be maintained and local codes should be consulted. It's important to coordinate with both electrical and plumbing contractors.</p>
+                        <p class="text-gray-600 leading-relaxed pb-6">Generally yes, but proper clearances must be
+                            maintained and local codes should be consulted. It's important to coordinate with both
+                            electrical and plumbing contractors.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 5 -->
                 <div class="faq-item border-b border-gray-200" data-category="service">
-                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
-                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
-                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                    <button
+                        class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span
+                                class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
                         </div>
-                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Is there a difference in meter bases?</span>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Is there a difference in
+                            meter bases?</span>
                         <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
                             <i class="fas fa-plus text-gray-400 text-xl"></i>
                         </div>
                     </button>
                     <div class="faq-answer pl-16 pr-14">
-                        <p class="text-gray-600 leading-relaxed pb-6">Yes, meter bases vary in size, configuration, and capacity depending on your electrical service requirements. Residential and commercial properties often require different meter bases.</p>
+                        <p class="text-gray-600 leading-relaxed pb-6">Yes, meter bases vary in size, configuration, and
+                            capacity depending on your electrical service requirements. Residential and commercial
+                            properties often require different meter bases.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 6 -->
                 <div class="faq-item border-b border-gray-200" data-category="service">
-                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
-                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
-                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                    <button
+                        class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span
+                                class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
                         </div>
-                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">What about outdoor lighting?</span>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">What about outdoor
+                            lighting?</span>
                         <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
                             <i class="fas fa-plus text-gray-400 text-xl"></i>
                         </div>
                     </button>
                     <div class="faq-answer pl-16 pr-14">
-                        <p class="text-gray-600 leading-relaxed pb-6">We install a variety of outdoor lighting solutions including landscape lighting, security lighting, motion sensors, and decorative fixtures. All installations are weatherproof and code-compliant.</p>
+                        <p class="text-gray-600 leading-relaxed pb-6">We install a variety of outdoor lighting solutions
+                            including landscape lighting, security lighting, motion sensors, and decorative fixtures.
+                            All installations are weatherproof and code-compliant.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 7 -->
                 <div class="faq-item border-b border-gray-200" data-category="safety">
-                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
-                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
-                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                    <button
+                        class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span
+                                class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
                         </div>
-                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Can permanent service be installed if the house has had a rough-in inspection?</span>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">Can permanent service be
+                            installed if the house has had a rough-in inspection?</span>
                         <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
                             <i class="fas fa-plus text-gray-400 text-xl"></i>
                         </div>
                     </button>
                     <div class="faq-answer pl-16 pr-14">
-                        <p class="text-gray-600 leading-relaxed pb-6">Typically, permanent service can only be installed after all necessary inspections have been completed and approved, including the rough-in inspection and final inspection.</p>
+                        <p class="text-gray-600 leading-relaxed pb-6">Typically, permanent service can only be installed
+                            after all necessary inspections have been completed and approved, including the rough-in
+                            inspection and final inspection.</p>
                     </div>
                 </div>
 
                 <!-- FAQ Item 8 -->
                 <div class="faq-item border-b border-gray-200" data-category="safety">
-                    <button class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
-                        <div class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
-                            <span class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
+                    <button
+                        class="faq-question w-full flex items-center gap-4 py-6 text-left hover:opacity-75 transition-opacity group">
+                        <div
+                            class="w-12 h-12 rounded-full border-2 border-gray-300 flex items-center justify-center flex-shrink-0 group-hover:border-orange-500 transition-colors">
+                            <span
+                                class="text-gray-500 font-semibold text-lg group-hover:text-orange-500 transition-colors">Q</span>
                         </div>
-                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">How often should I have my electrical system inspected?</span>
+                        <span class="flex-1 text-gray-700 text-base lg:text-lg font-medium">How often should I have my
+                            electrical system inspected?</span>
                         <div class="faq-icon w-10 h-10 flex-shrink-0 flex items-center justify-center">
                             <i class="fas fa-plus text-gray-400 text-xl"></i>
                         </div>
                     </button>
                     <div class="faq-answer pl-16 pr-14">
-                        <p class="text-gray-600 leading-relaxed pb-6">We recommend having your electrical system inspected every 3-5 years for residential properties and annually for commercial properties to ensure safety and code compliance.</p>
+                        <p class="text-gray-600 leading-relaxed pb-6">We recommend having your electrical system
+                            inspected every 3-5 years for residential properties and annually for commercial properties
+                            to ensure safety and code compliance.</p>
                     </div>
                 </div>
             </div>
@@ -319,11 +418,13 @@
                 Can't find the answer you're looking for? Our team is here to help. Contact us today!
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="tel:18007654321" class="inline-flex items-center justify-center gap-3 bg-white text-orange-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="tel:18007654321"
+                    class="inline-flex items-center justify-center gap-3 bg-white text-orange-500 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                     <i class="fas fa-phone-alt"></i>
                     Call: 1 (323) 640-1388
                 </a>
-                <a href="contact.html" class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center gap-3 bg-gray-800 hover:bg-gray-900 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl">
                     <i class="fas fa-envelope"></i>
                     Contact Us
                 </a>
@@ -336,67 +437,124 @@
         <div class="py-12 lg:py-16">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+
+                    <!-- Brand / Links -->
                     <div class="lg:col-span-4">
                         <div class="flex items-center mb-6">
                             <i class="fas fa-bolt text-orange-500 text-3xl mr-2"></i>
-                            <span class="text-2xl font-bold">Electrician</span>
+                            <span class="text-2xl font-bold">Sigma C &amp; S Electric LLC</span>
                         </div>
+
                         <p class="text-gray-400 mb-6 leading-relaxed">
-                            Our experienced electricians are highly trained in all aspects of electrical service.
+                            Licensed C-10 electrical contractor serving Southern California with safe,
+                            code-compliant work and clean workmanship.
                         </p>
+
                         <div class="grid grid-cols-2 gap-x-8 gap-y-3">
-                            <a href="index.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                            <a href="#top"
+                                class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
                                 <i class="fas fa-check text-orange-500 text-xs"></i>Home
                             </a>
-                            <a href="about-us.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
-                                <i class="fas fa-check text-orange-500 text-xs"></i>About Us
+                            <a href="#about"
+                                class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                                <i class="fas fa-check text-orange-500 text-xs"></i>About
                             </a>
-                            <a href="services.html" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                            <a href="#services"
+                                class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
                                 <i class="fas fa-check text-orange-500 text-xs"></i>Services
                             </a>
-                            <a href="#faq" class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
-                                <i class="fas fa-check text-orange-500 text-xs"></i>FAQ
+                            <a href="#gallery"
+                                class="text-gray-400 hover:text-orange-500 transition flex items-center gap-2">
+                                <i class="fas fa-check text-orange-500 text-xs"></i>Gallery
                             </a>
                         </div>
                     </div>
+
+                    <!-- Contact Info -->
                     <div class="lg:col-span-4 space-y-6">
                         <div class="flex items-start gap-4">
-                            <i class="fas fa-map-marker-alt text-orange-500 text-xl"></i>
-                            <p class="text-gray-400">8494 Signal Hill Road Manassas,<br>VA, 20110</p>
+                            <i class="fas fa-id-badge text-orange-500 text-xl"></i>
+                            <p class="text-gray-400">C-10 License #1085988</p>
                         </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marked-alt text-orange-500 text-xl"></i>
+                            <p class="text-gray-400">
+                                Serving Los Angeles, Orange, Riverside,<br>
+                                San Bernardino, Ventura &amp; Santa Barbara Counties
+                            </p>
+                        </div>
+
                         <div class="flex items-start gap-4">
                             <i class="far fa-clock text-orange-500 text-xl"></i>
-                            <p class="text-gray-400">Mon-Fri 08:00 AM - 05:00 PM</p>
+                            <p class="text-gray-400">
+                                Mon–Fri: 7:00 AM – 5:00 PM<br>
+                                Sat: 8:00 AM – 2:00 PM
+                            </p>
                         </div>
+
                         <div class="flex items-start gap-4">
                             <i class="fas fa-phone-alt text-orange-500 text-xl"></i>
-                            <a href="tel:18007654321" class="text-gray-400 hover:text-orange-500 transition">1 (323) 640-1388</a>
+                            <a href="tel:13236401388" class="text-gray-400 hover:text-orange-500 transition">
+                                (323) 640-1388
+                            </a>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-envelope text-orange-500 text-xl"></i>
+                            <a href="mailto:sigmaelectriccllc@gmail.com"
+                                class="text-gray-400 hover:text-orange-500 transition">
+                                sigmaelectriccllc@gmail.com
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Map / Placeholder -->
                     <div class="lg:col-span-4">
-                        <div class="bg-gray-700 rounded-lg overflow-hidden h-64">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.7474479892967!2d-77.5084!3d38.7509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDQ1JzAzLjIiTiA3N8KwMzAnMzAuMiJX!5e0!3m2!1sen!2sus!4v1234567890" 
-                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" class="grayscale"></iframe>
+                        <div
+                            class="bg-gray-700 rounded-lg overflow-hidden h-64 flex items-center justify-center text-center p-8">
+                            <div>
+                                <p class="font-semibold mb-2">Service Area</p>
+                                <p class="text-gray-300 text-sm">
+                                    We travel throughout Southern California. If you’re not sure whether we serve
+                                    your area, call us.
+                                </p>
+                                <a href="tel:13236401388"
+                                    class="inline-flex items-center gap-2 mt-4 text-white font-semibold hover:text-gray-100">
+                                    <i class="fas fa-phone-alt"></i> (323) 640-1388
+                                </a>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
+        <!-- Bottom Bar -->
         <div class="border-t border-gray-700 py-6">
             <div class="max-w-7xl mx-auto px-4">
                 <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p class="text-gray-400 text-sm">© 2024 Electrical Services. All Rights Reserved.</p>
+                    <p class="text-gray-400 text-sm">© 2025 Sigma C &amp; S Electric LLC. All Rights Reserved.</p>
+
                     <div class="flex gap-3">
-                        <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
-                            <i class="fab fa-twitter text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
+                        <!-- Replace # with real profiles when you have them -->
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Facebook">
                             <i class="fab fa-facebook-f text-white"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300">
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="Instagram">
                             <i class="fab fa-instagram text-white"></i>
                         </a>
+                        <a href="#"
+                            class="w-10 h-10 bg-gray-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors duration-300"
+                            aria-label="YouTube">
+                            <i class="fab fa-youtube text-white"></i>
+                        </a>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -418,9 +576,9 @@
                 const faqItem = question.parentElement;
                 const answer = faqItem.querySelector('.faq-answer');
                 const icon = question.querySelector('.faq-icon i');
-                
+
                 answer.classList.toggle('active');
-                
+
                 if (answer.classList.contains('active')) {
                     icon.classList.remove('fa-plus');
                     icon.classList.add('fa-minus');
@@ -443,14 +601,14 @@
         categoryTabs.forEach(tab => {
             tab.addEventListener('click', () => {
                 const category = tab.getAttribute('data-category');
-                
+
                 categoryTabs.forEach(t => t.classList.remove('active'));
                 tab.classList.add('active');
-                
+
                 let visibleCount = 0;
                 faqItems.forEach(item => {
                     const itemCategory = item.getAttribute('data-category');
-                    
+
                     if (category === 'all' || itemCategory === category) {
                         item.classList.remove('hidden-filter');
                         visibleCount++;
@@ -465,7 +623,7 @@
                         }
                     }
                 });
-                
+
                 resultsCount.textContent = `${visibleCount} Results`;
             });
         });
@@ -493,4 +651,5 @@
         window.addEventListener('load', initScrollAnimations);
     </script>
 </body>
+
 </html>
